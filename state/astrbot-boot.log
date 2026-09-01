@@ -131,3 +131,211 @@ Set dashboard.host in data/cmd_config.json to enable remote access.
 [32m[23:56:30.266][0m [Core] [1m[INFO][0m [core.event_bus:74]: [1m[default] [telegram(telegram)] Mokingh/6592796294: Hey there[0m
 [32m[23:56:33.589][0m [Core] [1m[INFO][0m [respond.stage:212]: [1mPrepare to send - Mokingh/6592796294: Hey! How's your day going? What can I help you with today?[0m
 [32m[23:56:46.591][0m [Core] [1m[INFO][0m [services.config_service:324]: [1m[Computer] Config changed: computer_use_runtime none -> local[0m
+[32m[23:57:34.882][0m [Core] [1m[INFO][0m [services.plugin_service:1012]: [1mFetched remote plugin marketplace data successfully; received 1941 plugins.[0m
+[32m[23:57:57.536][0m [Core] [1m[INFO][0m [services.plugin_service:1609]: [1mInstalling plugin https://github.com/NickCharlie/astrbot_plugin_self_learning[0m
+[32m[23:57:57.536][0m [Core] [1m[INFO][0m [star.updater:208]: [1mDownloading plugin archive for astrbot_plugin_self_learning: https://astrbot-cloud-test-s3.astrbot.app/plugins/releases/nickmo/astrbot_plugin_self_learning/3.6.3/astrbot_plugin_self_learning-3.6.3-f1cd2c06e01b.zip[0m
+[32m[23:57:57.910][0m [Core] [1m[INFO][0m [star.updater:459]: [1mExtracting archive: /home/runner/work/astrbot-cloud/astrbot-cloud/astrbot-data-root/data/plugins/astrbot_plugin_self_learning.zip[0m
+[32m[23:57:58.014][0m [Core] [1m[INFO][0m [star.star_manager:155]: [1mDependencies for plugin astrbot_plugin_self_learning are already satisfied; skipping installation.[0m
+[32m[23:57:58.018][0m [Core] [1m[INFO][0m [star.star_manager:1123]: [1mLoading plugin astrbot_plugin_self_learning ...[0m
+[32m[23:57:58.077][0m [Plug] [33m[1m[WARN][0m [v4.28.0-beta.1] [monitoring.metrics:25]: [33m[1m[Monitoring] prometheus_client 不可用，性能指标将以 no-op 模式运行[0m
+[32m[23:57:58.207][0m [Core] [1m[INFO][0m [star.star_manager:1207]: [1mPlugin astrbot_plugin_self_learning (3.6.3) by NickMo, EterUltimate: SELF LEARNING 自主学习插件 — 让 AI 聊天机器人自主学习对话风格、理解群组黑话、管理社交关系与好感度、自适应人格演化，像真人一样自然对话。(使用前必须手动备份人格数据)[0m
+[32m[23:57:58.207][0m [Core] [1m[INFO][0m [star.base:45]: [1mPlugin astrbot_plugin_self_learning log level: INFO.[0m
+[32m[23:57:58.208][0m [astrbot_plugin_self_learning] [1m[INFO][0m [astrbot_plugin_self_learning.main:150]: [1m使用用户自定义数据路径 (从Storage_Settings.data_dir): ./data/plugin_data/astrbot_plugin_self_learning[0m
+[32m[23:57:58.208][0m [astrbot_plugin_self_learning] [1m[INFO][0m [astrbot_plugin_self_learning.main:159]: [1m最终插件数据目录: /tmp/astrbot/data/plugin_data/astrbot_plugin_self_learning[0m
+[32m[23:57:58.208][0m [astrbot_plugin_self_learning] [1m[INFO][0m [astrbot_plugin_self_learning.config:416]: [1m [配置加载] Model_Configuration原始数据: {'filter_provider_id': None, 'refine_provider_id': None, 'reinforce_provider_id': None}[0m
+[32m[23:57:58.208][0m [astrbot_plugin_self_learning] [1m[INFO][0m [astrbot_plugin_self_learning.config:417]: [1m [配置加载] filter_provider_id: None[0m
+[32m[23:57:58.208][0m [astrbot_plugin_self_learning] [1m[INFO][0m [astrbot_plugin_self_learning.config:418]: [1m [配置加载] refine_provider_id: None[0m
+[32m[23:57:58.208][0m [astrbot_plugin_self_learning] [1m[INFO][0m [astrbot_plugin_self_learning.config:419]: [1m [配置加载] reinforce_provider_id: None[0m
+[32m[23:57:58.208][0m [astrbot_plugin_self_learning] [1m[INFO][0m [astrbot_plugin_self_learning.config:443]: [1m [配置加载] Goal_Driven_Chat_Settings原始数据: {'enable_goal_driven_chat': False, 'goal_session_timeout_hours': 24, 'goal_auto_detect': True, 'goal_max_conversation_history': 40}[0m
+[32m[23:57:58.209][0m [astrbot_plugin_self_learning] [1m[INFO][0m [astrbot_plugin_self_learning.config:444]: [1m [配置加载] enable_goal_driven_chat: False[0m
+[32m[23:57:58.209][0m [astrbot_plugin_self_learning] [1m[INFO][0m [astrbot_plugin_self_learning.main:169]: [1m[插件初始化] Provider配置已加载：[0m
+[32m[23:57:58.209][0m [astrbot_plugin_self_learning] [1m[INFO][0m [astrbot_plugin_self_learning.main:170]: [1m - filter_provider_id: None[0m
+[32m[23:57:58.209][0m [astrbot_plugin_self_learning] [1m[INFO][0m [astrbot_plugin_self_learning.main:171]: [1m - refine_provider_id: None[0m
+[32m[23:57:58.209][0m [astrbot_plugin_self_learning] [1m[INFO][0m [astrbot_plugin_self_learning.main:172]: [1m - reinforce_provider_id: None[0m
+[32m[23:57:58.210][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.feature_delegation:81]: [1m[功能融合] 未检测到可用 LivingMemory，保留本插件本地记忆能力[0m
+[32m[23:57:58.210][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.feature_delegation:89]: [1m[功能融合] 未检测到可用 Group Chat Plus，保留本插件本地回复兼容能力[0m
+[32m[23:57:58.344][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.patterns:321]: [1m注册服务: database_manager[0m
+[32m[23:57:58.344][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.factory:254]: [1m创建数据库管理器成功 (实现: SQLAlchemyDatabaseManager)[0m
+[32m[23:57:58.441][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core_learning.message_collector:43]: [1m消息收集服务初始化完成[0m
+[32m[23:57:58.441][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.patterns:321]: [1m注册服务: message_collector[0m
+[32m[23:57:58.442][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.factory:110]: [1m创建消息收集器成功[0m
+[32m[23:57:58.487][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.factory:63]: [1m初始化框架LLM适配器...[0m
+[32m[23:57:58.487][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.framework_llm_adapter:52]: [1m [LLM适配器] 开始初始化Provider，配置信息：[0m
+[32m[23:57:58.487][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.framework_llm_adapter:53]: [1m - filter_provider_id: None[0m
+[32m[23:57:58.487][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.framework_llm_adapter:54]: [1m - refine_provider_id: None[0m
+[32m[23:57:58.487][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.framework_llm_adapter:55]: [1m - reinforce_provider_id: None[0m
+[32m[23:57:58.488][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.framework_llm_adapter:62]: [1m - 发现 1 个 Provider[0m
+[32m[23:57:58.488][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.framework_llm_adapter:70]: [1m 发现 1 个可用的 CHAT_COMPLETION 类型 Provider[0m
+[32m[23:57:58.488][0m [astrbot_plugin_self_learning] [33m[1m[WARN][0m [v4.28.0-beta.1] [core.framework_llm_adapter:188]: [33m[1m配置文件中未指定任何Provider，尝试自动配置...[0m
+[32m[23:57:58.488][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.framework_llm_adapter:194]: [1m已自动配置Provider到所有角色: nine-router-flash[0m
+[32m[23:57:58.488][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.framework_llm_adapter:202]: [1m 已成功配置所有 3 个AI模型Provider！[0m
+[32m[23:57:58.488][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.framework_llm_adapter:217]: [1m Provider配置摘要: 筛选: nine-router-flash | 提炼: nine-router-flash | 强化: nine-router-flash[0m
+[32m[23:57:58.488][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.factory:70]: [1m 框架LLM适配器初始化成功，已配置 3 个提供商[0m
+[32m[23:57:58.562][0m [astrbot_plugin_self_learning] [1m[INFO][0m [persona.persona_backup_manager:31]: [1m人格备份管理器初始化完成[0m
+[32m[23:57:58.562][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.patterns:321]: [1m注册服务: persona_backup_manager[0m
+[32m[23:57:58.562][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.factory:429]: [1m创建人格备份管理器成功[0m
+[32m[23:57:58.562][0m [astrbot_plugin_self_learning] [1m[INFO][0m [persona.persona_manager_updater:57]: [1m成功获取AstrBot PersonaManager实例[0m
+[32m[23:57:58.562][0m [astrbot_plugin_self_learning] [1m[INFO][0m [persona.persona_manager_updater:43]: [1mPersonaManager增量更新服务初始化完成[0m
+[32m[23:57:58.563][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.framework_llm_adapter:52]: [1m [LLM适配器] 开始初始化Provider，配置信息：[0m
+[32m[23:57:58.563][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.framework_llm_adapter:53]: [1m - filter_provider_id: None[0m
+[32m[23:57:58.563][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.framework_llm_adapter:54]: [1m - refine_provider_id: None[0m
+[32m[23:57:58.563][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.framework_llm_adapter:55]: [1m - reinforce_provider_id: None[0m
+[32m[23:57:58.563][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.framework_llm_adapter:62]: [1m - 发现 1 个 Provider[0m
+[32m[23:57:58.563][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.framework_llm_adapter:70]: [1m 发现 1 个可用的 CHAT_COMPLETION 类型 Provider[0m
+[32m[23:57:58.563][0m [astrbot_plugin_self_learning] [33m[1m[WARN][0m [v4.28.0-beta.1] [core.framework_llm_adapter:188]: [33m[1m配置文件中未指定任何Provider，尝试自动配置...[0m
+[32m[23:57:58.563][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.framework_llm_adapter:194]: [1m已自动配置Provider到所有角色: nine-router-flash[0m
+[32m[23:57:58.563][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.framework_llm_adapter:202]: [1m 已成功配置所有 3 个AI模型Provider！[0m
+[32m[23:57:58.563][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.framework_llm_adapter:217]: [1m Provider配置摘要: 筛选: nine-router-flash | 提炼: nine-router-flash | 强化: nine-router-flash[0m
+[32m[23:57:58.564][0m [astrbot_plugin_self_learning] [33m[1m[WARN][0m [v4.28.0-beta.1] [utils.cache_manager:103]: [33m[1m[缓存管理器] cachetools 未安装，使用内置简易缓存；请在设置界面手动安装依赖以启用完整缓存策略[0m
+[32m[23:57:58.564][0m [astrbot_plugin_self_learning] [1m[INFO][0m [utils.cache_manager:148]: [1m[缓存管理器] 初始化完成[0m
+[32m[23:57:58.564][0m [astrbot_plugin_self_learning] [1m[INFO][0m [utils.task_scheduler:128]: [1m[任务调度器] 初始化完成[0m
+[32m[23:57:58.564][0m [astrbot_plugin_self_learning] [1m[INFO][0m [state.enhanced_memory_graph_manager:315]: [1m[增强型记忆图] 初始化完成（使用缓存管理器）[0m
+[32m[23:57:58.565][0m [astrbot_plugin_self_learning] [1m[INFO][0m [persona.persona_updater:59]: [1mPersonaUpdater初始化完成，已集成MaiBot功能模块和PersonaManager更新器[0m
+[32m[23:57:58.565][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.patterns:321]: [1m注册服务: persona_updater[0m
+[32m[23:57:58.565][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.factory:476]: [1m创建人格更新器成功[0m
+[32m[23:57:58.565][0m [astrbot_plugin_self_learning] [1m[INFO][0m [persona.persona_manager_updater:57]: [1m成功获取AstrBot PersonaManager实例[0m
+[32m[23:57:58.565][0m [astrbot_plugin_self_learning] [1m[INFO][0m [persona.persona_manager_updater:43]: [1mPersonaManager增量更新服务初始化完成[0m
+[32m[23:57:58.566][0m [astrbot_plugin_self_learning] [1m[INFO][0m [persona.temporary_persona_updater:72]: [1m临时人格更新器初始化完成[0m
+[32m[23:57:58.566][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.patterns:321]: [1m注册服务: temporary_persona_updater[0m
+[32m[23:57:58.566][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.factory:455]: [1m创建临时人格更新器成功[0m
+[32m[23:57:58.566][0m [astrbot_plugin_self_learning] [1m[INFO][0m [analysis.multidimensional_analyzer:146]: [1m多维度学习引擎初始化完成[0m
+[32m[23:57:58.566][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.factory:383]: [1m创建多维度分析器成功[0m
+[32m[23:57:58.572][0m [astrbot_plugin_self_learning] [1m[INFO][0m [analysis.expression_pattern_learner:123]: [1m重新初始化ExpressionPatternLearner单例，提供更好的参数[0m
+[32m[23:57:58.572][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.patterns:321]: [1m注册服务: style_analyzer[0m
+[32m[23:57:58.572][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.factory:132]: [1m创建MaiBot风格分析器成功[0m
+[32m[23:57:58.572][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.patterns:321]: [1m注册服务: quality_monitor[0m
+[32m[23:57:58.572][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.factory:222]: [1m创建MaiBot质量监控器成功[0m
+[32m[23:57:58.572][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.patterns:321]: [1m注册服务: persona_manager[0m
+[32m[23:57:58.572][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.factory:337]: [1m创建人格管理器成功[0m
+[32m[23:57:58.573][0m [astrbot_plugin_self_learning] [33m[1m[WARN][0m [v4.28.0-beta.1] [analysis.ml_analyzer:88]: [33m[1mscikit-learn未安装，将使用基础统计分析[0m
+[32m[23:57:58.573][0m [astrbot_plugin_self_learning] [1m[INFO][0m [analysis.ml_analyzer:97]: [1m轻量级ML分析器初始化完成[0m
+[32m[23:57:58.573][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.factory:281]: [1m创建ML分析器成功[0m
+[32m[23:57:58.573][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core_learning.progressive_learning:92]: [1m渐进式学习服务初始化完成[0m
+[32m[23:57:58.573][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.patterns:321]: [1m注册服务: progressive_learning[0m
+[32m[23:57:58.573][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.factory:413]: [1m创建渐进式学习服务成功[0m
+[32m[23:57:58.602][0m [astrbot_plugin_self_learning] [1m[INFO][0m [response.response_diversity_manager:83]: [1m响应多样性管理器初始化完成[0m
+[32m[23:57:58.603][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.patterns:321]: [1m注册服务: response_diversity_manager[0m
+[32m[23:57:58.603][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.factory:605]: [1m创建响应多样性管理器成功[0m
+[32m[23:57:58.603][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core_learning.advanced_learning:86]: [1m高级学习机制服务初始化完成[0m
+[32m[23:57:58.603][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.patterns:321]: [1m注册服务: advanced_learning[0m
+[32m[23:57:58.603][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.factory:818]: [1m创建高级学习服务成功[0m
+[32m[23:57:58.603][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.patterns:321]: [1m注册服务: enhanced_interaction[0m
+[32m[23:57:58.603][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.factory:838]: [1m创建增强交互服务成功[0m
+[32m[23:57:58.605][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.patterns:321]: [1m注册服务: intelligence_enhancement[0m
+[32m[23:57:58.606][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.factory:859]: [1m创建智能化提升服务成功[0m
+[32m[23:57:58.606][0m [astrbot_plugin_self_learning] [1m[INFO][0m [database.manager_factory:46]: [1m[ManagerFactory] initialized[0m
+[32m[23:57:58.606][0m [astrbot_plugin_self_learning] [1m[INFO][0m [database.manager_factory:82]: [1m[ManagerFactory] Creating affection manager[0m
+[32m[23:57:58.606][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.patterns:321]: [1m注册服务: affection_manager[0m
+[32m[23:57:58.607][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.factory:886]: [1m创建好感度管理服务成功 (实现: AffectionManager)[0m
+[32m[23:57:58.607][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.plugin_lifecycle:69]: [1m[初始化] enable_goal_driven_chat=False[0m
+[32m[23:57:58.607][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.plugin_lifecycle:83]: [1m对话目标管理器未启用[0m
+[32m[23:57:58.637][0m [astrbot_plugin_self_learning] [1m[INFO][0m [database.manager_factory:46]: [1m[ManagerFactory] initialized[0m
+[32m[23:57:58.638][0m [astrbot_plugin_self_learning] [1m[INFO][0m [database.manager_factory:133]: [1m[ManagerFactory] Creating psychological state manager[0m
+[32m[23:57:58.638][0m [astrbot_plugin_self_learning] [1m[INFO][0m [state.enhanced_psychological_state_manager:88]: [1m[增强型心理状态] 初始化完成（使用缓存管理器和任务调度器）[0m
+[32m[23:57:58.638][0m [astrbot_plugin_self_learning] [1m[INFO][0m [database.manager_factory:163]: [1m [工厂] 创建社交关系管理器[0m
+[32m[23:57:58.638][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.factory:952]: [1m 成功创建心理状态和社交关系管理器（整合到SocialContextInjector）[0m
+[32m[23:57:58.639][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.patterns:321]: [1m注册服务: social_context_injector[0m
+[32m[23:57:58.639][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.factory:972]: [1m创建社交上下文注入器成功（已整合心理状态功能，对话目标管理器未初始化）[0m
+[32m[23:57:58.650][0m [astrbot_plugin_self_learning] [1m[INFO][0m [jargon.jargon_query:33]: [1m[黑话查询] 使用 TTLCache (maxsize=500, ttl=60s)[0m
+[32m[23:57:58.650][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.plugin_lifecycle:108]: [1m黑话查询服务已初始化（带60秒缓存）[0m
+[32m[23:57:58.651][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.plugin_lifecycle:115]: [1m黑话挖掘管理器已初始化[0m
+[32m[23:57:58.651][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.plugin_lifecycle:118]: [1m黑话统计预筛器已初始化[0m
+[32m[23:57:58.651][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.plugin_lifecycle:122]: [1m[V2] Config check: knowledge_engine='legacy', memory_engine='legacy'[0m
+[32m[23:57:58.651][0m [astrbot_plugin_self_learning] [1m[INFO][0m [response.intelligent_responder:57]: [1m智能回复器初始化完成 - 使用默认配置[0m
+[32m[23:57:58.651][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.factory:317]: [1m创建智能回复器成功[0m
+[32m[23:57:58.651][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.plugin_lifecycle:172]: [1m已将 group_id 映射表传递给服务组件[0m
+[32m[23:57:58.652][0m [astrbot_plugin_self_learning] [1m[INFO][0m [persona.persona_manager_updater:57]: [1m成功获取AstrBot PersonaManager实例[0m
+[32m[23:57:58.652][0m [astrbot_plugin_self_learning] [1m[INFO][0m [persona.persona_manager_updater:43]: [1mPersonaManager增量更新服务初始化完成[0m
+[32m[23:57:58.652][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.framework_llm_adapter:52]: [1m [LLM适配器] 开始初始化Provider，配置信息：[0m
+[32m[23:57:58.652][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.framework_llm_adapter:53]: [1m - filter_provider_id: None[0m
+[32m[23:57:58.652][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.framework_llm_adapter:54]: [1m - refine_provider_id: None[0m
+[32m[23:57:58.652][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.framework_llm_adapter:55]: [1m - reinforce_provider_id: None[0m
+[32m[23:57:58.652][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.framework_llm_adapter:62]: [1m - 发现 1 个 Provider[0m
+[32m[23:57:58.652][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.framework_llm_adapter:70]: [1m 发现 1 个可用的 CHAT_COMPLETION 类型 Provider[0m
+[32m[23:57:58.652][0m [astrbot_plugin_self_learning] [33m[1m[WARN][0m [v4.28.0-beta.1] [core.framework_llm_adapter:188]: [33m[1m配置文件中未指定任何Provider，尝试自动配置...[0m
+[32m[23:57:58.652][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.framework_llm_adapter:194]: [1m已自动配置Provider到所有角色: nine-router-flash[0m
+[32m[23:57:58.653][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.framework_llm_adapter:202]: [1m 已成功配置所有 3 个AI模型Provider！[0m
+[32m[23:57:58.653][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.framework_llm_adapter:217]: [1m Provider配置摘要: 筛选: nine-router-flash | 提炼: nine-router-flash | 强化: nine-router-flash[0m
+[32m[23:57:58.653][0m [astrbot_plugin_self_learning] [1m[INFO][0m [analysis.expression_pattern_learner:123]: [1m重新初始化ExpressionPatternLearner单例，提供更好的参数[0m
+[32m[23:57:58.653][0m [astrbot_plugin_self_learning] [1m[INFO][0m [persona.persona_updater:59]: [1mPersonaUpdater初始化完成，已集成MaiBot功能模块和PersonaManager更新器[0m
+[32m[23:57:58.704][0m [astrbot_plugin_self_learning] [1m[INFO][0m [webui.manager:64]: [1m准备创建 Server 实例，端口: 7833[0m
+[32m[23:57:58.950][0m [astrbot_plugin_self_learning] [1m[INFO][0m [webui.server:89]: [1m[WebUI] 初始化Web服务器 (固定端口: 7833)...[0m
+[32m[23:57:58.950][0m [astrbot_plugin_self_learning] [1m[INFO][0m [webui.manager:96]: [1mWeb 服务器实例已创建 (0.0.0.0:7833)，将在 on_load 中启动[0m
+[32m[23:57:58.950][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.plugin_lifecycle:299]: [1m自学习插件工厂模式服务层初始化完成[0m
+[32m[23:57:58.970][0m [astrbot_plugin_self_learning] [1m[INFO][0m [astrbot_plugin_self_learning.main:236]: [1m官方插件页面 API 已注册: /plugin-page/astrbot_plugin_self_learning/dashboard[0m
+[32m[23:57:58.972][0m [astrbot_plugin_self_learning] [1m[INFO][0m [astrbot_plugin_self_learning.main:218]: [1m自学习插件初始化完成[0m
+[32m[23:57:58.972][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.plugin_lifecycle:358]: [1m开始执行 on_load 方法[0m
+[32m[23:57:58.972][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.plugin_lifecycle:367]: [1m尝试启动数据库管理器 (第 1/3 次)[0m
+[32m[23:57:58.972][0m [astrbot_plugin_self_learning] [1m[INFO][0m [database.sqlalchemy_database_manager:78]: [1m[DomainRouter] 开始启动…[0m
+[32m[23:57:58.973][0m [astrbot_plugin_self_learning] [33m[1m[WARN][0m [v4.28.0-beta.1] [database.sqlalchemy_database_manager:100]: [33m[1m[DomainRouter] PostgreSQL 启动失败，回退到 SQLite: 缺少 PostgreSQL 异步驱动 asyncpg，请先安装依赖或使用打包版依赖[0m
+[32m[23:57:58.974][0m [astrbot_plugin_self_learning] [1m[INFO][0m [database.engine:71]: [1m[DatabaseEngine] 数据库引擎初始化成功[0m
+[32m[23:57:58.974][0m [astrbot_plugin_self_learning] [1m[INFO][0m [database.sqlalchemy_database_manager:331]: [1m[DomainRouter] 数据库引擎已创建 (sqlite)[0m
+[32m[23:57:59.179][0m [astrbot_plugin_self_learning] [1m[INFO][0m [database.engine:298]: [1m[DatabaseEngine] 数据库表结构同步完成[0m
+[32m[23:57:59.325][0m [astrbot_plugin_self_learning] [1m[INFO][0m [database.sqlalchemy_database_manager:156]: [1m[DomainRouter] 11 个领域 Facade 已初始化[0m
+[32m[23:57:59.326][0m [astrbot_plugin_self_learning] [1m[INFO][0m [database.sqlalchemy_database_manager:339]: [1m[DomainRouter] 数据库启动成功 (sqlite)[0m
+[32m[23:57:59.326][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.plugin_lifecycle:370]: [1m数据库管理器启动完成[0m
+[32m[23:57:59.326][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.patterns:43]: [1m服务状态变更: created -> initializing[0m
+[32m[23:57:59.364][0m [astrbot_plugin_self_learning] [1m[INFO][0m [state.affection_manager:514]: [1m找到 0 个活跃群组用于情绪初始化[0m
+[32m[23:57:59.364][0m [astrbot_plugin_self_learning] [1m[INFO][0m [state.affection_manager:423]: [1m没有发现活跃群组，跳过情绪初始化[0m
+[32m[23:57:59.365][0m [astrbot_plugin_self_learning] [1m[INFO][0m [state.affection_manager:139]: [1m好感度管理服务启动成功[0m
+[32m[23:57:59.365][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.patterns:43]: [1m服务状态变更: initializing -> running[0m
+[32m[23:57:59.365][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.patterns:56]: [1m服务启动成功[0m
+[32m[23:57:59.365][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.plugin_lifecycle:396]: [1m好感度管理服务启动成功[0m
+[32m[23:57:59.365][0m [Plug] [1m[INFO][0m [astrbot.self_learning.monitoring.trace:187]: [1mFunction-level monitoring disabled[0m
+[32m[23:57:59.365][0m [Plug] [1m[INFO][0m [astrbot.self_learning.monitoring.trace:200]: [1mFunction-level trace logging disabled[0m
+[32m[23:57:59.365][0m [astrbot_plugin_self_learning] [1m[INFO][0m [webui.manager:222]: [1m成功获取 AstrBot 框架 PersonaManager: <class 'astrbot.core.persona_mgr.PersonaManager'>[0m
+[32m[23:57:59.366][0m [astrbot_plugin_self_learning] [1m[INFO][0m [webui.dependencies:139]: [1m [WebUI] persona_updater 获取成功: <class 'data.plugins.astrbot_plugin_self_learning.services.persona.persona_updater.PersonaUpdater'>[0m
+[32m[23:57:59.366][0m [astrbot_plugin_self_learning] [1m[INFO][0m [webui.dependencies:179]: [1m[WebUI] 性能监测模块初始化成功[0m
+[32m[23:57:59.369][0m [astrbot_plugin_self_learning] [1m[INFO][0m [webui.dependencies:196]: [1m [WebUI] PersonaWebManager 初始化成功[0m
+[32m[23:57:59.369][0m [astrbot_plugin_self_learning] [1m[INFO][0m [webui.dependencies:204]: [1m [WebUI] 服务容器初始化完成[0m
+[32m[23:57:59.369][0m [astrbot_plugin_self_learning] [1m[INFO][0m [webui.dependencies:277]: [1m [WebUI] 插件服务设置完成[0m
+[32m[23:57:59.369][0m [astrbot_plugin_self_learning] [1m[INFO][0m [webui.manager:156]: [1mWeb 服务器插件服务设置完成[0m
+[32m[23:57:59.369][0m [astrbot_plugin_self_learning] [1m[INFO][0m [webui.manager:163]: [1m准备启动 Web 服务器: http://0.0.0.0:7833[0m
+[32m[23:57:59.371][0m [astrbot_plugin_self_learning] [1m[INFO][0m [webui.app:38]: [1m [WebUI] 已生成并保存新的 secret_key: /tmp/astrbot/data/plugin_data/astrbot_plugin_self_learning/.secret_key[0m
+[32m[23:57:59.372][0m [astrbot_plugin_self_learning] [1m[INFO][0m [webui.app:126]: [1m [WebUI] Quart 应用创建成功[0m
+[32m[23:57:59.450][0m [astrbot_plugin_self_learning] [1m[INFO][0m [webui.app:144]: [1m [WebUI] 已注册蓝图: auth[0m
+[32m[23:57:59.452][0m [astrbot_plugin_self_learning] [1m[INFO][0m [webui.app:144]: [1m [WebUI] 已注册蓝图: config[0m
+[32m[23:57:59.457][0m [astrbot_plugin_self_learning] [1m[INFO][0m [webui.app:144]: [1m [WebUI] 已注册蓝图: personas[0m
+[32m[23:57:59.462][0m [astrbot_plugin_self_learning] [1m[INFO][0m [webui.app:144]: [1m [WebUI] 已注册蓝图: learning[0m
+[32m[23:57:59.466][0m [astrbot_plugin_self_learning] [1m[INFO][0m [webui.app:144]: [1m [WebUI] 已注册蓝图: jargon[0m
+[32m[23:57:59.468][0m [astrbot_plugin_self_learning] [1m[INFO][0m [webui.app:144]: [1m [WebUI] 已注册蓝图: chat[0m
+[32m[23:57:59.469][0m [astrbot_plugin_self_learning] [1m[INFO][0m [webui.app:144]: [1m [WebUI] 已注册蓝图: bug_report[0m
+[32m[23:57:59.471][0m [astrbot_plugin_self_learning] [1m[INFO][0m [webui.app:144]: [1m [WebUI] 已注册蓝图: metrics[0m
+[32m[23:57:59.473][0m [astrbot_plugin_self_learning] [1m[INFO][0m [webui.app:144]: [1m [WebUI] 已注册蓝图: social[0m
+[32m[23:57:59.476][0m [astrbot_plugin_self_learning] [1m[INFO][0m [webui.app:144]: [1m [WebUI] 已注册蓝图: persona_reviews[0m
+[32m[23:57:59.478][0m [astrbot_plugin_self_learning] [1m[INFO][0m [webui.app:144]: [1m [WebUI] 已注册蓝图: intelligent_chat[0m
+[32m[23:57:59.479][0m [astrbot_plugin_self_learning] [1m[INFO][0m [webui.app:144]: [1m [WebUI] 已注册蓝图: graph_share[0m
+[32m[23:57:59.481][0m [astrbot_plugin_self_learning] [1m[INFO][0m [webui.app:144]: [1m [WebUI] 已注册蓝图: data_management[0m
+[32m[23:57:59.482][0m [astrbot_plugin_self_learning] [1m[INFO][0m [webui.app:144]: [1m [WebUI] 已注册蓝图: graphs[0m
+[32m[23:57:59.485][0m [astrbot_plugin_self_learning] [1m[INFO][0m [webui.app:144]: [1m [WebUI] 已注册蓝图: integrations[0m
+[32m[23:57:59.489][0m [astrbot_plugin_self_learning] [1m[INFO][0m [webui.app:144]: [1m [WebUI] 已注册蓝图: hub[0m
+[32m[23:57:59.491][0m [astrbot_plugin_self_learning] [1m[INFO][0m [webui.app:144]: [1m [WebUI] 已注册蓝图: shadow_mode[0m
+[32m[23:57:59.493][0m [astrbot_plugin_self_learning] [1m[INFO][0m [webui.app:144]: [1m [WebUI] 已注册蓝图: monitoring[0m
+[32m[23:57:59.494][0m [astrbot_plugin_self_learning] [1m[INFO][0m [webui.app:146]: [1m [WebUI] 共注册 18 个蓝图[0m
+[32m[23:57:59.494][0m [astrbot_plugin_self_learning] [1m[INFO][0m [webui.server:138]: [1m[WebUI] 启动服务器: http://0.0.0.0:7833[0m
+[32m[23:57:59.977][0m [astrbot_plugin_self_learning] [1m[INFO][0m [webui.manager:222]: [1m成功获取 AstrBot 框架 PersonaManager: <class 'astrbot.core.persona_mgr.PersonaManager'>[0m
+[32m[23:57:59.977][0m [astrbot_plugin_self_learning] [1m[INFO][0m [webui.dependencies:139]: [1m [WebUI] persona_updater 获取成功: <class 'data.plugins.astrbot_plugin_self_learning.services.persona.persona_updater.PersonaUpdater'>[0m
+[32m[23:57:59.978][0m [astrbot_plugin_self_learning] [1m[INFO][0m [webui.dependencies:179]: [1m[WebUI] 性能监测模块初始化成功[0m
+[32m[23:57:59.978][0m [astrbot_plugin_self_learning] [1m[INFO][0m [webui.dependencies:196]: [1m [WebUI] PersonaWebManager 初始化成功[0m
+[32m[23:57:59.978][0m [astrbot_plugin_self_learning] [1m[INFO][0m [webui.dependencies:204]: [1m [WebUI] 服务容器初始化完成[0m
+[32m[23:57:59.978][0m [astrbot_plugin_self_learning] [1m[INFO][0m [webui.dependencies:277]: [1m [WebUI] 插件服务设置完成[0m
+[32m[23:57:59.978][0m [astrbot_plugin_self_learning] [1m[INFO][0m [webui.server:123]: [1m[WebUI] 服务器已在运行中[0m
+[32m[23:57:59.978][0m [astrbot_plugin_self_learning] [1m[INFO][0m [webui.manager:135]: [1mWeb 服务器已成功启动[0m
+[32m[23:58:00.496][0m [astrbot_plugin_self_learning] [1m[INFO][0m [webui.server:151]: [1m[WebUI] Web服务器启动成功[0m
+[32m[23:58:00.496][0m [astrbot_plugin_self_learning] [1m[INFO][0m [webui.server:152]: [1m[WebUI] 本地访问: http://127.0.0.1:7833[0m
+[32m[23:58:00.497][0m [astrbot_plugin_self_learning] [1m[INFO][0m [webui.manager:168]: [1mWeb 服务器启动完成[0m
+[32m[23:58:00.497][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.plugin_lifecycle:452]: [1m自学习插件加载完成[0m
+[32m[23:58:00.504][0m [Core] [1m[INFO][0m [computer.computer_client:672]: [1m[Computer] Syncing skills to 0 active sandbox(es)[0m
+[32m[23:58:00.505][0m [Core] [1m[INFO][0m [services.plugin_service:1626]: [1mInstalled plugin https://github.com/NickCharlie/astrbot_plugin_self_learning successfully.[0m
+[32m[23:58:08.976][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.framework_llm_adapter:52]: [1m [LLM适配器] 开始初始化Provider，配置信息：[0m
+[32m[23:58:08.976][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.framework_llm_adapter:53]: [1m - filter_provider_id: None[0m
+[32m[23:58:08.976][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.framework_llm_adapter:54]: [1m - refine_provider_id: None[0m
+[32m[23:58:08.977][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.framework_llm_adapter:55]: [1m - reinforce_provider_id: None[0m
+[32m[23:58:08.977][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.framework_llm_adapter:62]: [1m - 发现 1 个 Provider[0m
+[32m[23:58:08.977][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.framework_llm_adapter:70]: [1m 发现 1 个可用的 CHAT_COMPLETION 类型 Provider[0m
+[32m[23:58:08.977][0m [astrbot_plugin_self_learning] [33m[1m[WARN][0m [v4.28.0-beta.1] [core.framework_llm_adapter:188]: [33m[1m配置文件中未指定任何Provider，尝试自动配置...[0m
+[32m[23:58:08.977][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.framework_llm_adapter:194]: [1m已自动配置Provider到所有角色: nine-router-flash[0m
+[32m[23:58:08.977][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.framework_llm_adapter:202]: [1m 已成功配置所有 3 个AI模型Provider！[0m
+[32m[23:58:08.977][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.framework_llm_adapter:217]: [1m Provider配置摘要: 筛选: nine-router-flash | 提炼: nine-router-flash | 强化: nine-router-flash[0m
+[32m[23:58:08.977][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.plugin_lifecycle:589]: [1m延迟重新初始化提供商配置完成[0m
+[32m[23:58:08.977][0m [astrbot_plugin_self_learning] [1m[INFO][0m [core.plugin_lifecycle:597]: [1m成功配置了 3 个提供商[0m
