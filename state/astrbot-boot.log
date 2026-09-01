@@ -127,3 +127,9 @@ Set dashboard.host in data/cmd_config.json to enable remote access.
 [32m[20:36:48.330][0m [Core] [33m[1m[WARN][0m [v4.28.0-beta.1] [telegram.tg_adapter:456]: [33m[1mReceived an update without a message.[0m
 [32m[20:36:48.330][0m [Core] [1m[INFO][0m [core.event_bus:74]: [1m[default] [telegram(telegram)] Mokingh/6592796294: ayo[0m
 [32m[20:36:50.475][0m [Core] [1m[INFO][0m [respond.stage:212]: [1mPrepare to send - Mokingh/6592796294: Ayo! How can I help you today?[0m
+[32m[21:13:24.572][0m [Core] [1m[INFO][0m [core.event_bus:74]: [1m[default] [telegram(telegram)] Mokingh/6592796294: sup sup sup[0m
+[32m[21:13:31.563][0m [Core] [1m[INFO][0m [respond.stage:212]: [1mPrepare to send - Mokingh/6592796294: Not much, just hanging out and ready to help! What's on your mind today?[0m
+[32m[21:15:20.090][0m [Core] [1m[INFO][0m [core.event_bus:74]: [1m[default] [telegram(telegram)] MoKingGh/301626321: hey hello[0m
+[32m[21:15:20.093][0m [Core] [1m[INFO][0m [whitelist_check.stage:65]: [1mSession ID telegram:FriendMessage:301626321 is not in the session allowlist, so event propagation was stopped. Add this session ID to the allowlist in the configuration file.[0m
+[32m[21:15:33.676][0m [Core] [1m[INFO][0m [core.event_bus:74]: [1m[default] [telegram(telegram)] MoKingGh/301626321: hey hey[0m
+[32m[21:15:33.679][0m [Core] [1m[INFO][0m [whitelist_check.stage:65]: [1mSession ID telegram:FriendMessage:301626321 is not in the session allowlist, so event propagation was stopped. Add this session ID to the allowlist in the configuration file.[0m
