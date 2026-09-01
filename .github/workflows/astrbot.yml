@@ -23,13 +23,13 @@ jobs:
 
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: "3.13"
 
       - name: Cache pip
         uses: actions/cache@v4
         with:
           path: ~/.cache/pip
-          key: astrbot-pip-3.11-v1
+          key: astrbot-pip-3.13-v1
 
       - name: Clone AstrBot source
         run: |
