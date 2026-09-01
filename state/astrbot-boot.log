@@ -1,88 +1,91 @@
-[32m[22:05:33.072][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.072][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.072][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.072][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.072][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.073][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.073][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.073][0m [Core] [1m[INFO][0m [config.astrbot_config:223]: [1mConfig key order fixed: platform_settings[0m
-[32m[22:05:33.073][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.073][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.073][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.073][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.073][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.073][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.073][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.074][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.074][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.074][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.074][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.074][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.074][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.074][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.074][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.074][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.074][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.074][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.074][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.074][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.075][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.075][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.075][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.075][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.075][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.075][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.075][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.075][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.075][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.075][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.075][0m [Core] [1m[INFO][0m [config.astrbot_config:223]: [1mConfig key order fixed: provider_settings[0m
-[32m[22:05:33.075][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.075][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.076][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.076][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.076][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.076][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.076][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.076][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.076][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.076][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.076][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.076][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.076][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.076][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.076][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.076][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.077][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.077][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.077][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.077][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.077][0m [Core] [1m[INFO][0m [config.astrbot_config:223]: [1mConfig key order fixed: dashboard[0m
-[32m[22:05:33.077][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.077][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.077][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.077][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.077][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.077][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.077][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.077][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.077][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.078][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.078][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.078][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.078][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.078][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.078][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.078][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.078][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.078][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.078][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.078][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.078][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.078][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.079][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
-[32m[22:05:33.079][0m [Core] [1m[INFO][0m [config.astrbot_config:225]: [1mConfig key order fixed[0m
-[32m[22:05:36.504][0m [Core] [1m[INFO][0m [astrbot.main:123]: [1m
+[32m[23:43:07.974][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.974][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.974][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.974][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.974][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.974][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.974][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.974][0m [Core] [1m[INFO][0m [config.astrbot_config:223]: [1mConfig key order fixed: platform_settings[0m
+[32m[23:43:07.975][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.975][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.975][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.975][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.975][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.975][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.975][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.975][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.975][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.975][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.975][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.975][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.975][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.975][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.976][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.976][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.976][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.976][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.976][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.976][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.976][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.976][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.976][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.976][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.976][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.976][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.976][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.976][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.976][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.976][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.976][0m [Core] [1m[INFO][0m [config.astrbot_config:223]: [1mConfig key order fixed: provider_settings[0m
+[32m[23:43:07.977][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.977][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.977][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.977][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.977][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.977][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.977][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.977][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.977][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.977][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.977][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.977][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.977][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.978][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.978][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.978][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.978][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.978][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.978][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.978][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.978][0m [Core] [1m[INFO][0m [config.astrbot_config:223]: [1mConfig key order fixed: dashboard[0m
+[32m[23:43:07.978][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.978][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.978][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.979][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.979][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.979][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.979][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.979][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.979][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.979][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.979][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.979][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.979][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.980][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.980][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.980][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.980][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.980][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.980][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.980][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.980][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.980][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.980][0m [Core] [1m[INFO][0m [config.astrbot_config:184]: [1mConfig key missing; added default.[0m
+[32m[23:43:07.980][0m [Core] [1m[INFO][0m [config.astrbot_config:225]: [1mConfig key order fixed[0m
+[32m[23:43:11.256][0m [Core] [1m[INFO][0m [core.dashboard_assets:255]: [1mDownloading AstrBot WebUI from https://astrbot-registry.soulter.top/download/astrbot-dashboard/v4.28.0-beta.1/dist.zip[0m
+Downloading: https URL host='astrbot-registry.soulter.top' file='dist.zip' len=87 | Size: 5547.30 KB
+Progress: 0.14% Speed: 5954.65 KB/sProgress: 0.27% Speed: 10717.93 KB/sProgress: 0.29% Speed: 11248.55 KB/sProgress: 0.43% Speed: 10340.35 KB/sProgress: 0.46% Speed: 10869.78 KB/sProgress: 0.60% Speed: 13734.69 KB/sProgress: 0.67% Speed: 15315.20 KB/sProgress: 0.72% Speed: 15809.81 KB/sProgress: 0.87% Speed: 18240.76 KB/sProgress: 0.94% Speed: 19673.12 KB/sProgress: 0.96% Speed: 19711.23 KB/sProgress: 1.11% Speed: 22130.99 KB/sProgress: 1.15% Speed: 22996.27 KB/sProgress: 1.30% Speed: 20955.51 KB/sProgress: 1.30% Speed: 20980.16 KB/sProgress: 1.45% Speed: 22009.41 KB/sProgress: 1.59% Speed: 24102.37 KB/sProgress: 1.67% Speed: 25296.29 KB/sProgress: 1.82% Speed: 21556.68 KB/sProgress: 1.96% Speed: 23185.37 KB/sProgress: 1.97% Speed: 23267.63 KB/sProgress: 2.12% Speed: 24581.11 KB/sProgress: 2.26% Speed: 26181.26 KB/sProgress: 2.27% Speed: 26259.64 KB/sProgress: 2.38% Speed: 23495.69 KB/sProgress: 2.53% Speed: 24145.40 KB/sProgress: 2.53% Speed: 24152.46 KB/sProgress: 2.67% Speed: 25068.12 KB/sProgress: 2.82% Speed: 26353.79 KB/sProgress: 2.96% Speed: 27601.56 KB/sProgress: 3.10% Speed: 28201.76 KB/sProgress: 3.25% Speed: 29442.32 KB/sProgress: 3.39% Speed: 30691.32 KB/sProgress: 3.54% Speed: 31938.05 KB/sProgress: 3.68% Speed: 33177.66 KB/sProgress: 3.75% Speed: 33777.89 KB/sProgress: 3.82% Speed: 34115.69 KB/sProgress: 3.97% Speed: 28306.20 KB/sProgress: 4.11% Speed: 29271.19 KB/sProgress: 4.26% Speed: 29982.15 KB/sProgress: 4.40% Speed: 30945.48 KB/sProgress: 4.55% Speed: 31713.23 KB/sProgress: 4.69% Speed: 32659.74 KB/sProgress: 4.83% Speed: 31780.55 KB/sProgress: 4.98% Speed: 32566.79 KB/sProgress: 5.12% Speed: 33445.42 KB/sProgress: 5.27% Speed: 34341.81 KB/sProgress: 5.41% Speed: 35160.07 KB/sProgress: 5.55% Speed: 36034.86 KB/sProgress: 5.70% Speed: 36922.05 KB/sProgress: 5.77% Speed: 37350.14 KB/sProgress: 5.91% Speed: 37523.71 KB/sProgress: 6.06% Speed: 38368.80 KB/sProgress: 6.20% Speed: 38958.84 KB/sProgress: 6.35% Speed: 39812.18 KB/sProgress: 6.49% Speed: 35827.49 KB/sProgress: 6.63% Speed: 36568.99 KB/sProgress: 6.78% Speed: 36968.08 KB/sProgress: 6.92% Speed: 37707.79 KB/sProgress: 7.07% Speed: 38453.75 KB/sProgress: 7.21% Speed: 39200.93 KB/sProgress: 7.35% Speed: 39807.30 KB/sProgress: 7.50% Speed: 40546.34 KB/sProgress: 7.64% Speed: 39128.38 KB/sProgress: 7.79% Speed: 39812.34 KB/sProgress: 7.93% Speed: 40496.22 KB/sProgress: 8.08% Speed: 41144.94 KB/sProgress: 8.22% Speed: 41839.36 KB/sProgress: 8.36% Speed: 42534.30 KB/sProgress: 8.51% Speed: 43228.92 KB/sProgress: 8.65% Speed: 43921.33 KB/sProgress: 8.80% Speed: 43274.07 KB/sProgress: 8.94% Speed: 43929.62 KB/sProgress: 9.09% Speed: 44598.60 KB/sProgress: 9.23% Speed: 45267.36 KB/sProgress: 9.37% Speed: 45928.19 KB/sProgress: 9.52% Speed: 46575.93 KB/sProgress: 9.66% Speed: 47240.89 KB/sProgress: 9.81% Speed: 47904.71 KB/sProgress: 9.95% Speed: 44751.35 KB/sProgress: 10.10% Speed: 45345.58 KB/sProgress: 10.24% Speed: 45675.04 KB/sProgress: 10.38% Speed: 46273.11 KB/sProgress: 10.53% Speed: 46877.18 KB/sProgress: 10.67% Speed: 47479.36 KB/sProgress: 10.82% Speed: 47961.40 KB/sProgress: 10.96% Speed: 48483.53 KB/sProgress: 11.10% Speed: 46909.68 KB/sProgress: 11.25% Speed: 47467.19 KB/sProgress: 11.39% Speed: 48038.28 KB/sProgress: 11.54% Speed: 48609.36 KB/sProgress: 11.68% Speed: 49178.68 KB/sProgress: 11.83% Speed: 49748.92 KB/sProgress: 11.97% Speed: 48800.03 KB/sProgress: 12.11% Speed: 49336.98 KB/sProgress: 12.26% Speed: 49501.48 KB/sProgress: 12.40% Speed: 50030.01 KB/sProgress: 12.55% Speed: 50298.69 KB/sProgress: 12.69% Speed: 50833.92 KB/sProgress: 12.84% Speed: 49486.21 KB/sProgress: 12.98% Speed: 49995.84 KB/sProgress: 13.12% Speed: 49682.77 KB/sProgress: 13.27% Speed: 50178.11 KB/sProgress: 13.41% Speed: 50688.10 KB/sProgress: 13.56% Speed: 51197.37 KB/sProgress: 13.70% Speed: 46549.61 KB/sProgress: 13.84% Speed: 46999.80 KB/sProgress: 13.99% Speed: 47454.07 KB/sProgress: 14.13% Speed: 47914.65 KB/sProgress: 14.28% Speed: 48339.48 KB/sProgress: 14.42% Speed: 48797.22 KB/sProgress: 14.57% Speed: 48668.72 KB/sProgress: 14.71% Speed: 49112.50 KB/sProgress: 14.85% Speed: 48882.03 KB/sProgress: 15.00% Speed: 49318.95 KB/sProgress: 15.14% Speed: 49762.93 KB/sProgress: 15.29% Speed: 50207.08 KB/sProgress: 15.43% Speed: 49549.73 KB/sProgress: 15.58% Speed: 49974.19 KB/sProgress: 15.72% Speed: 50221.53 KB/sProgress: 15.86% Speed: 50645.42 KB/sProgress: 16.01% Speed: 50938.09 KB/sProgress: 16.15% Speed: 51363.27 KB/sProgress: 16.30% Speed: 49567.30 KB/sProgress: 16.44% Speed: 49966.11 KB/sProgress: 16.58% Speed: 49803.30 KB/sProgress: 16.73% Speed: 50200.09 KB/sProgress: 16.87% Speed: 50581.96 KB/sProgress: 17.02% Speed: 50937.50 KB/sProgress: 17.16% Speed: 49141.31 KB/sProgress: 17.31% Speed: 49517.70 KB/sProgress: 17.45% Speed: 49631.27 KB/sProgress: 17.59% Speed: 49937.67 KB/sProgress: 17.74% Speed: 50293.01 KB/sProgress: 17.88% Speed: 50674.11 KB/sProgress: 18.03% Speed: 48976.56 KB/sProgress: 18.17% Speed: 49333.81 KB/sProgress: 18.32% Speed: 49699.83 KB/sProgress: 18.46% Speed: 50067.23 KB/sProgress: 18.60% Speed: 50432.51 KB/sProgress: 18.75% Speed: 50798.01 KB/sProgress: 18.89% Speed: 49113.74 KB/sProgress: 19.04% Speed: 49457.16 KB/sProgress: 19.18% Speed: 49807.92 KB/sProgress: 19.32% Speed: 50158.90 KB/sProgress: 19.47% Speed: 50511.24 KB/sProgress: 19.61% Speed: 50860.45 KB/sProgress: 19.76% Speed: 49938.70 KB/sProgress: 19.90% Speed: 50272.09 KB/sProgress: 20.05% Speed: 50271.25 KB/sProgress: 20.19% Speed: 50605.10 KB/sProgress: 20.33% Speed: 50841.69 KB/sProgress: 20.48% Speed: 51176.42 KB/sProgress: 20.62% Speed: 49419.97 KB/sProgress: 20.77% Speed: 49735.85 KB/sProgress: 20.91% Speed: 49927.07 KB/sProgress: 21.06% Speed: 50246.64 KB/sProgress: 21.20% Speed: 50467.09 KB/sProgress: 21.34% Speed: 50782.86 KB/sProgress: 21.49% Speed: 49608.17 KB/sProgress: 21.63% Speed: 49912.88 KB/sProgress: 21.78% Speed: 50225.71 KB/sProgress: 21.92% Speed: 50537.29 KB/sProgress: 22.06% Speed: 50713.99 KB/sProgress: 22.21% Speed: 51021.26 KB/sProgress: 22.35% Speed: 49917.33 KB/sProgress: 22.50% Speed: 50212.39 KB/sProgress: 22.64% Speed: 50189.55 KB/sProgress: 22.79% Speed: 50480.85 KB/sProgress: 22.93% Speed: 50779.56 KB/sProgress: 23.07% Speed: 51077.54 KB/sProgress: 23.22% Speed: 50031.61 KB/sProgress: 23.36% Speed: 50315.81 KB/sProgress: 23.51% Speed: 50439.64 KB/sProgress: 23.65% Speed: 50725.23 KB/sProgress: 23.80% Speed: 49177.32 KB/sProgress: 23.94% Speed: 49449.89 KB/sProgress: 24.08% Speed: 49441.41 KB/sProgress: 24.23% Speed: 49712.90 KB/sProgress: 24.37% Speed: 49772.66 KB/sProgress: 24.52% Speed: 50044.33 KB/sProgress: 24.66% Speed: 49233.40 KB/sProgress: 24.80% Speed: 49495.41 KB/sProgress: 24.95% Speed: 49580.77 KB/sProgress: 25.09% Speed: 49845.23 KB/sProgress: 25.24% Speed: 50114.58 KB/sProgress: 25.38% Speed: 50382.89 KB/sProgress: 25.53% Speed: 49342.70 KB/sProgress: 25.67% Speed: 49558.89 KB/sProgress: 25.81% Speed: 49646.17 KB/sProgress: 25.96% Speed: 49903.31 KB/sProgress: 26.10% Speed: 50087.02 KB/sProgress: 26.25% Speed: 50345.06 KB/sProgress: 26.39% Speed: 48837.69 KB/sProgress: 26.54% Speed: 49081.54 KB/sProgress: 26.68% Speed: 49331.42 KB/sProgress: 26.82% Speed: 49581.53 KB/sProgress: 26.97% Speed: 49831.47 KB/sProgress: 27.11% Speed: 50081.24 KB/sProgress: 27.26% Speed: 48975.12 KB/sProgress: 27.40% Speed: 49212.20 KB/sProgress: 27.54% Speed: 49358.81 KB/sProgress: 27.69% Speed: 49599.28 KB/sProgress: 27.83% Speed: 49760.69 KB/sProgress: 27.98% Speed: 50000.84 KB/sProgress: 28.12% Speed: 49200.05 KB/sProgress: 28.27% Speed: 49430.43 KB/sProgress: 28.41% Speed: 49666.57 KB/sProgress: 28.55% Speed: 49902.94 KB/sProgress: 28.70% Speed: 50063.22 KB/sProgress: 28.84% Speed: 50297.82 KB/sProgress: 28.99% Speed: 49499.03 KB/sProgress: 29.13% Speed: 49725.59 KB/sProgress: 29.28% Speed: 49555.84 KB/sProgress: 29.42% Speed: 49779.68 KB/sProgress: 29.56% Speed: 50008.06 KB/sProgress: 29.71% Speed: 50208.56 KB/sProgress: 29.85% Speed: 49267.05 KB/sProgress: 30.00% Speed: 49470.67 KB/sProgress: 30.14% Speed: 49478.44 KB/sProgress: 30.29% Speed: 49684.33 KB/sProgress: 30.43% Speed: 49898.41 KB/sProgress: 30.57% Speed: 50112.29 KB/sProgress: 30.72% Speed: 49572.35 KB/sProgress: 30.86% Speed: 49775.40 KB/sProgress: 31.01% Speed: 49723.97 KB/sProgress: 31.15% Speed: 49928.41 KB/sProgress: 31.29% Speed: 50139.18 KB/sProgress: 31.44% Speed: 50349.43 KB/sProgress: 31.58% Speed: 48958.79 KB/sProgress: 31.73% Speed: 49155.49 KB/sProgress: 31.87% Speed: 49229.77 KB/sProgress: 32.02% Speed: 49429.23 KB/sProgress: 32.16% Speed: 49631.47 KB/sProgress: 32.30% Speed: 49833.87 KB/sProgress: 32.45% Speed: 49398.99 KB/sProgress: 32.59% Speed: 49592.59 KB/sProgress: 32.74% Speed: 49551.16 KB/sProgress: 32.88% Speed: 49744.21 KB/sProgress: 33.03% Speed: 49943.87 KB/sProgress: 33.17% Speed: 50143.07 KB/sProgress: 33.31% Speed: 49454.95 KB/sProgress: 33.46% Speed: 49643.06 KB/sProgress: 33.60% Speed: 49469.33 KB/sProgress: 33.75% Speed: 49655.88 KB/sProgress: 33.89% Speed: 49849.17 KB/sProgress: 34.03% Speed: 50041.37 KB/sProgress: 34.18% Speed: 49637.97 KB/sProgress: 34.32% Speed: 49822.85 KB/sProgress: 34.47% Speed: 49735.55 KB/sProgress: 34.61% Speed: 49920.12 KB/sProgress: 34.76% Speed: 49977.25 KB/sProgress: 34.90% Speed: 50162.61 KB/sProgress: 35.04% Speed: 49745.75 KB/sProgress: 35.19% Speed: 49925.49 KB/sProgress: 35.33% Speed: 49920.37 KB/sProgress: 35.48% Speed: 50100.70 KB/sProgress: 35.62% Speed: 50286.04 KB/sProgress: 35.77% Speed: 50472.18 KB/sProgress: 35.91% Speed: 49536.97 KB/sProgress: 36.05% Speed: 49712.63 KB/sProgress: 36.20% Speed: 49699.12 KB/sProgress: 36.34% Speed: 49875.05 KB/sProgress: 36.49% Speed: 50055.55 KB/sProgress: 36.63% Speed: 50235.63 KB/sProgress: 36.77% Speed: 49150.02 KB/sProgress: 36.92% Speed: 49300.57 KB/sProgress: 37.06% Speed: 49478.67 KB/sProgress: 37.21% Speed: 49659.23 KB/sProgress: 37.35% Speed: 49839.41 KB/sProgress: 37.50% Speed: 50019.79 KB/sProgress: 37.64% Speed: 49759.41 KB/sProgress: 37.78% Speed: 49933.04 KB/sProgress: 37.93% Speed: 49966.12 KB/sProgress: 38.07% Speed: 50140.49 KB/sProgress: 38.22% Speed: 50317.88 KB/sProgress: 38.36% Speed: 50496.04 KB/sProgress: 38.51% Speed: 49703.65 KB/sProgress: 38.65% Speed: 49870.99 KB/sProgress: 38.79% Speed: 49943.52 KB/sProgress: 38.94% Speed: 50114.49 KB/sProgress: 39.08% Speed: 50287.02 KB/sProgress: 39.23% Speed: 50459.19 KB/sProgress: 39.37% Speed: 49694.09 KB/sProgress: 39.51% Speed: 49859.62 KB/sProgress: 39.66% Speed: 49813.32 KB/sProgress: 39.80% Speed: 49978.81 KB/sProgress: 39.95% Speed: 50040.26 KB/sProgress: 40.09% Speed: 50207.12 KB/sProgress: 40.24% Speed: 49792.76 KB/sProgress: 40.38% Speed: 49956.35 KB/sProgress: 40.52% Speed: 49779.56 KB/sProgress: 40.67% Speed: 49942.47 KB/sProgress: 40.81% Speed: 50021.62 KB/sProgress: 40.96% Speed: 50185.69 KB/sProgress: 41.10% Speed: 49524.14 KB/sProgress: 41.25% Speed: 49684.28 KB/sProgress: 41.39% Speed: 49785.83 KB/sProgress: 41.53% Speed: 49946.64 KB/sProgress: 41.68% Speed: 50056.68 KB/sProgress: 41.82% Speed: 50217.71 KB/sProgress: 41.97% Speed: 49505.12 KB/sProgress: 42.11% Speed: 49659.88 KB/sProgress: 42.25% Speed: 49818.84 KB/sProgress: 42.40% Speed: 49977.98 KB/sProgress: 42.54% Speed: 50137.30 KB/sProgress: 42.69% Speed: 50296.56 KB/sProgress: 42.83% Speed: 49874.72 KB/sProgress: 42.98% Speed: 50028.12 KB/sProgress: 43.12% Speed: 50076.74 KB/sProgress: 43.26% Speed: 50231.69 KB/sProgress: 43.41% Speed: 50388.82 KB/sProgress: 43.55% Speed: 50545.38 KB/sProgress: 43.70% Speed: 49890.05 KB/sProgress: 43.84% Speed: 50040.21 KB/sProgress: 43.99% Speed: 50125.89 KB/sProgress: 44.13% Speed: 50278.17 KB/sProgress: 44.27% Speed: 49615.22 KB/sProgress: 44.42% Speed: 49747.36 KB/sProgress: 44.56% Speed: 49787.13 KB/sProgress: 44.71% Speed: 49935.79 KB/sProgress: 44.85% Speed: 50034.42 KB/sProgress: 44.99% Speed: 50179.90 KB/sProgress: 45.14% Speed: 49453.96 KB/sProgress: 45.28% Speed: 49593.04 KB/sProgress: 45.43% Speed: 49658.65 KB/sProgress: 45.57% Speed: 49803.67 KB/sProgress: 45.72% Speed: 49951.42 KB/sProgress: 45.86% Speed: 50098.88 KB/sProgress: 46.00% Speed: 49688.35 KB/sProgress: 46.15% Speed: 49816.59 KB/sProgress: 46.29% Speed: 49681.15 KB/sProgress: 46.44% Speed: 49807.20 KB/sProgress: 46.58% Speed: 49864.88 KB/sProgress: 46.73% Speed: 50007.07 KB/sProgress: 46.87% Speed: 49530.77 KB/sProgress: 47.01% Speed: 49669.64 KB/sProgress: 47.16% Speed: 49606.21 KB/sProgress: 47.30% Speed: 49743.07 KB/sProgress: 47.45% Speed: 49884.36 KB/sProgress: 47.59% Speed: 50026.03 KB/sProgress: 47.73% Speed: 49715.83 KB/sProgress: 47.88% Speed: 49853.31 KB/sProgress: 48.02% Speed: 49596.85 KB/sProgress: 48.17% Speed: 49731.23 KB/sProgress: 48.31% Speed: 49870.38 KB/sProgress: 48.46% Speed: 50009.71 KB/sProgress: 48.60% Speed: 49588.41 KB/sProgress: 48.74% Speed: 49723.13 KB/sProgress: 48.89% Speed: 49471.37 KB/sProgress: 49.03% Speed: 49604.79 KB/sProgress: 49.18% Speed: 49699.04 KB/sProgress: 49.32% Speed: 49834.61 KB/sProgress: 49.47% Speed: 49502.87 KB/sProgress: 49.61% Speed: 49634.81 KB/sProgress: 49.75% Speed: 49672.73 KB/sProgress: 49.90% Speed: 49805.59 KB/sProgress: 50.04% Speed: 49940.33 KB/sProgress: 50.19% Speed: 50075.01 KB/sProgress: 50.33% Speed: 49425.14 KB/sProgress: 50.48% Speed: 49533.94 KB/sProgress: 50.62% Speed: 49469.11 KB/sProgress: 50.76% Speed: 49598.17 KB/sProgress: 50.91% Speed: 49729.68 KB/sProgress: 51.05% Speed: 49861.55 KB/sProgress: 51.20% Speed: 49671.09 KB/sProgress: 51.34% Speed: 49799.80 KB/sProgress: 51.48% Speed: 49827.51 KB/sProgress: 51.63% Speed: 49955.86 KB/sProgress: 51.77% Speed: 50046.49 KB/sProgress: 51.92% Speed: 50175.89 KB/sProgress: 52.06% Speed: 49672.35 KB/sProgress: 52.21% Speed: 49798.52 KB/sProgress: 52.35% Speed: 49837.80 KB/sProgress: 52.49% Speed: 49964.87 KB/sProgress: 52.64% Speed: 50091.69 KB/sProgress: 52.78% Speed: 50220.30 KB/sProgress: 52.93% Speed: 49300.70 KB/sProgress: 53.07% Speed: 49422.96 KB/sProgress: 53.22% Speed: 49548.94 KB/sProgress: 53.36% Speed: 49675.26 KB/sProgress: 53.50% Speed: 49801.75 KB/sProgress: 53.65% Speed: 49927.40 KB/sProgress: 53.79% Speed: 49603.49 KB/sProgress: 53.94% Speed: 49725.44 KB/sProgress: 54.08% Speed: 49674.75 KB/sProgress: 54.22% Speed: 49796.21 KB/sProgress: 54.37% Speed: 49853.48 KB/sProgress: 54.51% Speed: 49976.06 KB/sProgress: 54.66% Speed: 49595.50 KB/sProgress: 54.80% Speed: 49715.12 KB/sProgress: 54.95% Speed: 49761.74 KB/sProgress: 55.09% Speed: 49882.64 KB/sProgress: 55.23% Speed: 49968.30 KB/sProgress: 55.38% Speed: 50089.22 KB/sProgress: 55.52% Speed: 49258.02 KB/sProgress: 55.67% Speed: 49371.84 KB/sProgress: 55.81% Speed: 49402.76 KB/sProgress: 55.96% Speed: 49520.24 KB/sProgress: 56.10% Speed: 49639.94 KB/sProgress: 56.24% Speed: 49759.23 KB/sProgress: 56.39% Speed: 49613.46 KB/sProgress: 56.53% Speed: 49729.44 KB/sProgress: 56.68% Speed: 49716.64 KB/sProgress: 56.82% Speed: 49832.44 KB/sProgress: 56.96% Speed: 49913.39 KB/sProgress: 57.11% Speed: 50029.20 KB/sProgress: 57.25% Speed: 49538.90 KB/sProgress: 57.40% Speed: 49652.60 KB/sProgress: 57.54% Speed: 49769.59 KB/sProgress: 57.69% Speed: 49886.16 KB/sProgress: 57.83% Speed: 49961.48 KB/sProgress: 57.97% Speed: 50077.15 KB/sProgress: 58.12% Speed: 49399.19 KB/sProgress: 58.26% Speed: 49511.28 KB/sProgress: 58.41% Speed: 49544.26 KB/sProgress: 58.55% Speed: 49656.64 KB/sProgress: 58.70% Speed: 49734.17 KB/sProgress: 58.84% Speed: 49847.83 KB/sProgress: 58.98% Speed: 49552.68 KB/sProgress: 59.13% Speed: 49663.07 KB/sProgress: 59.27% Speed: 49704.36 KB/sProgress: 59.42% Speed: 49815.78 KB/sProgress: 59.56% Speed: 49871.99 KB/sProgress: 59.70% Speed: 49983.93 KB/sProgress: 59.85% Speed: 49772.99 KB/sProgress: 59.99% Speed: 49882.41 KB/sProgress: 60.14% Speed: 49924.35 KB/sProgress: 60.28% Speed: 50034.97 KB/sProgress: 60.43% Speed: 50063.59 KB/sProgress: 60.57% Speed: 50173.07 KB/sProgress: 60.71% Speed: 49602.75 KB/sProgress: 60.86% Speed: 49698.41 KB/sProgress: 61.00% Speed: 49535.22 KB/sProgress: 61.15% Speed: 49637.08 KB/sProgress: 61.29% Speed: 49743.04 KB/sProgress: 61.44% Speed: 49849.48 KB/sProgress: 61.58% Speed: 49674.77 KB/sProgress: 61.72% Speed: 49776.60 KB/sProgress: 61.87% Speed: 49775.42 KB/sProgress: 62.01% Speed: 49879.20 KB/sProgress: 62.16% Speed: 49984.83 KB/sProgress: 62.30% Speed: 50091.11 KB/sProgress: 62.44% Speed: 49634.19 KB/sProgress: 62.59% Speed: 49735.23 KB/sProgress: 62.73% Speed: 48951.22 KB/sProgress: 62.88% Speed: 49049.44 KB/sProgress: 63.02% Speed: 49076.22 KB/sProgress: 63.17% Speed: 49176.51 KB/sProgress: 63.31% Speed: 49200.38 KB/sProgress: 63.45% Speed: 49300.59 KB/sProgress: 63.60% Speed: 49403.07 KB/sProgress: 63.74% Speed: 49505.51 KB/sProgress: 63.89% Speed: 49546.56 KB/sProgress: 64.03% Speed: 49643.18 KB/sProgress: 64.18% Speed: 49558.64 KB/sProgress: 64.32% Speed: 49656.33 KB/sProgress: 64.46% Speed: 49647.41 KB/sProgress: 64.61% Speed: 49746.13 KB/sProgress: 64.75% Speed: 49458.31 KB/sProgress: 64.90% Speed: 49555.44 KB/sProgress: 65.04% Speed: 49271.65 KB/sProgress: 65.18% Speed: 49358.08 KB/sProgress: 65.33% Speed: 49456.82 KB/sProgress: 65.47% Speed: 49556.16 KB/sProgress: 65.62% Speed: 49502.99 KB/sProgress: 65.76% Speed: 49594.42 KB/sProgress: 65.91% Speed: 49623.08 KB/sProgress: 66.05% Speed: 49718.63 KB/sProgress: 66.19% Speed: 49817.68 KB/sProgress: 66.34% Speed: 49916.69 KB/sProgress: 66.48% Speed: 49581.21 KB/sProgress: 66.63% Speed: 49675.38 KB/sProgress: 66.77% Speed: 49628.81 KB/sProgress: 66.92% Speed: 49722.65 KB/sProgress: 67.06% Speed: 49731.98 KB/sProgress: 67.20% Speed: 49826.70 KB/sProgress: 67.35% Speed: 49015.83 KB/sProgress: 67.49% Speed: 49103.59 KB/sProgress: 67.64% Speed: 49148.88 KB/sProgress: 67.78% Speed: 49245.21 KB/sProgress: 67.92% Speed: 49343.21 KB/sProgress: 68.07% Speed: 49441.18 KB/sProgress: 68.21% Speed: 49488.46 KB/sProgress: 68.36% Speed: 49585.51 KB/sProgress: 68.50% Speed: 49627.00 KB/sProgress: 68.65% Speed: 49723.58 KB/sProgress: 68.79% Speed: 49820.91 KB/sProgress: 68.93% Speed: 49918.67 KB/sProgress: 69.08% Speed: 49632.44 KB/sProgress: 69.22% Speed: 49720.09 KB/sProgress: 69.37% Speed: 49729.88 KB/sProgress: 69.51% Speed: 49821.14 KB/sProgress: 69.66% Speed: 49914.04 KB/sProgress: 69.80% Speed: 50009.07 KB/sProgress: 69.94% Speed: 49654.45 KB/sProgress: 70.09% Speed: 49746.66 KB/sProgress: 70.23% Speed: 49691.22 KB/sProgress: 70.38% Speed: 49784.02 KB/sProgress: 70.52% Speed: 49878.31 KB/sProgress: 70.67% Speed: 49973.62 KB/sProgress: 70.81% Speed: 49507.56 KB/sProgress: 70.95% Speed: 49598.71 KB/sProgress: 71.10% Speed: 49692.65 KB/sProgress: 71.24% Speed: 49787.31 KB/sProgress: 71.39% Speed: 49881.95 KB/sProgress: 71.53% Speed: 49976.27 KB/sProgress: 71.67% Speed: 49731.76 KB/sProgress: 71.82% Speed: 49823.66 KB/sProgress: 71.96% Speed: 49813.50 KB/sProgress: 72.11% Speed: 49904.71 KB/sProgress: 72.25% Speed: 49945.99 KB/sProgress: 72.40% Speed: 50038.40 KB/sProgress: 72.54% Speed: 49676.76 KB/sProgress: 72.68% Speed: 49766.74 KB/sProgress: 72.83% Speed: 49805.68 KB/sProgress: 72.97% Speed: 49896.97 KB/sProgress: 73.12% Speed: 49894.41 KB/sProgress: 73.26% Speed: 49984.90 KB/sProgress: 73.41% Speed: 49599.11 KB/sProgress: 73.55% Speed: 49688.47 KB/sProgress: 73.69% Speed: 49700.33 KB/sProgress: 73.84% Speed: 49789.94 KB/sProgress: 73.98% Speed: 49698.36 KB/sProgress: 74.13% Speed: 49786.75 KB/sProgress: 74.27% Speed: 49693.83 KB/sProgress: 74.41% Speed: 49782.74 KB/sProgress: 74.56% Speed: 49779.31 KB/sProgress: 74.70% Speed: 49868.30 KB/sProgress: 74.85% Speed: 49861.14 KB/sProgress: 74.99% Speed: 49948.06 KB/sProgress: 75.14% Speed: 49436.85 KB/sProgress: 75.28% Speed: 49523.48 KB/sProgress: 75.42% Speed: 49612.32 KB/sProgress: 75.57% Speed: 49701.56 KB/sProgress: 75.71% Speed: 49790.92 KB/sProgress: 75.86% Speed: 49879.98 KB/sProgress: 76.00% Speed: 48189.76 KB/sProgress: 76.15% Speed: 48273.18 KB/sProgress: 76.29% Speed: 47921.96 KB/sProgress: 76.43% Speed: 48004.78 KB/sProgress: 76.58% Speed: 48055.14 KB/sProgress: 76.72% Speed: 48139.53 KB/sProgress: 76.87% Speed: 48192.98 KB/sProgress: 77.01% Speed: 48277.42 KB/sProgress: 77.15% Speed: 48362.48 KB/sProgress: 77.30% Speed: 48447.66 KB/sProgress: 77.44% Speed: 48106.13 KB/sProgress: 77.59% Speed: 48188.13 KB/sProgress: 77.73% Speed: 48272.28 KB/sProgress: 77.88% Speed: 48356.29 KB/sProgress: 78.02% Speed: 48406.31 KB/sProgress: 78.16% Speed: 48489.58 KB/sProgress: 78.31% Speed: 48536.73 KB/sProgress: 78.45% Speed: 48619.77 KB/sProgress: 78.60% Speed: 48643.58 KB/sProgress: 78.74% Speed: 48726.23 KB/sProgress: 78.89% Speed: 48803.27 KB/sProgress: 79.03% Speed: 48886.77 KB/sProgress: 79.17% Speed: 48918.10 KB/sProgress: 79.32% Speed: 49001.09 KB/sProgress: 79.46% Speed: 49083.28 KB/sProgress: 79.61% Speed: 49167.00 KB/sProgress: 79.75% Speed: 49250.98 KB/sProgress: 79.89% Speed: 49334.54 KB/sProgress: 80.04% Speed: 49374.84 KB/sProgress: 80.18% Speed: 49457.38 KB/sProgress: 80.33% Speed: 49540.82 KB/sProgress: 80.47% Speed: 49624.50 KB/sProgress: 80.62% Speed: 49673.54 KB/sProgress: 80.76% Speed: 49756.34 KB/sProgress: 80.90% Speed: 49839.65 KB/sProgress: 81.05% Speed: 49922.94 KB/sProgress: 81.19% Speed: 49656.57 KB/sProgress: 81.34% Speed: 49736.66 KB/sProgress: 81.48% Speed: 49716.01 KB/sProgress: 81.63% Speed: 49796.42 KB/sProgress: 81.77% Speed: 49879.04 KB/sProgress: 81.91% Speed: 49961.64 KB/sProgress: 82.06% Speed: 49503.66 KB/sProgress: 82.20% Speed: 49583.33 KB/sProgress: 82.35% Speed: 49664.78 KB/sProgress: 82.49% Speed: 49746.60 KB/sProgress: 82.63% Speed: 49828.28 KB/sProgress: 82.78% Speed: 49909.94 KB/sProgress: 82.92% Speed: 49559.34 KB/sProgress: 83.07% Speed: 49638.39 KB/sProgress: 83.21% Speed: 49470.46 KB/sProgress: 83.36% Speed: 49549.11 KB/sProgress: 83.50% Speed: 49629.51 KB/sProgress: 83.64% Speed: 49709.89 KB/sProgress: 83.79% Speed: 49667.34 KB/sProgress: 83.93% Speed: 49744.08 KB/sProgress: 84.08% Speed: 49769.58 KB/sProgress: 84.22% Speed: 49848.61 KB/sProgress: 84.37% Speed: 49928.76 KB/sProgress: 84.51% Speed: 50008.89 KB/sProgress: 84.65% Speed: 49752.59 KB/sProgress: 84.80% Speed: 49830.42 KB/sProgress: 84.94% Speed: 49868.31 KB/sProgress: 85.09% Speed: 49947.06 KB/sProgress: 85.23% Speed: 49142.38 KB/sProgress: 85.37% Speed: 49218.33 KB/sProgress: 85.52% Speed: 49237.67 KB/sProgress: 85.66% Speed: 49314.60 KB/sProgress: 85.81% Speed: 49392.12 KB/sProgress: 85.95% Speed: 49470.11 KB/sProgress: 86.10% Speed: 49519.80 KB/sProgress: 86.24% Speed: 49596.74 KB/sProgress: 86.38% Speed: 49615.66 KB/sProgress: 86.53% Speed: 49692.11 KB/sProgress: 86.67% Speed: 49746.57 KB/sProgress: 86.82% Speed: 49823.56 KB/sProgress: 86.96% Speed: 49664.39 KB/sProgress: 87.11% Speed: 49740.04 KB/sProgress: 87.25% Speed: 49761.45 KB/sProgress: 87.39% Speed: 49837.83 KB/sProgress: 87.54% Speed: 49914.94 KB/sProgress: 87.68% Speed: 49992.39 KB/sProgress: 87.83% Speed: 49554.64 KB/sProgress: 87.97% Speed: 49629.39 KB/sProgress: 88.12% Speed: 49676.42 KB/sProgress: 88.26% Speed: 49752.18 KB/sProgress: 88.40% Speed: 49805.48 KB/sProgress: 88.55% Speed: 49881.17 KB/sProgress: 88.69% Speed: 49653.22 KB/sProgress: 88.84% Speed: 49727.25 KB/sProgress: 88.98% Speed: 49773.01 KB/sProgress: 89.12% Speed: 49847.69 KB/sProgress: 89.27% Speed: 49890.33 KB/sProgress: 89.41% Speed: 49965.17 KB/sProgress: 89.56% Speed: 49585.47 KB/sProgress: 89.70% Speed: 49658.82 KB/sProgress: 89.85% Speed: 49646.28 KB/sProgress: 89.99% Speed: 49719.60 KB/sProgress: 90.13% Speed: 49714.39 KB/sProgress: 90.28% Speed: 49787.56 KB/sProgress: 90.42% Speed: 49636.97 KB/sProgress: 90.57% Speed: 49709.57 KB/sProgress: 90.71% Speed: 49744.95 KB/sProgress: 90.86% Speed: 49813.23 KB/sProgress: 91.00% Speed: 49830.30 KB/sProgress: 91.14% Speed: 49902.93 KB/sProgress: 91.29% Speed: 48937.40 KB/sProgress: 91.43% Speed: 49007.93 KB/sProgress: 91.58% Speed: 49080.37 KB/sProgress: 91.72% Speed: 49144.19 KB/sProgress: 91.86% Speed: 49150.27 KB/sProgress: 92.01% Speed: 49214.19 KB/sProgress: 92.15% Speed: 49286.45 KB/sProgress: 92.30% Speed: 49358.93 KB/sProgress: 92.44% Speed: 49430.94 KB/sProgress: 92.59% Speed: 49503.16 KB/sProgress: 92.73% Speed: 49535.54 KB/sProgress: 92.87% Speed: 49603.01 KB/sProgress: 93.02% Speed: 49466.22 KB/sProgress: 93.16% Speed: 49533.74 KB/sProgress: 93.31% Speed: 49561.27 KB/sProgress: 93.45% Speed: 49630.28 KB/sProgress: 93.60% Speed: 49654.50 KB/sProgress: 93.74% Speed: 49722.51 KB/sProgress: 93.88% Speed: 49655.80 KB/sProgress: 94.03% Speed: 49723.60 KB/sProgress: 94.17% Speed: 49720.99 KB/sProgress: 94.32% Speed: 49788.88 KB/sProgress: 94.46% Speed: 49819.35 KB/sProgress: 94.60% Speed: 49887.94 KB/sProgress: 94.75% Speed: 49586.94 KB/sProgress: 94.89% Speed: 49652.81 KB/sProgress: 95.04% Speed: 49596.65 KB/sProgress: 95.18% Speed: 49662.89 KB/sProgress: 95.33% Speed: 49731.45 KB/sProgress: 95.47% Speed: 49800.10 KB/sProgress: 95.61% Speed: 49700.50 KB/sProgress: 95.76% Speed: 49766.57 KB/sProgress: 95.90% Speed: 49762.37 KB/sProgress: 96.05% Speed: 49828.98 KB/sProgress: 96.19% Speed: 49897.01 KB/sProgress: 96.34% Speed: 49965.25 KB/sProgress: 96.48% Speed: 49548.97 KB/sProgress: 96.62% Speed: 49613.62 KB/sProgress: 96.77% Speed: 49680.65 KB/sProgress: 96.91% Speed: 49748.22 KB/sProgress: 97.06% Speed: 49815.65 KB/sProgress: 97.20% Speed: 49883.29 KB/sProgress: 97.34% Speed: 49661.66 KB/sProgress: 97.49% Speed: 49725.42 KB/sProgress: 97.63% Speed: 49726.59 KB/sProgress: 97.78% Speed: 49792.30 KB/sProgress: 97.92% Speed: 49831.83 KB/sProgress: 98.07% Speed: 49898.34 KB/sProgress: 98.21% Speed: 49518.95 KB/sProgress: 98.35% Speed: 49581.56 KB/sProgress: 98.50% Speed: 49603.21 KB/sProgress: 98.64% Speed: 49668.10 KB/sProgress: 98.79% Speed: 49734.26 KB/sProgress: 98.93% Speed: 49800.40 KB/sProgress: 99.08% Speed: 49770.27 KB/sProgress: 99.22% Speed: 49832.38 KB/sProgress: 99.36% Speed: 49801.93 KB/sProgress: 99.51% Speed: 49865.62 KB/sProgress: 99.65% Speed: 49890.29 KB/sProgress: 99.80% Speed: 49955.18 KB/sProgress: 99.94% Speed: 49765.38 KB/sProgress: 100.00% Speed: 49785.27 KB/s
+[32m[23:43:12.084][0m [Core] [1m[INFO][0m [astrbot.main:123]: [1m
      ___           _______.___________..______      .______     ______   .___________.
     /   \         /       |           ||   _  \     |   _  \   /  __  \  |           |
    /  ^  \       |   (----`---|  |----`|  |_)  |    |  |_)  | |  |  |  | `---|  |----`
@@ -91,25 +94,25 @@
 /__/     \__\ |_______/       |__|     | _| `._____||______/   \______/      |__|
 
 [0m
-[32m[22:05:36.504][0m [Core] [1m[INFO][0m [core.core_lifecycle:163]: [1mAstrBot v4.28.0-beta.1[0m
-[32m[22:05:36.624][0m [Core] [1m[INFO][0m [utils.migra_helper:393]: [1mMigrating provider nine-router-flash to new structure[0m
-[32m[22:05:36.628][0m [Core] [1m[INFO][0m [utils.migra_helper:424]: [1mProvider-source structure migration completed[0m
-[32m[22:05:36.634][0m [Core] [1m[INFO][0m [core.persona_mgr:43]: [1mLoaded 0 personas.[0m
-[32m[22:05:36.640][0m [Core] [1m[INFO][0m [star.star_manager:1123]: [1mLoading plugin webui_link ...[0m
-[32m[22:05:36.644][0m [Core] [1m[INFO][0m [star.star_manager:1207]: [1mPlugin webui_link (v1.0.0) by mokingh: DM the live WebUI tunnel link + credentials with /webui[0m
-[32m[22:05:36.645][0m [Core] [1m[INFO][0m [star.base:45]: [1mPlugin webui_link log level: INFO.[0m
-[32m[22:05:36.645][0m [Core] [1m[INFO][0m [star.star_manager:1123]: [1mLoading plugin astrbot ...[0m
-[32m[22:05:36.655][0m [Core] [1m[INFO][0m [star.star_manager:1207]: [1mPlugin astrbot (4.4.0) by AstrBot Team: AstrBot's internal plugin, providing some basic capabilities.[0m
-[32m[22:05:36.655][0m [Core] [1m[INFO][0m [star.star_manager:1123]: [1mLoading plugin builtin_commands ...[0m
-[32m[22:05:36.670][0m [Core] [1m[INFO][0m [star.star_manager:1207]: [1mPlugin builtin_commands (0.0.1) by Soulter: AstrBot's internal plugin, providing all built-in commands such as /reset.[0m
-[32m[22:05:36.674][0m [Core] [1m[INFO][0m [provider.manager:676]: [1mLoading model openai_chat_completion(nine-router-flash) ...[0m
-[32m[22:05:37.047][0m [Core] [1m[INFO][0m [provider.manager:781]: [1mSelected openai_chat_completion(nine-router-flash) as default chat model provider[0m
-[32m[22:05:37.049][0m [Core] [1m[INFO][0m [t2i.network_strategy:131]: [1mSuccessfully got 2 official T2I endpoints.[0m
-[32m[22:05:37.062][0m [Core] [1m[INFO][0m [knowledge_base.kb_mgr:64]: [1mKnowledgeBase database initialized: /home/runner/work/astrbot-cloud/astrbot-cloud/astrbot-data-root/data/knowledge_base/kb.db[0m
-[32m[22:05:37.421][0m [Core] [1m[INFO][0m [platform.manager:129]: [1mLoading IM platform adapter telegram(telegram) ...[0m
-[32m[22:05:37.566][0m [Core] [1m[INFO][0m [dashboard.server:438]: [1mInitialized random JWT secret for dashboard.[0m
-[32m[22:05:37.753][0m [Core] [1m[INFO][0m [dashboard.server:543]: [1mStarting WebUI at http://127.0.0.1:6185[0m
-[32m[22:05:37.753][0m [Core] [1m[INFO][0m [dashboard.server:588]: [1m
+[32m[23:43:12.085][0m [Core] [1m[INFO][0m [core.core_lifecycle:163]: [1mAstrBot v4.28.0-beta.1[0m
+[32m[23:43:12.175][0m [Core] [1m[INFO][0m [utils.migra_helper:393]: [1mMigrating provider nine-router-flash to new structure[0m
+[32m[23:43:12.179][0m [Core] [1m[INFO][0m [utils.migra_helper:424]: [1mProvider-source structure migration completed[0m
+[32m[23:43:12.184][0m [Core] [1m[INFO][0m [core.persona_mgr:43]: [1mLoaded 0 personas.[0m
+[32m[23:43:12.190][0m [Core] [1m[INFO][0m [star.star_manager:1123]: [1mLoading plugin webui_link ...[0m
+[32m[23:43:12.194][0m [Core] [1m[INFO][0m [star.star_manager:1207]: [1mPlugin webui_link (v1.0.0) by mokingh: DM the live WebUI tunnel link + credentials with /webui[0m
+[32m[23:43:12.195][0m [Core] [1m[INFO][0m [star.base:45]: [1mPlugin webui_link log level: INFO.[0m
+[32m[23:43:12.195][0m [Core] [1m[INFO][0m [star.star_manager:1123]: [1mLoading plugin astrbot ...[0m
+[32m[23:43:12.204][0m [Core] [1m[INFO][0m [star.star_manager:1207]: [1mPlugin astrbot (4.4.0) by AstrBot Team: AstrBot's internal plugin, providing some basic capabilities.[0m
+[32m[23:43:12.205][0m [Core] [1m[INFO][0m [star.star_manager:1123]: [1mLoading plugin builtin_commands ...[0m
+[32m[23:43:12.219][0m [Core] [1m[INFO][0m [star.star_manager:1207]: [1mPlugin builtin_commands (0.0.1) by Soulter: AstrBot's internal plugin, providing all built-in commands such as /reset.[0m
+[32m[23:43:12.222][0m [Core] [1m[INFO][0m [provider.manager:676]: [1mLoading model openai_chat_completion(nine-router-flash) ...[0m
+[32m[23:43:12.589][0m [Core] [1m[INFO][0m [provider.manager:781]: [1mSelected openai_chat_completion(nine-router-flash) as default chat model provider[0m
+[32m[23:43:12.590][0m [Core] [1m[INFO][0m [t2i.network_strategy:131]: [1mSuccessfully got 2 official T2I endpoints.[0m
+[32m[23:43:12.604][0m [Core] [1m[INFO][0m [knowledge_base.kb_mgr:64]: [1mKnowledgeBase database initialized: /home/runner/work/astrbot-cloud/astrbot-cloud/astrbot-data-root/data/knowledge_base/kb.db[0m
+[32m[23:43:12.894][0m [Core] [1m[INFO][0m [platform.manager:129]: [1mLoading IM platform adapter telegram(telegram) ...[0m
+[32m[23:43:13.034][0m [Core] [1m[INFO][0m [dashboard.server:438]: [1mInitialized random JWT secret for dashboard.[0m
+[32m[23:43:13.220][0m [Core] [1m[INFO][0m [dashboard.server:543]: [1mStarting WebUI at http://127.0.0.1:6185[0m
+[32m[23:43:13.220][0m [Core] [1m[INFO][0m [dashboard.server:588]: [1m
  ✨✨✨
   AstrBot v4.28.0-beta.1 WebUI is ready
 
@@ -118,99 +121,10 @@
  ✨✨✨
 Set dashboard.host in data/cmd_config.json to enable remote access.
 [0m
-[32m[22:05:37.754][0m [Core] [1m[INFO][0m [utils.event_loop_diagnostics:195]: [1mEvent loop faulthandler watchdog enabled: timeout=30.000s interval=5.000s. If the loop is blocked, Python thread stacks will be written to /home/runner/work/astrbot-cloud/astrbot-cloud/astrbot-data-root/data/logs/event_loop_watchdog.log (rotates at 1048576 bytes).[0m
-[32m[22:05:37.754][0m [Core] [1m[INFO][0m [core.core_lifecycle:364]: [1mAstrBot started.[0m
-[32m[22:05:37.757][0m [Core] [1m[INFO][0m [utils.temp_dir_cleaner:127]: [1mTempDirCleaner started. interval=600s cleanup_ratio=0.3[0m
-[2026-09-01 22:05:37 +0000] [2422] [INFO] Running on http://127.0.0.1:6185 (CTRL + C to quit)
-[32m[22:05:38.121][0m [Core] [1m[INFO][0m [utils.llm_metadata:79]: [1mSuccessfully fetched metadata for 3546 LLMs from https://models.dev/api.json.[0m
-[32m[22:05:38.332][0m [Core] [1m[INFO][0m [telegram.tg_adapter:253]: [1mStarting Telegram polling...[0m
-[32m[22:05:38.425][0m [Core] [1m[INFO][0m [telegram.tg_adapter:255]: [1mTelegram Platform Adapter is running.[0m
-No error handlers are registered, logging exception.
-Traceback (most recent call last):
-  File "/tmp/astrbot/astrbot/core/utils/media_utils.py", line 1170, in convert_audio_format
-    process = await asyncio.create_subprocess_exec(
-              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    ...<3 lines>...
-    )
-    ^
-  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/subprocess.py", line 224, in create_subprocess_exec
-    transport, protocol = await loop.subprocess_exec(
-                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    ...<3 lines>...
-        stderr=stderr, **kwds)
-        ^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/base_events.py", line 1813, in subprocess_exec
-    transport = await self._make_subprocess_transport(
-                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-        protocol, popen_args, False, stdin, stdout, stderr,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-        bufsize, **kwargs)
-        ^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/unix_events.py", line 214, in _make_subprocess_transport
-    transp = _UnixSubprocessTransport(self, protocol, args, shell,
-                                    stdin, stdout, stderr, bufsize,
-                                    waiter=waiter, extra=extra,
-                                    **kwargs)
-  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/base_subprocess.py", line 39, in __init__
-    self._start(args=args, shell=shell, stdin=stdin, stdout=stdout,
-    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-                stderr=stderr, bufsize=bufsize, **kwargs)
-                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/unix_events.py", line 869, in _start
-    self._proc = subprocess.Popen(
-                 ~~~~~~~~~~~~~~~~^
-        args, shell=shell, stdin=stdin, stdout=stdout, stderr=stderr,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-        universal_newlines=False, bufsize=bufsize, **kwargs)
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/subprocess.py", line 1039, in __init__
-    self._execute_child(args, executable, preexec_fn, close_fds,
-    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-                        pass_fds, cwd, env,
-                        ^^^^^^^^^^^^^^^^^^^
-    ...<5 lines>...
-                        gid, gids, uid, umask,
-                        ^^^^^^^^^^^^^^^^^^^^^^
-                        start_new_session, process_group)
-                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/subprocess.py", line 1991, in _execute_child
-    raise child_exception_type(errno_num, err_msg, err_filename)
-FileNotFoundError: [Errno 2] No such file or directory: 'ffmpeg'
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages/telegram/ext/_application.py", line 1315, in process_update
-    await coroutine
-  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages/telegram/ext/_handlers/basehandler.py", line 159, in handle_update
-    return await self.callback(update, context)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/tmp/astrbot/astrbot/core/platform/sources/telegram/tg_adapter.py", line 439, in message_handler
-    abm = await self.convert_message(update, context)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/tmp/astrbot/astrbot/core/platform/sources/telegram/tg_adapter.py", line 661, in convert_message
-    path_wav = await MediaResolver(
-               ^^^^^^^^^^^^^^^^^^^^
-    ...<3 lines>...
-    ).to_path(target_format="wav")
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/tmp/astrbot/astrbot/core/utils/media_utils.py", line 732, in to_path
-    resolved = await self._resolve_path(
-               ^^^^^^^^^^^^^^^^^^^^^^^^^
-    ...<2 lines>...
-    )
-    ^
-  File "/tmp/astrbot/astrbot/core/utils/media_utils.py", line 666, in _resolve_path
-    await ensure_wav(str(resolved_path))
-  File "/tmp/astrbot/astrbot/core/utils/media_utils.py", line 1275, in ensure_wav
-    return await convert_audio_to_wav(audio_path, output_path)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/tmp/astrbot/astrbot/core/utils/media_utils.py", line 1226, in convert_audio_to_wav
-    return await convert_audio_format(
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    ...<3 lines>...
-    )
-    ^
-  File "/tmp/astrbot/astrbot/core/utils/media_utils.py", line 1194, in convert_audio_format
-    raise Exception("ffmpeg not found")
-Exception: ffmpeg not found
+[32m[23:43:13.221][0m [Core] [1m[INFO][0m [utils.event_loop_diagnostics:195]: [1mEvent loop faulthandler watchdog enabled: timeout=30.000s interval=5.000s. If the loop is blocked, Python thread stacks will be written to /home/runner/work/astrbot-cloud/astrbot-cloud/astrbot-data-root/data/logs/event_loop_watchdog.log (rotates at 1048576 bytes).[0m
+[32m[23:43:13.222][0m [Core] [1m[INFO][0m [core.core_lifecycle:364]: [1mAstrBot started.[0m
+[32m[23:43:13.224][0m [Core] [1m[INFO][0m [utils.temp_dir_cleaner:127]: [1mTempDirCleaner started. interval=600s cleanup_ratio=0.3[0m
+[2026-09-01 23:43:13 +0000] [2417] [INFO] Running on http://127.0.0.1:6185 (CTRL + C to quit)
+[32m[23:43:13.506][0m [Core] [1m[INFO][0m [utils.llm_metadata:79]: [1mSuccessfully fetched metadata for 3548 LLMs from https://models.dev/api.json.[0m
+[32m[23:43:13.704][0m [Core] [1m[INFO][0m [telegram.tg_adapter:253]: [1mStarting Telegram polling...[0m
+[32m[23:43:13.790][0m [Core] [1m[INFO][0m [telegram.tg_adapter:255]: [1mTelegram Platform Adapter is running.[0m
