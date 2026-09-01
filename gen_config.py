@@ -3,12 +3,24 @@
 
 AstrBot auto-fills missing keys from DEFAULT_CONFIG at load, so we only write
 our overrides. Secrets never touch disk in plaintext — injected via env at boot.
+
+v2 fixes (2026-09-01):
+- whitelist uses unified_msg_origin format: "telegram:FriendMessage:<id>"
+  (raw IDs are NOT matched by the pipeline's WhitelistCheckStage)
+- admins_id set to real Telegram IDs (string form)
+- dashboard bound to 127.0.0.1, port 6185
+- root path strategy: ASTRBOT_ROOT env must point at the dir CONTAINING data/
+  (the workflow exports ASTRBOT_ROOT=$ASTRBOT_DATA_DIR/..)
 """
 import json
 import os
 
-DATA_DIR = os.environ.get("ASTRBOT_DATA_DIR", "/tmp/astrbot-data")
-DATA_DIR = os.path.abspath(DATA_DIR)
+DATA_DIR = os.path.abspath(os.environ.get("ASTRBOT_DATA_DIR", "/tmp/astrbot-data"))
+
+ADMIN_IDS = [x.strip() for x in os.environ.get("ASTRBOT_ADMIN_IDS", "6592796294,8439794110").split(",") if x.strip()]
+
+# Whitelist entries: platform_id:message_type:session_id
+WHITELIST = [f"telegram:FriendMessage:{i}" for i in ADMIN_IDS]
 
 config = {
     # --- Provider: 9router OpenAI-compatible ---
@@ -43,7 +55,7 @@ config = {
             "id": "telegram",
             "type": "telegram",
             "enable": True,
-            "telegram_token": "$TG_BOT_TOKEN",  # substituted by bootstrapper below
+            "telegram_token": os.environ.get("TG_BOT_TOKEN", ""),
             "start_message": "AstrBot on the cloud ☁️",
             "telegram_api_base_url": "https://api.telegram.org/bot",
             "telegram_file_base_url": "https://api.telegram.org/file/bot",
@@ -58,60 +70,52 @@ config = {
         "runner_type": "local",
         "config": {"model": {"provider_id": "nine-router-flash"}},
     },
-    # --- Access control: whitelist ON, only Boss's IDs ---
+    # --- Access control ---
     "platform_settings": {
         "unique_session": False,
         "rate_limit": {"time": 60, "count": 30, "strategy": "stall"},
         "enable_id_white_list": True,
-        "id_whitelist": [
-            int(x) for x in os.environ.get("ASTRBOT_ADMIN_IDS", "6592796294,8439794110").split(",") if x.strip()
-        ],
+        "id_whitelist": WHITELIST,
         "id_whitelist_log": True,
         "wl_ignore_admin_on_group": False,
         "wl_ignore_admin_on_friend": False,
         "reply_with_mention": False,
         "reply_with_quote": False,
-        "no_permission_reply": False,
+        "no_permission_reply": True,
+        "friend_message_needs_wake_prefix": False,
+        "ignore_bot_self_message": True,
     },
-    # --- Persona: street-smart assistant (edit later via config) ---
-    "provider_settings.prompt_prefix": None,  # sentinel removed below
+    # --- Admins (string IDs, compared via str(event.get_sender_id())) ---
+    "admins_id": ADMIN_IDS,
+    # --- Persona ---
+    "persona": [
+        {
+            "name": "default",
+            "prompt": os.environ.get(
+                "ASTRBOT_PERSONA",
+                "You are AstrBot, a helpful, direct AI assistant on Telegram. "
+                "Be concise, friendly, no fluff.",
+            ),
+            "begin_dialogs": [],
+            "mood_imitation_dialogs": [],
+        }
+    ],
+    # --- Dashboard: loopback only ---
+    "dashboard": {
+        "enable": True,
+        "username": "admin",
+        "password": os.environ.get("ASTRBOT_DASH_PASSWORD", "changeme-cloud"),
+        "host": "127.0.0.1",
+        "port": 6185,
+    },
 }
-config.pop("provider_settings.prompt_prefix", None)
-
-# --- Persona prompt lives under provider_settings.persona_v3 or persona section ---
-persona_prompt = os.environ.get(
-    "ASTRBOT_PERSONA",
-    "You are AstrBot, a helpful, direct AI assistant on Telegram. "
-    "Be concise, friendly, no fluff.",
-)
-config["persona"] = [
-    {
-        "name": "default",
-        "prompt": persona_prompt,
-        "begin_dialogs": [],
-        "mood_imitation_dialogs": [],
-    }
-]
-
-# --- Dashboard: bind loopback-only so it doesn't crash the runner ---
-config["dashboard"] = {
-    "enable": True,
-    "username": "admin",
-    "password": os.environ.get("ASTRBOT_DASH_PASSWORD", "changeme-cloud"),
-    "host": "127.0.0.1",
-    "port": 6185,
-}
-
-# --- Telegram token: real value substituted from env (not $-env syntax — AstrBot
-# only resolves $ENV for provider keys, not platform tokens) ---
-tg_token = os.environ.get("TG_BOT_TOKEN", "")
-config["platform"][0]["telegram_token"] = tg_token
 
 os.makedirs(DATA_DIR, exist_ok=True)
 out = os.path.join(DATA_DIR, "cmd_config.json")
 with open(out, "w", encoding="utf-8") as f:
     json.dump(config, f, indent=2, ensure_ascii=False)
-print(f"[gen-config] wrote {out} ({os.path.getsize(out)} bytes)")
-print(f"[gen-config] provider model: {config['provider'][0]['model']}")
-print(f"[gen-config] tg token present: {bool(tg_token)}")
-print(f"[gen-config] whitelist: {config['platform_settings']['id_whitelist']}")
+print(f"[gen-config v2] wrote {out} ({os.path.getsize(out)} bytes)")
+print(f"[gen-config v2] provider model: {config['provider'][0]['model']}")
+print(f"[gen-config v2] tg token present: {bool(config['platform'][0]['telegram_token'])}")
+print(f"[gen-config v2] admins: {config['admins_id']}")
+print(f"[gen-config v2] whitelist: {config['platform_settings']['id_whitelist']}")

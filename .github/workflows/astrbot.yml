@@ -49,17 +49,17 @@ jobs:
           ROUTER_URL: ${{ secrets.ROUTER_URL }}
           MODEL_NAME: "Flash-lite"
           ASTRBOT_ADMIN_IDS: ${{ secrets.ASTRBOT_ADMIN_IDS }}
-          ASTRBOT_DATA_DIR: ${{ github.workspace }}/astrbot-data
+          ASTRBOT_DATA_DIR: ${{ github.workspace }}/astrbot-data-root/data
         run: python gen_config.py
 
       - name: Restore state from last run
         run: |
-          mkdir -p astrbot-data
+          mkdir -p astrbot-data-root/data
           if git ls-remote --exit-code --heads origin state >/dev/null 2>&1; then
             git fetch origin state --depth 1
             git checkout origin/state -- state/ 2>/dev/null || true
             # restore into data dir (skip cmd_config.json — freshly generated wins)
-            rsync -a state/ astrbot-data/ --exclude cmd_config.json || true
+            rsync -a state/ astrbot-data-root/data/ --exclude cmd_config.json || true
             echo "state restored from origin/state"
           else
             echo "no prior state branch — fresh boot"
@@ -68,7 +68,7 @@ jobs:
       - name: Start state pusher (background)
         env:
           GITHUB_TOKEN: ${{ github.token }}
-          ASTRBOT_DATA_DIR: ${{ github.workspace }}/astrbot-data
+          ASTRBOT_DATA_DIR: ${{ github.workspace }}/astrbot-data-root/data
           STATE_PUSH_INTERVAL: "10"
         run: |
           nohup python push_state.py > push_state.log 2>&1 &
@@ -79,7 +79,9 @@ jobs:
         env:
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
           ROUTER_API_KEY: ${{ secrets.ROUTER_API_KEY }}
-          ASTRBOT_DATA_DIR: ${{ github.workspace }}/astrbot-data
+          # CRITICAL: AstrBot resolves data/ from ASTRBOT_ROOT (cwd fallback).
+          # Root = parent of the data dir we generated.
+          ASTRBOT_ROOT: ${{ github.workspace }}/astrbot-data-root
           RUN_MINUTES: "285"
         run: |
           echo "Running AstrBot @ $ASTRBOT_COMMIT for ${RUN_MINUTES}m"
