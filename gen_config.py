@@ -100,7 +100,7 @@ config = {
             "mood_imitation_dialogs": [],
         }
     ],
-    # --- Dashboard: loopback only ---
+    # --- Dashboard: loopback only (cloudflared tunnel exposes it publicly) ---
     "dashboard": {
         "enable": True,
         "username": "admin",

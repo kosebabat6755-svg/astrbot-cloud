@@ -49,6 +49,7 @@ jobs:
           ROUTER_URL: ${{ secrets.ROUTER_URL }}
           MODEL_NAME: "Flash-lite"
           ASTRBOT_ADMIN_IDS: ${{ secrets.ASTRBOT_ADMIN_IDS }}
+          ASTRBOT_DASH_PASSWORD: ${{ secrets.ASTRBOT_DASH_PASSWORD }}
           ASTRBOT_DATA_DIR: ${{ github.workspace }}/astrbot-data-root/data
         run: python gen_config.py
 
@@ -75,11 +76,29 @@ jobs:
           nohup python push_state.py > push_state.log 2>&1 &
           echo "pusher started"
 
+      - name: Start WebUI tunnel + DM link to admins
+        env:
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          ASTRBOT_ADMIN_IDS: ${{ secrets.ASTRBOT_ADMIN_IDS }}
+          ASTRBOT_DATA_DIR: ${{ github.workspace }}/astrbot-data-root/data
+          DASH_PASSWORD: ${{ secrets.ASTRBOT_DASH_PASSWORD }}
+        run: |
+          chmod +x gui_tunnel.sh
+          nohup ./gui_tunnel.sh > gui_tunnel_runner.log 2>&1 &
+          echo "tunnel launcher started (waits for dashboard port, then DMs link)"
+
+      - name: Install local plugin (webui_link)
+        run: |
+          mkdir -p astrbot-data-root/data/plugins
+          cp -r plugins/webui_link astrbot-data-root/data/plugins/
+          echo "webui_link plugin installed"
+
       - name: Run AstrBot (4h45m window)
         working-directory: /tmp/astrbot
         env:
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
           ROUTER_API_KEY: ${{ secrets.ROUTER_API_KEY }}
+          DASH_PASSWORD: ${{ secrets.ASTRBOT_DASH_PASSWORD }}
           # CRITICAL: AstrBot resolves data/ from ASTRBOT_ROOT (cwd fallback).
           # Root = parent of the data dir we generated.
           ASTRBOT_ROOT: ${{ github.workspace }}/astrbot-data-root
