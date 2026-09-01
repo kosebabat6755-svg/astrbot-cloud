@@ -85,5 +85,14 @@ jobs:
           RUN_MINUTES: "285"
         run: |
           echo "Running AstrBot @ $ASTRBOT_COMMIT for ${RUN_MINUTES}m"
-          timeout ${RUN_MINUTES}m python main.py || true
+          # tee to workspace so the state pusher can upload boot logs live
+          timeout ${RUN_MINUTES}m python main.py 2>&1 | tee $GITHUB_WORKSPACE/astrbot-boot.log || true
           echo "window ended — exiting cleanly for next cron"
+
+      - name: Upload boot log (always)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: astrbot-boot-log
+          path: astrbot-boot.log
+          retention-days: 3
