@@ -61,8 +61,11 @@ jobs:
             git checkout origin/state -- state/ 2>/dev/null || true
             # restore into data dir (explicitly delete the redacted cmd_config.json from the checkout so it never gets copied or loaded)
             rm -f state/cmd_config.json
+            # dist/ is poison: AstrBot bundles its own matching dist every release.
+            # Restoring an old dist mixes chunk hashes across versions (franken-dist) → WebUI 404s after login.
+            rm -rf state/dist
             rsync -a state/ astrbot-data-root/data/ || true
-            echo "state restored from origin/state (redacted config excluded)"
+            echo "state restored from origin/state (config + dist excluded)"
           else
             echo "no prior state branch — fresh boot"
           fi

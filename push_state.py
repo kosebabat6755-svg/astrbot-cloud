@@ -60,7 +60,7 @@ def push_file(path: Path, rel: str, message: str) -> None:
 def snapshot() -> list[tuple[Path, str]]:
     """Collect pushable files: db, kb, plugins, logs. Skip caches, temps, and cmd_config.json."""
     out = []
-    skip_parts = {"__pycache__", "temp", ".cache", "webchat"}
+    skip_parts = {"__pycache__", "temp", ".cache", "webchat", "dist"}
     for path in STATE_DIR.rglob("*"):
         if not path.is_file():
             continue
@@ -69,6 +69,11 @@ def snapshot() -> list[tuple[Path, str]]:
             continue
         # NEVER push cmd_config.json — secrets are injected from GitHub Secrets on each boot
         if path.name == "cmd_config.json":
+            continue
+        # NEVER push dist/ — AstrBot bundles a matching dashboard dist in its own
+        # package every release. Restoring an old dist mixes chunk hashes across
+        # versions (franken-dist) and 404s the WebUI after login.
+        if rel.parts[0] == "dist":
             continue
         # Skip files > 12MB
         if path.stat().st_size > 12 * 1024 * 1024:
