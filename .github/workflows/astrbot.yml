@@ -39,8 +39,8 @@ jobs:
 
       - name: Install deps
         run: |
-          pip install --quiet -r /tmp/astrbot/requirements.txt
-          cd /tmp/astrbot && pip install --quiet -e . --no-deps || true
+          cd /tmp/astrbot
+          pip install --quiet .
 
       - name: Generate runtime config
         env:
