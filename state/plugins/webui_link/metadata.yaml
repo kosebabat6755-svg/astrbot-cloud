@@ -1,0 +1,5 @@
+name: webui_link
+desc: DM the live WebUI tunnel link + credentials with /webui
+version: v1.0.0
+author: mokingh
+repo: https://github.com/balsicl1234/astrbot-cloud
