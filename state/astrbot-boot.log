@@ -125,3 +125,92 @@ Set dashboard.host in data/cmd_config.json to enable remote access.
 [32m[22:05:38.121][0m [Core] [1m[INFO][0m [utils.llm_metadata:79]: [1mSuccessfully fetched metadata for 3546 LLMs from https://models.dev/api.json.[0m
 [32m[22:05:38.332][0m [Core] [1m[INFO][0m [telegram.tg_adapter:253]: [1mStarting Telegram polling...[0m
 [32m[22:05:38.425][0m [Core] [1m[INFO][0m [telegram.tg_adapter:255]: [1mTelegram Platform Adapter is running.[0m
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/tmp/astrbot/astrbot/core/utils/media_utils.py", line 1170, in convert_audio_format
+    process = await asyncio.create_subprocess_exec(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/subprocess.py", line 224, in create_subprocess_exec
+    transport, protocol = await loop.subprocess_exec(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        stderr=stderr, **kwds)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/base_events.py", line 1813, in subprocess_exec
+    transport = await self._make_subprocess_transport(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        protocol, popen_args, False, stdin, stdout, stderr,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        bufsize, **kwargs)
+        ^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/unix_events.py", line 214, in _make_subprocess_transport
+    transp = _UnixSubprocessTransport(self, protocol, args, shell,
+                                    stdin, stdout, stderr, bufsize,
+                                    waiter=waiter, extra=extra,
+                                    **kwargs)
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/base_subprocess.py", line 39, in __init__
+    self._start(args=args, shell=shell, stdin=stdin, stdout=stdout,
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                stderr=stderr, bufsize=bufsize, **kwargs)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/unix_events.py", line 869, in _start
+    self._proc = subprocess.Popen(
+                 ~~~~~~~~~~~~~~~~^
+        args, shell=shell, stdin=stdin, stdout=stdout, stderr=stderr,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        universal_newlines=False, bufsize=bufsize, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/subprocess.py", line 1039, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/subprocess.py", line 1991, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'ffmpeg'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages/telegram/ext/_application.py", line 1315, in process_update
+    await coroutine
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages/telegram/ext/_handlers/basehandler.py", line 159, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/astrbot/astrbot/core/platform/sources/telegram/tg_adapter.py", line 439, in message_handler
+    abm = await self.convert_message(update, context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/astrbot/astrbot/core/platform/sources/telegram/tg_adapter.py", line 661, in convert_message
+    path_wav = await MediaResolver(
+               ^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    ).to_path(target_format="wav")
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/astrbot/astrbot/core/utils/media_utils.py", line 732, in to_path
+    resolved = await self._resolve_path(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "/tmp/astrbot/astrbot/core/utils/media_utils.py", line 666, in _resolve_path
+    await ensure_wav(str(resolved_path))
+  File "/tmp/astrbot/astrbot/core/utils/media_utils.py", line 1275, in ensure_wav
+    return await convert_audio_to_wav(audio_path, output_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/astrbot/astrbot/core/utils/media_utils.py", line 1226, in convert_audio_to_wav
+    return await convert_audio_format(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/tmp/astrbot/astrbot/core/utils/media_utils.py", line 1194, in convert_audio_format
+    raise Exception("ffmpeg not found")
+Exception: ffmpeg not found
