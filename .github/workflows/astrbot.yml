@@ -1,0 +1,87 @@
+name: astrbot
+
+on:
+  schedule:
+    - cron: "0 */5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: astrbot
+  cancel-in-progress: true
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: astrbot-pip-3.11-v1
+
+      - name: Clone AstrBot source
+        run: |
+          git clone --depth 1 https://github.com/AstrBotDevs/AstrBot.git /tmp/astrbot
+          cd /tmp/astrbot
+          echo "ASTRBOT_COMMIT=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
+
+      - name: Install deps
+        run: |
+          pip install --quiet -r /tmp/astrbot/requirements.txt
+          cd /tmp/astrbot && pip install --quiet -e . --no-deps || true
+
+      - name: Generate runtime config
+        env:
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          ROUTER_API_KEY: ${{ secrets.ROUTER_API_KEY }}
+          ROUTER_URL: ${{ secrets.ROUTER_URL }}
+          MODEL_NAME: "Flash-lite"
+          ASTRBOT_ADMIN_IDS: ${{ secrets.ASTRBOT_ADMIN_IDS }}
+          ASTRBOT_DATA_DIR: ${{ github.workspace }}/astrbot-data
+        run: python gen_config.py
+
+      - name: Restore state from last run
+        run: |
+          mkdir -p astrbot-data
+          if git ls-remote --exit-code --heads origin state >/dev/null 2>&1; then
+            git fetch origin state --depth 1
+            git checkout origin/state -- state/ 2>/dev/null || true
+            # restore into data dir (skip cmd_config.json — freshly generated wins)
+            rsync -a state/ astrbot-data/ --exclude cmd_config.json || true
+            echo "state restored from origin/state"
+          else
+            echo "no prior state branch — fresh boot"
+          fi
+
+      - name: Start state pusher (background)
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          ASTRBOT_DATA_DIR: ${{ github.workspace }}/astrbot-data
+          STATE_PUSH_INTERVAL: "10"
+        run: |
+          nohup python push_state.py > push_state.log 2>&1 &
+          echo "pusher started"
+
+      - name: Run AstrBot (4h45m window)
+        working-directory: /tmp/astrbot
+        env:
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          ROUTER_API_KEY: ${{ secrets.ROUTER_API_KEY }}
+          ASTRBOT_DATA_DIR: ${{ github.workspace }}/astrbot-data
+          RUN_MINUTES: "285"
+        run: |
+          echo "Running AstrBot @ $ASTRBOT_COMMIT for ${RUN_MINUTES}m"
+          timeout ${RUN_MINUTES}m python main.py || true
+          echo "window ended — exiting cleanly for next cron"
