@@ -58,9 +58,10 @@ jobs:
           if git ls-remote --exit-code --heads origin state >/dev/null 2>&1; then
             git fetch origin state --depth 1
             git checkout origin/state -- state/ 2>/dev/null || true
-            # restore into data dir (skip cmd_config.json — freshly generated wins)
-            rsync -a state/ astrbot-data-root/data/ --exclude cmd_config.json || true
-            echo "state restored from origin/state"
+            # restore into data dir (explicitly delete the redacted cmd_config.json from the checkout so it never gets copied or loaded)
+            rm -f state/cmd_config.json
+            rsync -a state/ astrbot-data-root/data/ || true
+            echo "state restored from origin/state (redacted config excluded)"
           else
             echo "no prior state branch — fresh boot"
           fi
