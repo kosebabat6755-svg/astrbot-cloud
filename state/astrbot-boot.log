@@ -133,3 +133,24 @@ Set dashboard.host in data/cmd_config.json to enable remote access.
 [32m[21:15:20.093][0m [Core] [1m[INFO][0m [whitelist_check.stage:65]: [1mSession ID telegram:FriendMessage:301626321 is not in the session allowlist, so event propagation was stopped. Add this session ID to the allowlist in the configuration file.[0m
 [32m[21:15:33.676][0m [Core] [1m[INFO][0m [core.event_bus:74]: [1m[default] [telegram(telegram)] MoKingGh/301626321: hey hey[0m
 [32m[21:15:33.679][0m [Core] [1m[INFO][0m [whitelist_check.stage:65]: [1mSession ID telegram:FriendMessage:301626321 is not in the session allowlist, so event propagation was stopped. Add this session ID to the allowlist in the configuration file.[0m
+[32m[21:15:52.848][0m [Core] [1m[INFO][0m [core.event_bus:74]: [1m[default] [telegram(telegram)] Mokingh/6592796294: hey hey[0m
+[32m[21:15:56.160][0m [Core] [1m[INFO][0m [respond.stage:212]: [1mPrepare to send - Mokingh/6592796294: Hey there! How's it going? Let me know if there's anything you'd like to work on or chat about![0m
+[32m[21:16:21.323][0m [Core] [1m[INFO][0m [core.event_bus:74]: [1m[default] [telegram(telegram)] Mokingh/6592796294: based on the web whats the enws[0m
+[32m[21:16:25.259][0m [Core] [1m[INFO][0m [respond.stage:212]: [1mPrepare to send - Mokingh/6592796294: Hey! I actually don't have a web search tool or real-time internet access right now to check today's latest headlines. 
+
+Is there anything else I can help you with, like brainstorming, writing, coding, or answering general questions?[0m
+[32m[21:16:41.984][0m [Core] [1m[INFO][0m [core.event_bus:74]: [1m[default] [telegram(telegram)] Mokingh/6592796294: /stats[0m
+[32m[21:16:41.992][0m [Core] [1m[INFO][0m [respond.stage:212]: [1mPrepare to send - Mokingh/6592796294: 📊 Conversation Token usage (ID: 063d73a7...)
+Total:          16,145
+Input (cached): 0
+Input (other):  16,037
+Output:         108
+[0m
+[32m[21:16:49.040][0m [Core] [1m[INFO][0m [core.event_bus:74]: [1m[default] [telegram(telegram)] Mokingh/6592796294: /dashboard_update[0m
+[32m[21:17:03.589][0m [Core] [1m[INFO][0m [core.event_bus:74]: [1m[default] [telegram(telegram)] Mokingh/6592796294: /stats[0m
+[32m[21:17:03.595][0m [Core] [1m[INFO][0m [respond.stage:212]: [1mPrepare to send - Mokingh/6592796294: 📊 Conversation Token usage (ID: 063d73a7...)
+Total:          16,145
+Input (cached): 0
+Input (other):  16,037
+Output:         108
+[0m
