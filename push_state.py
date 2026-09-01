@@ -66,7 +66,7 @@ def push_file(path: Path, rel: str, message: str) -> None:
 
 
 def snapshot() -> list[tuple[Path, str]]:
-    """Collect pushable files: small config/json/db files, skip caches and secrets."""
+    """Collect pushable files: small config/json/db/log files, skip caches and secrets."""
     out = []
     skip_parts = {"__pycache__", "logs", "temp", ".cache", "webchat"}
     for path in STATE_DIR.rglob("*"):

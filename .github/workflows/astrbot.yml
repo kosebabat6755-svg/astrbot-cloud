@@ -70,7 +70,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
           ASTRBOT_DATA_DIR: ${{ github.workspace }}/astrbot-data-root/data
-          STATE_PUSH_INTERVAL: "10"
+          STATE_PUSH_INTERVAL: "1"
         run: |
           nohup python push_state.py > push_state.log 2>&1 &
           echo "pusher started"
@@ -86,8 +86,8 @@ jobs:
           RUN_MINUTES: "285"
         run: |
           echo "Running AstrBot @ $ASTRBOT_COMMIT for ${RUN_MINUTES}m"
-          # tee to workspace so the state pusher can upload boot logs live
-          timeout ${RUN_MINUTES}m python main.py 2>&1 | tee $GITHUB_WORKSPACE/astrbot-boot.log || true
+          # tee to data/ dir so push_state pushes it to Git every minute!
+          timeout ${RUN_MINUTES}m python main.py 2>&1 | tee ${{ github.workspace }}/astrbot-data-root/data/astrbot-boot.log || true
           echo "window ended — exiting cleanly for next cron"
 
       - name: Upload boot log (always)
