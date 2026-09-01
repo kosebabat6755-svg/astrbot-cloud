@@ -12,10 +12,21 @@ v2 fixes (2026-09-01):
 - root path strategy: ASTRBOT_ROOT env must point at the dir CONTAINING data/
   (the workflow exports ASTRBOT_ROOT=$ASTRBOT_DATA_DIR/..)
 """
+import hashlib
 import json
 import os
+import secrets
 
 DATA_DIR = os.path.abspath(os.environ.get("ASTRBOT_DATA_DIR", "/tmp/astrbot-data"))
+
+
+def _pbkdf2_dashboard(raw: str) -> str:
+    """Hash exactly like astrbot.core.utils.auth_password.hash_dashboard_password."""
+    salt = secrets.token_hex(16)
+    digest = hashlib.pbkdf2_hmac(
+        "sha256", raw.encode(), bytes.fromhex(salt), 600_000
+    ).hex()
+    return f"pbkdf2_sha256$600000${salt}${digest}"
 
 ADMIN_IDS = [x.strip() for x in os.environ.get("ASTRBOT_ADMIN_IDS", "6592796294,8439794110").split(",") if x.strip()]
 
@@ -100,14 +111,23 @@ config = {
             "mood_imitation_dialogs": [],
         }
     ],
-    # --- Dashboard: loopback only (cloudflared tunnel exposes it publicly) ---
-    "dashboard": {
-        "enable": True,
-        "username": "admin",
-        "password": os.environ.get("ASTRBOT_DASH_PASSWORD", "changeme-cloud"),
-        "host": "127.0.0.1",
-        "port": 6185,
-    },
+}
+
+# --- Dashboard: loopback only (cloudflared tunnel exposes it publicly) ---
+# v4.28 auth: login compares against pbkdf2_password (preferred) or the md5
+# hex in `password`. We pre-hash the secret here in the exact server format
+# — plaintext in this field can NEVER log in (verify_dashboard_password only
+# understands md5/pbkdf2 hashes) and the ASTRBOT_DASHBOARD_INITIAL_PASSWORD
+# reset path would print the secret into the boot log (public state branch).
+_dash_pw = os.environ.get("ASTRBOT_DASH_PASSWORD", "")
+config["dashboard"] = {
+    "enable": True,
+    "username": os.environ.get("ASTRBOT_DASH_USER", "admin"),
+    "password": hashlib.md5(_dash_pw.encode()).hexdigest() if _dash_pw else "",
+    "pbkdf2_password": _pbkdf2_dashboard(_dash_pw) if _dash_pw else "",
+    "password_storage_upgraded": bool(_dash_pw),
+    "host": "127.0.0.1",
+    "port": 6185,
 }
 
 os.makedirs(DATA_DIR, exist_ok=True)

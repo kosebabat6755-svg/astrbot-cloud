@@ -98,7 +98,8 @@ jobs:
         env:
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
           ROUTER_API_KEY: ${{ secrets.ROUTER_API_KEY }}
-          DASH_PASSWORD: ${{ secrets.ASTRBOT_DASH_PASSWORD }}
+          # Official v4.28+ path: AstrBot hashes this into pbkdf2_password at boot
+          ASTRBOT_DASHBOARD_INITIAL_PASSWORD: ${{ secrets.ASTRBOT_DASH_PASSWORD }}
           # CRITICAL: AstrBot resolves data/ from ASTRBOT_ROOT (cwd fallback).
           # Root = parent of the data dir we generated.
           ASTRBOT_ROOT: ${{ github.workspace }}/astrbot-data-root
