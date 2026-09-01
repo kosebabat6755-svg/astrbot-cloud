@@ -128,3 +128,6 @@ Set dashboard.host in data/cmd_config.json to enable remote access.
 [32m[23:43:13.506][0m [Core] [1m[INFO][0m [utils.llm_metadata:79]: [1mSuccessfully fetched metadata for 3548 LLMs from https://models.dev/api.json.[0m
 [32m[23:43:13.704][0m [Core] [1m[INFO][0m [telegram.tg_adapter:253]: [1mStarting Telegram polling...[0m
 [32m[23:43:13.790][0m [Core] [1m[INFO][0m [telegram.tg_adapter:255]: [1mTelegram Platform Adapter is running.[0m
+[32m[23:56:30.266][0m [Core] [1m[INFO][0m [core.event_bus:74]: [1m[default] [telegram(telegram)] Mokingh/6592796294: Hey there[0m
+[32m[23:56:33.589][0m [Core] [1m[INFO][0m [respond.stage:212]: [1mPrepare to send - Mokingh/6592796294: Hey! How's your day going? What can I help you with today?[0m
+[32m[23:56:46.591][0m [Core] [1m[INFO][0m [services.config_service:324]: [1m[Computer] Config changed: computer_use_runtime none -> local[0m
