@@ -1,0 +1,25 @@
+﻿default_install_hook_types: [pre-commit, prepare-commit-msg]
+ci:
+  autofix_commit_msg: ":sparkles: auto fixes by pre-commit hooks"
+  autofix_prs: true
+  autoupdate_branch: master
+  autoupdate_schedule: weekly
+  autoupdate_commit_msg: ":sparkles: pre-commit autoupdate"
+repos:
+- repo: https://github.com/astral-sh/ruff-pre-commit 
+  # 与 AstrBot 开发环境中 uv 解析的 Ruff 版本保持一致。
+  rev: v0.15.22
+  hooks:
+    # 运行静态检查。
+    - id: ruff-check
+      types_or: [ python, pyi ]
+      args: [ --fix ]
+    # 运行格式化。
+    - id: ruff-format
+      types_or: [ python, pyi ]
+      
+- repo: https://github.com/asottile/pyupgrade 
+  rev: v3.21.0
+  hooks:
+    - id: pyupgrade
+      args: [--py310-plus]
