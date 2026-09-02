@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-01T23:57:35.980787",
+  "timestamp": "2026-09-02T00:30:23.785822",
   "data": {
     "$meta": {
       "schema_version": 1,
@@ -856,7 +856,7 @@
       "updated_at": "2026-07-25T16:34:22.506168Z",
       "commit_sha": "ed872b2e242ae14585e7857a6b72a6060e0223a2",
       "stars": 3,
-      "download_count": 1211
+      "download_count": 1210
     },
     "JiaJian/astrbot_plugin_hindsight_memory": {
       "author": "JiaJian",
@@ -880,7 +880,7 @@
       "updated_at": "2026-08-10T06:30:52.016047Z",
       "commit_sha": "a36ebbaadb391c12c171632055efff77bb4ebfa8",
       "stars": 0,
-      "download_count": 354
+      "download_count": 353
     },
     "Fold/astrbot_plugin_suwayomi_server": {
       "author": "Fold",
@@ -1226,7 +1226,7 @@
       "updated_at": "2026-08-14T14:10:23.643795Z",
       "commit_sha": "f516d34827cfca38b69b5fbad3d691f1ab43d797",
       "stars": 12,
-      "download_count": 360
+      "download_count": 359
     },
     "WindClear-VC/astrbot_plugin_minecraft": {
       "author": "WindClear-VC",
@@ -1650,7 +1650,7 @@
       "updated_at": "2026-08-27T12:28:42.317284Z",
       "commit_sha": "61b30cb7e00d0f3319376262f0ffb42710f8c029",
       "stars": 326,
-      "download_count": 6189
+      "download_count": 6187
     },
     "Rinyin/astrbot-plugin-multimodal-router": {
       "author": "Rinyin",
@@ -2550,7 +2550,7 @@
       "updated_at": "2026-07-25T16:35:47.558793Z",
       "commit_sha": "a6be7054ad73c38579dc7b6c0dbc5efbd606cfcf",
       "stars": 11,
-      "download_count": 357
+      "download_count": 356
     },
     "牧濑红莉栖/obsidian_sync": {
       "author": "牧濑红莉栖",
@@ -2585,7 +2585,7 @@
       "updated_at": "2026-07-25T16:35:47.575545Z",
       "commit_sha": "823ca261286c557c410f5fcbaa1268134ca124a0",
       "stars": 15,
-      "download_count": 84
+      "download_count": 83
     },
     "User/astrbot_plugin_maimai_updater": {
       "author": "User",
@@ -2601,7 +2601,7 @@
       "updated_at": "2026-08-15T19:06:04.841928Z",
       "commit_sha": "6af1788215df12d7bfbd915d776e8fa3f36c154e",
       "stars": 9,
-      "download_count": 99
+      "download_count": 98
     },
     "Moonlit Sapling/astrbot_plugin_indextts": {
       "author": "Moonlit Sapling",
@@ -2996,7 +2996,7 @@
       "updated_at": "2026-08-18T04:45:04.562634Z",
       "commit_sha": "63b5099fa6a7bd261c5eb55a6d1877fc245818d5",
       "stars": 36,
-      "download_count": 165
+      "download_count": 164
     },
     "NimYA/astrbot_plugin_course": {
       "author": "NimYA",
@@ -3063,7 +3063,7 @@
       "updated_at": "2026-07-25T16:35:47.83239Z",
       "commit_sha": "602d5f278633d7e175c932244604fd61ff5ea8d7",
       "stars": 31,
-      "download_count": 556
+      "download_count": 555
     },
     "lingran7031/astrbot_plugin_media_wiki": {
       "author": "lingran7031",
@@ -4770,7 +4770,7 @@
       "updated_at": "2026-07-25T16:36:06.928418Z",
       "commit_sha": "11fc4c62af961717a2365cfbb3a681037f7f6f49",
       "stars": 39,
-      "download_count": 864
+      "download_count": 863
     },
     "椛椿/astrbot_plugin_bili_daily_report": {
       "author": "椛椿",
@@ -5039,7 +5039,7 @@
       "updated_at": "2026-09-01T07:55:38.041896Z",
       "commit_sha": "a4f6f7d008bb0d84287e9b9f11b73102e74228e1",
       "stars": 467,
-      "download_count": 5456
+      "download_count": 5455
     },
     "lingyun/astrbot_plugin_group_welcome": {
       "author": "lingyun",
@@ -6393,7 +6393,7 @@
       "updated_at": "2026-07-25T16:36:21.748383Z",
       "commit_sha": "3eba19074250218d9d55a09cac87a6789272997a",
       "stars": 17,
-      "download_count": 405
+      "download_count": 404
     },
     "阿汐/astrbot_plugin_astrbot_enhance_mode": {
       "author": "阿汐",
@@ -7383,7 +7383,7 @@
       "updated_at": "2026-07-25T16:36:22.281646Z",
       "commit_sha": "01ffdd412b7c164f60693a271192907de2a1f969",
       "stars": 1,
-      "download_count": 60
+      "download_count": 59
     },
     "Future-404/astrbot_plugin_newapi": {
       "author": "Future-404",
@@ -7957,7 +7957,7 @@
       "updated_at": "2026-08-31T11:53:27.16361Z",
       "commit_sha": "3675d91b593b227fbfb05a8b13de351bc55c85f7",
       "stars": 34,
-      "download_count": 2209
+      "download_count": 2208
     },
     "Chinachani/astrbot_plugin_steamwatch": {
       "author": "Chinachani",
@@ -8088,7 +8088,7 @@
       "updated_at": "2026-07-25T16:36:36.318785Z",
       "commit_sha": "1e3728ac5d9bb66cf3abc604406dfa4978df641f",
       "stars": 13,
-      "download_count": 1526
+      "download_count": 1525
     },
     "Azincc/astrbot_plugin_skland": {
       "author": "Azincc",
@@ -8741,7 +8741,7 @@
       "updated_at": "2026-08-13T16:14:50.399755Z",
       "commit_sha": "32c32679ea87a6be9f42c4bca36d274a7498cae6",
       "stars": 14,
-      "download_count": 500
+      "download_count": 499
     },
     "Jason.Joestar/astrbot_plugin_mc_manager": {
       "author": "Jason.Joestar",
@@ -9445,7 +9445,7 @@
       "updated_at": "2026-08-01T00:28:05.686597Z",
       "commit_sha": "499a17a0ed0288132d952c0155fa2f2290190743",
       "stars": 15,
-      "download_count": 511
+      "download_count": 510
     },
     "Hakuin123/astrbot_plugin_maa": {
       "author": "Hakuin123",
@@ -11305,7 +11305,7 @@
       "updated_at": "2026-07-25T16:36:52.498599Z",
       "commit_sha": "dbf318d08530c48c6f13514344cd41ee241fccc5",
       "stars": 16,
-      "download_count": 554
+      "download_count": 553
     },
     "Foolllll/astrbot_plugin_CloudImg": {
       "author": "Foolllll",
@@ -14750,7 +14750,7 @@
       "updated_at": "2026-07-25T16:37:21.879839Z",
       "commit_sha": "a3539ed0b2ee5352919e338b051bbe6c8b98b94d",
       "stars": 13,
-      "download_count": 582
+      "download_count": 580
     },
     "Foolllll/astrbot_plugin_anti_revoke": {
       "author": "Foolllll",
@@ -14963,7 +14963,7 @@
       "updated_at": "2026-08-14T08:17:33.381055Z",
       "commit_sha": "8fe9bb1d2128678ee10105a3948751e0c84952cd",
       "stars": 334,
-      "download_count": 9339
+      "download_count": 9337
     },
     "qa296/astrbot_plugin_completely_disable": {
       "author": "qa296",
@@ -15849,7 +15849,7 @@
       "updated_at": "2026-07-25T16:37:35.694835Z",
       "commit_sha": "fb354da41ece0abfa387d6102e3b2136195ad1f1",
       "stars": 15,
-      "download_count": 247
+      "download_count": 246
     },
     "长安某/astrobot_plugin_who_at_me": {
       "author": "长安某",
@@ -15881,7 +15881,7 @@
       "updated_at": "2026-08-15T07:39:21.659358Z",
       "commit_sha": "5de4f11e4cc07f54adf1e17ca1e4ee9900658c18",
       "stars": 75,
-      "download_count": 2355
+      "download_count": 2354
     },
     "Zhalslar/astrbot_plugin_image_summary": {
       "author": "Zhalslar",
@@ -16022,7 +16022,7 @@
       "updated_at": "2026-07-25T16:37:35.7327Z",
       "commit_sha": "6df214576f2302cd9dd2d1d500e76a39bb557cd3",
       "stars": 161,
-      "download_count": 2660
+      "download_count": 2659
     },
     "LuBanQAQ/astrbot_plugin_matchreminder": {
       "author": "LuBanQAQ",
@@ -21911,7 +21911,7 @@
       "updated_at": "2026-08-27T15:35:24.781331Z",
       "commit_sha": "3a4cac134abf22a8617eda837bd2c9a9c1b90b1f",
       "stars": 385,
-      "download_count": 15306
+      "download_count": 15305
     },
     "MC云-小馒头/mccloud_command": {
       "author": "MC云-小馒头",
@@ -22381,7 +22381,7 @@
       "updated_at": "2026-07-25T16:38:33.69501Z",
       "commit_sha": "28b00377232a9bfc3f4af3c53e352a649ffc63de",
       "stars": 11,
-      "download_count": 276
+      "download_count": 275
     },
     "w33d/astrbot_plugin_buckshot_roulette": {
       "author": "w33d",
@@ -22704,7 +22704,7 @@
       "updated_at": "2026-07-25T16:38:33.780881Z",
       "commit_sha": "42ec96375699f35e81f24338cad32d01be07dda6",
       "stars": 9,
-      "download_count": 198
+      "download_count": 197
     },
     "枫莹/astrbot_plugin_token_auto": {
       "author": "枫莹",
@@ -24950,7 +24950,7 @@
       "updated_at": "2026-08-28T09:51:11.85654Z",
       "commit_sha": "f5d17cd1ea78569eeab598d9cdf086f4272a1807",
       "stars": 1,
-      "download_count": 62
+      "download_count": 61
     },
     "Rua432/astrbot_plugin_chisa_still_eating": {
       "author": "Rua432",
@@ -36168,5 +36168,5 @@
       "download_count": 0
     }
   },
-  "md5": "104d937940a2bbaa0644a364bcd546d0"
+  "md5": "1734417655c42b992b571cc99d54e26a"
 }
