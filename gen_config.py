@@ -49,16 +49,70 @@ config = {
             ),
             "timeout": 120,
             "custom_headers": {},
-        }
+        },
+        # --- Voice provider (STT only: Groq Whisper API — TTS intentionally OFF per Boss) ---
+        {
+            "id": "groq_whisper",
+            "provider": "openai",
+            "type": "openai_whisper_api",
+            "provider_type": "speech_to_text",
+            "enable": True,
+            "api_key": ["$GROQ_API_KEY"],
+            "api_base": "https://api.groq.com/openai/v1",
+            "model": "whisper-large-v3-turbo",
+            "proxy": "",
+        },
     ],
     "provider_sources": [],
     "provider_settings": {
         "enable": True,
         "provider_pool": ["*"],
         "wake_prefix": "",
-        "web_search": False,
+        "web_search": True,
+        "websearch_provider": "tavily",
+        "websearch_tavily_key": ["$TAVILY_API_KEY"],
+        "web_search_link": True,
         "streaming_response": False,
         "datetime_system_prompt": True,
+        "show_tool_use_status": True,
+        "t2i": True,
+        "t2i_word_threshold": 150,
+        # human-like texting: split long replies into multiple messages
+        "segmented_reply": {
+            "enable": True,
+            "only_llm_result": True,
+            "interval_method": "random",
+            "interval": "1.5,3.5",
+            "log_base": 2.6,
+            "words_count_threshold": 150,
+        },
+    },
+    # --- Voice settings: STT only (Groq Whisper in). TTS OFF per Boss. ---
+    "provider_stt_settings": {
+        "enable": True,
+        "provider_id": "groq_whisper",
+    },
+    "provider_tts_settings": {
+        "enable": False,
+        "provider_id": "",
+        "dual_output": False,
+        "use_file_service": False,
+        "trigger_probability": 1.0,
+    },
+    # --- Image understanding (bot describes photos you send) ---
+    "provider_ltm_settings": {
+        "group_icl_enable": False,
+        "group_message_max_cnt": 100,
+        "image_caption": True,
+        "image_caption_provider_id": "nine-router-flash",
+        "group_message_history_enable": False,
+        "group_message_history_max_cnt": 100,
+        "active_reply": {
+            "enable": False,
+            "method": "possibility_reply",
+            "possibility_reply": 0.1,
+            "whitelist": [],
+        },
     },
     # --- Platform: Telegram via long polling ---
     "platform": [
@@ -91,7 +145,7 @@ config = {
         "wl_ignore_admin_on_group": False,
         "wl_ignore_admin_on_friend": False,
         "reply_with_mention": False,
-        "reply_with_quote": False,
+        "reply_with_quote": True,
         "no_permission_reply": True,
         "friend_message_needs_wake_prefix": False,
         "ignore_bot_self_message": True,
