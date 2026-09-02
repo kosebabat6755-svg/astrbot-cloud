@@ -1,0 +1,8 @@
+{
+  "report_font_size": {
+    "description": "喜报/悲报字体大小",
+    "type": "int",
+    "default": 65,
+    "hint": "用于调整喜报和悲报的字体大小，默认值为65"
+  }
+}
