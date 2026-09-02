@@ -2493,3 +2493,14 @@ Set dashboard.host in data/cmd_config.json to enable remote access.
 [32m[17:14:41.060][0m [Core] [33m[1m[WARN][0m [v4.28.0-beta.1] [telegram.tg_adapter:366]: [33m[1m命令名 'remember' 重复注册，将使用首次注册的定义: '手动记住引用对话及上下文，并链入表达方式和对话示例'[0m
 [32m[17:17:56.756][0m [astrbot_plugin_proactive_chat] [33m[1m[WARN][0m [v4.28.0-beta.1] [core.notification_center:348]: [33m[1m[主动消息] 同步远端通知失败喵: 通知接口请求失败，HTTP 403 (可忽略)[0m
 [32m[17:19:41.061][0m [Core] [33m[1m[WARN][0m [v4.28.0-beta.1] [telegram.tg_adapter:366]: [33m[1m命令名 'remember' 重复注册，将使用首次注册的定义: '手动记住引用对话及上下文，并链入表达方式和对话示例'[0m
+[32m[17:22:56.891][0m [astrbot_plugin_proactive_chat] [33m[1m[WARN][0m [v4.28.0-beta.1] [core.notification_center:348]: [33m[1m[主动消息] 同步远端通知失败喵: 通知接口请求失败，HTTP 403 (可忽略)[0m
+[32m[17:24:41.060][0m [Core] [33m[1m[WARN][0m [v4.28.0-beta.1] [telegram.tg_adapter:366]: [33m[1m命令名 'remember' 重复注册，将使用首次注册的定义: '手动记住引用对话及上下文，并链入表达方式和对话示例'[0m
+[32m[17:27:57.152][0m [astrbot_plugin_proactive_chat] [33m[1m[WARN][0m [v4.28.0-beta.1] [core.notification_center:348]: [33m[1m[主动消息] 同步远端通知失败喵: 通知接口请求失败，HTTP 403 (可忽略)[0m
+[32m[17:29:41.061][0m [Core] [33m[1m[WARN][0m [v4.28.0-beta.1] [telegram.tg_adapter:366]: [33m[1m命令名 'remember' 重复注册，将使用首次注册的定义: '手动记住引用对话及上下文，并链入表达方式和对话示例'[0m
+[32m[17:32:57.290][0m [astrbot_plugin_proactive_chat] [33m[1m[WARN][0m [v4.28.0-beta.1] [core.notification_center:348]: [33m[1m[主动消息] 同步远端通知失败喵: 通知接口请求失败，HTTP 403 (可忽略)[0m
+[32m[17:34:41.060][0m [Core] [33m[1m[WARN][0m [v4.28.0-beta.1] [telegram.tg_adapter:366]: [33m[1m命令名 'remember' 重复注册，将使用首次注册的定义: '手动记住引用对话及上下文，并链入表达方式和对话示例'[0m
+[32m[17:37:57.427][0m [astrbot_plugin_proactive_chat] [33m[1m[WARN][0m [v4.28.0-beta.1] [core.notification_center:348]: [33m[1m[主动消息] 同步远端通知失败喵: 通知接口请求失败，HTTP 403 (可忽略)[0m
+[32m[17:39:41.060][0m [Core] [33m[1m[WARN][0m [v4.28.0-beta.1] [telegram.tg_adapter:366]: [33m[1m命令名 'remember' 重复注册，将使用首次注册的定义: '手动记住引用对话及上下文，并链入表达方式和对话示例'[0m
+[32m[17:42:57.573][0m [astrbot_plugin_proactive_chat] [33m[1m[WARN][0m [v4.28.0-beta.1] [core.notification_center:348]: [33m[1m[主动消息] 同步远端通知失败喵: 通知接口请求失败，HTTP 403 (可忽略)[0m
+[32m[17:44:41.061][0m [Core] [33m[1m[WARN][0m [v4.28.0-beta.1] [telegram.tg_adapter:366]: [33m[1m命令名 'remember' 重复注册，将使用首次注册的定义: '手动记住引用对话及上下文，并链入表达方式和对话示例'[0m
+[32m[17:47:57.716][0m [astrbot_plugin_proactive_chat] [33m[1m[WARN][0m [v4.28.0-beta.1] [core.notification_center:348]: [33m[1m[主动消息] 同步远端通知失败喵: 通知接口请求失败，HTTP 403 (可忽略)[0m
