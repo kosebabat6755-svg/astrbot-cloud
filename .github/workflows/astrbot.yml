@@ -66,8 +66,13 @@ jobs:
             # dist/ is poison: AstrBot bundles its own matching dist every release.
             # Restoring an old dist mixes chunk hashes across versions (franken-dist) → WebUI 404s after login.
             rm -rf state/dist
+            # broken half-installed plugins (missing core .py files) — never restore;
+            # they'd fail import every boot until reinstalled clean from marketplace
+            rm -rf state/plugins/astrbot_plugin_music \
+                   state/plugins/astrbot_plugin_private_companion \
+                   state/plugins/astrbot_plugin_parser
             rsync -a state/ astrbot-data-root/data/ || true
-            echo "state restored from origin/state (config + dist excluded)"
+            echo "state restored from origin/state (config + dist + broken plugins excluded)"
           else
             echo "no prior state branch — fresh boot"
           fi
