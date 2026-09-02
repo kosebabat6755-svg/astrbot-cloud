@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>Mnemosyne 记忆档案</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="app-shell">
+        <header class="top-shell">
+            <div class="masthead">
+                <a class="brand-lockup" href="#dashboard" data-page="dashboard" aria-label="Mnemosyne 首页">
+                    <span class="brand-mark"><i data-lucide="asterisk"></i></span>
+                    <span class="brand-name">MNEMOSYNE</span>
+                </a>
+                <div class="masthead-meta">
+                    <span>MEMORY ARCHIVE</span>
+                    <span id="local-clock">--:--</span>
+                    <span class="system-signature"><span class="signal-dot"></span>ONLINE</span>
+                    <button id="theme-toggle-btn" class="icon-button theme-toggle-btn" type="button" title="切换主题">
+                        <span class="theme-icon"><i data-lucide="moon"></i></span>
+                        <span class="sr-only">深色模式</span>
+                    </button>
+                </div>
+            </div>
+
+            <nav class="nav-menu" aria-label="主导航">
+                <a href="#dashboard" class="nav-item active" data-page="dashboard">
+                    <span class="nav-index">01</span><span>系统脉搏</span>
+                </a>
+                <a href="#memories" class="nav-item" data-page="memories">
+                    <span class="nav-index">02</span><span>记忆工作台</span>
+                </a>
+                <a href="#sessions" class="nav-item" data-page="sessions">
+                    <span class="nav-index">03</span><span>会话图谱</span>
+                </a>
+                <a href="#statistics" class="nav-item" data-page="statistics">
+                    <span class="nav-index">04</span><span>统计信号</span>
+                </a>
+                <a href="#config" class="nav-item" data-page="config">
+                    <span class="nav-index">05</span><span>运行配置</span>
+                </a>
+            </nav>
+        </header>
+
+        <main class="main-content">
+            <div id="page-container">
+                <section id="dashboard-page" class="page active" aria-labelledby="dashboard-title">
+                    <div class="page-header dashboard-header">
+                        <div class="title-lockup">
+                            <p class="eyebrow">SYSTEM PULSE / LIVE</p>
+                            <h1 id="dashboard-title"><span>系统</span><span>脉搏</span></h1>
+                        </div>
+                        <div class="header-action">
+                            <span class="edition-label">MN / 2.2</span>
+                            <button class="btn btn-primary" type="button" onclick="refreshDashboard()">
+                                <i data-lucide="refresh-cw"></i><span>刷新数据</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <section class="memory-field-stage" aria-labelledby="memory-field-title">
+                        <div class="memory-field-heading">
+                            <p class="eyebrow">LIVE RELATION FIELD / 01</p>
+                            <h2 id="memory-field-title">记忆拓扑场</h2>
+                            <p id="memory-field-summary" class="memory-field-summary">正在建立系统关系</p>
+                        </div>
+                        <div class="memory-field-legend" aria-label="节点状态图例">
+                            <span><span class="legend-swatch legend-swatch-core"></span>档案核心</span>
+                            <span><span class="legend-swatch legend-swatch-live"></span>运行节点</span>
+                            <span><span class="legend-swatch legend-swatch-warn"></span>注意节点</span>
+                        </div>
+                        <canvas id="memory-field-canvas" aria-label="系统记忆、会话和运行组件之间的实时关系图"></canvas>
+                        <div class="memory-field-readout">
+                            <span>RELATIONS / ACTIVE</span>
+                            <strong id="memory-field-count">--</strong>
+                        </div>
+                    </section>
+
+                    <div class="status-manifest">
+                        <article class="status-card status-card-primary" id="overall-status">
+                            <div class="manifest-label"><span>01</span><span>STATUS</span></div>
+                            <div class="card-icon"><i data-lucide="circle-check-big"></i></div>
+                            <div class="card-content"><h2>系统状态</h2><p class="status-text">加载中</p></div>
+                        </article>
+                        <article class="status-card">
+                            <div class="manifest-label"><span>02</span><span>MEMORY</span></div>
+                            <div class="card-content"><h2>记忆总数</h2><p class="status-value" id="total-memories">--</p></div>
+                        </article>
+                        <article class="status-card">
+                            <div class="manifest-label"><span>03</span><span>SESSIONS</span></div>
+                            <div class="card-content"><h2>活跃会话</h2><p class="status-value" id="active-sessions">--</p></div>
+                        </article>
+                        <article class="status-card status-card-accent">
+                            <div class="manifest-label"><span>04</span><span>PROCESS</span></div>
+                            <div class="card-content"><h2>内存使用</h2><p class="status-value" id="memory-usage">--</p></div>
+                        </article>
+                    </div>
+
+                    <div class="dashboard-sections">
+                        <section class="section component-section">
+                            <div class="section-heading">
+                                <div><span class="section-number">A</span><h2>组件状态</h2></div>
+                                <i data-lucide="network"></i>
+                            </div>
+                            <div id="components-health" class="components-grid"></div>
+                        </section>
+                        <section class="section metric-section">
+                            <div class="section-heading">
+                                <div><span class="section-number">B</span><h2>性能轨迹</h2></div>
+                                <i data-lucide="scan-line"></i>
+                            </div>
+                            <div id="performance-metrics" class="metrics-grid"></div>
+                        </section>
+                    </div>
+                </section>
+
+                <section id="memories-page" class="page" aria-labelledby="memories-title">
+                    <div class="page-header">
+                        <div class="title-lockup compact-title">
+                            <p class="eyebrow">ARCHIVE / SEARCH</p>
+                            <h1 id="memories-title">记忆工作台</h1>
+                        </div>
+                        <div class="btn-group">
+                            <button class="btn btn-primary" type="button" onclick="loadAllMemories()"><i data-lucide="refresh-cw"></i><span>刷新</span></button>
+                            <button class="btn" type="button" onclick="exportMemories()"><i data-lucide="download"></i><span>导出</span></button>
+                        </div>
+                    </div>
+
+                    <section class="filter-station">
+                        <div class="filter-station-title">
+                            <span class="section-number">01</span>
+                            <h2>筛选索引</h2>
+                            <i data-lucide="sliders-horizontal"></i>
+                        </div>
+                        <div class="filters-grid">
+                            <label class="filter-group"><span>关键词</span><input type="search" id="search-keyword" placeholder="输入语义线索" class="input"></label>
+                            <label class="filter-group"><span>会话 ID</span><input type="text" id="search-session-id" placeholder="筛选会话" class="input"></label>
+                            <label class="filter-group"><span>人格 ID</span><input type="text" id="search-persona-id" placeholder="筛选人格" class="input"></label>
+                            <label class="filter-group"><span>分组</span><select id="search-group-by" class="input" onchange="applyGrouping()"><option value="">时间序列</option><option value="session">会话</option><option value="persona">人格</option><option value="date">日期</option></select></label>
+                        </div>
+                        <div class="filter-actions">
+                            <button class="btn btn-primary" type="button" onclick="searchMemories()"><i data-lucide="search"></i><span>关键词搜索</span></button>
+                            <button class="btn btn-blue" type="button" onclick="vectorSearchMemories()"><i data-lucide="sparkles"></i><span>向量检索</span></button>
+                            <button class="btn" type="button" onclick="clearFilters()"><i data-lucide="rotate-ccw"></i><span>重置</span></button>
+                        </div>
+                    </section>
+
+                    <div class="ledger-toolbar">
+                        <div class="info-bar"><span id="memories-count-info">共 0 条记忆</span><span id="memories-filter-info"></span></div>
+                        <div class="selection-tools">
+                            <button class="btn btn-sm" type="button" onclick="toggleSelectAll()"><i data-lucide="square-check-big"></i><span>全选</span></button>
+                            <div id="batch-actions" class="batch-actions">
+                                <span>已选择 <strong id="selected-count">0</strong> 条</span>
+                                <button class="btn btn-sm" type="button" onclick="clearMemorySelection()"><i data-lucide="x"></i><span>清空</span></button>
+                                <button class="btn btn-danger btn-sm" type="button" onclick="batchDeleteMemories()"><i data-lucide="trash-2"></i><span>批量删除</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="memories-list" class="list-container memory-ledger"><div class="loading-placeholder"><i data-lucide="loader-circle"></i><p>正在读取记忆</p></div></div>
+                    <div id="memories-pagination" class="pagination"></div>
+                </section>
+
+                <section id="sessions-page" class="page" aria-labelledby="sessions-title">
+                    <div class="page-header">
+                        <div class="title-lockup compact-title"><p class="eyebrow">CONVERSATION / MAP</p><h1 id="sessions-title">会话图谱</h1></div>
+                        <button class="btn btn-primary" type="button" onclick="loadSessions()"><i data-lucide="refresh-cw"></i><span>刷新</span></button>
+                    </div>
+                    <div class="column-labels"><span>会话标识</span><span>时间范围</span><span>操作</span></div>
+                    <div id="sessions-list" class="list-container session-ledger"><p class="placeholder">正在读取会话</p></div>
+                </section>
+
+                <section id="statistics-page" class="page" aria-labelledby="statistics-title">
+                    <div class="page-header">
+                        <div class="title-lockup compact-title"><p class="eyebrow">ANALYTICS / SIGNAL</p><h1 id="statistics-title">统计信号</h1></div>
+                        <button class="btn btn-primary" type="button" onclick="loadStatistics()"><i data-lucide="refresh-cw"></i><span>刷新</span></button>
+                    </div>
+                    <div class="stats-strip">
+                        <article class="stat-card"><span class="stat-index">01</span><h2>总记忆数</h2><div class="stat-value" id="stat-total-memories">--</div><div class="stat-label">TOTAL MEMORY</div></article>
+                        <article class="stat-card"><span class="stat-index">02</span><h2>活跃会话</h2><div class="stat-value" id="stat-active-sessions">--</div><div class="stat-label">ACTIVE SESSION</div></article>
+                        <article class="stat-card stat-red"><span class="stat-index">03</span><h2>今日新增</h2><div class="stat-value" id="stat-today-added">--</div><div class="stat-label">LAST 24 HOURS</div></article>
+                        <article class="stat-card stat-blue"><span class="stat-index">04</span><h2>平均记忆数</h2><div class="stat-value" id="stat-avg-per-session">--</div><div class="stat-label">PER SESSION</div></article>
+                    </div>
+                    <div class="analytics-grid">
+                        <section class="chart-container chart-main"><div class="section-heading"><div><span class="section-number">A</span><h2>每日趋势</h2></div><i data-lucide="chart-spline"></i></div><div class="chart-wrapper"><canvas id="statistics-chart"></canvas></div></section>
+                        <section class="section top-session-section"><div class="section-heading"><div><span class="section-number">B</span><h2>活跃会话</h2></div><i data-lucide="list-filter"></i></div><div id="top-sessions-list" class="list-container compact-list"><p class="placeholder">正在分析</p></div></section>
+                    </div>
+                    <section class="chart-container distribution-section"><div class="section-heading"><div><span class="section-number">C</span><h2>记忆分布</h2></div><i data-lucide="chart-pie"></i></div><div class="chart-wrapper"><canvas id="distribution-chart"></canvas></div></section>
+                </section>
+
+                <section id="config-page" class="page" aria-labelledby="config-title">
+                    <div class="page-header">
+                        <div class="title-lockup compact-title"><p class="eyebrow">RUNTIME / CONFIG</p><h1 id="config-title">运行配置</h1></div>
+                        <button class="btn btn-primary" type="button" onclick="loadConfig()"><i data-lucide="refresh-cw"></i><span>刷新</span></button>
+                    </div>
+                    <div class="column-labels config-labels"><span>配置键</span><span>当前值</span><span>类型</span></div>
+                    <div id="config-content"></div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <div id="memory-inspector-backdrop" class="memory-inspector-backdrop" aria-hidden="true"></div>
+    <aside id="memory-inspector" class="memory-inspector" aria-labelledby="memory-inspector-title" aria-hidden="true">
+        <header class="memory-inspector-header">
+            <div>
+                <p class="eyebrow">MEMORY / INSPECTOR</p>
+                <h2 id="memory-inspector-title">记忆检查器</h2>
+            </div>
+            <button id="memory-inspector-close" class="btn-close" type="button" title="关闭" aria-label="关闭记忆检查器"><i data-lucide="x"></i></button>
+        </header>
+        <div class="memory-inspector-body">
+            <dl class="memory-inspector-meta">
+                <div><dt>记忆 ID</dt><dd id="inspector-memory-id">--</dd></div>
+                <div><dt>会话</dt><dd id="inspector-session-id">--</dd></div>
+                <div><dt>人格</dt><dd id="inspector-persona-id">--</dd></div>
+                <div><dt>创建时间</dt><dd id="inspector-create-time">--</dd></div>
+            </dl>
+            <label class="memory-editor-label" for="inspector-content">记忆内容</label>
+            <textarea id="inspector-content" class="memory-editor" maxlength="4096" rows="12"></textarea>
+            <div class="memory-editor-status">
+                <span id="inspector-save-status">编辑内容后将重新生成向量</span>
+                <span><strong id="inspector-character-count">0</strong> / 4096</span>
+            </div>
+        </div>
+        <footer class="memory-inspector-footer">
+            <button id="memory-inspector-cancel" class="btn" type="button">取消</button>
+            <button id="memory-inspector-save" class="btn btn-primary" type="button" disabled><i data-lucide="save"></i><span>保存并重建向量</span></button>
+        </footer>
+    </aside>
+
+    <div id="loading-overlay" class="loading-overlay"><div class="loading-core"><i data-lucide="loader-circle"></i></div><p>正在同步数据</p></div>
+    <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="./demo-bridge.js"></script>
+    <script src="./memory-field.js"></script>
+    <script type="module" src="./app.js"></script>
+</body>
+</html>
