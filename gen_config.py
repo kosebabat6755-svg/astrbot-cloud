@@ -31,7 +31,9 @@ def _pbkdf2_dashboard(raw: str) -> str:
 ADMIN_IDS = [x.strip() for x in os.environ.get("ASTRBOT_ADMIN_IDS", "6592796294,8439794110").split(",") if x.strip()]
 
 # Whitelist entries: platform_id:message_type:session_id
+# Boss DMs (both his accounts) + his group بره (-1001635507223)
 WHITELIST = [f"telegram:FriendMessage:{i}" for i in ADMIN_IDS]
+WHITELIST.append("telegram:GroupMessage:-1001635507223")
 
 config = {
     # --- Provider: 9router OpenAI-compatible ---
