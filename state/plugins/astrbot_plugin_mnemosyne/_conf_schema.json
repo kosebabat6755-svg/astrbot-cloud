@@ -1,0 +1,326 @@
+{
+    "LLM_providers":{
+        "description":"记忆总结使用的LLM服务商",
+        "type":"string",
+        "hint":"选择用于记忆总结的大语言模型提供商。留空则使用当前会话的默认提供商",
+        "_special":"select_provider",
+        "default":""
+    },
+    "summary_fallback_provider_id":{
+        "description":"记忆总结备用 LLM 服务商",
+        "type":"string",
+        "hint":"主总结模型调用失败或返回空内容时重试一次。留空表示不启用备用模型",
+        "_special":"select_provider",
+        "default":""
+    },
+    "embedding_provider_id":{
+        "description":"Embedding 服务提供商",
+        "type":"string",
+        "hint":"选择用于向量嵌入的 Embedding Provider。留空则使用 AstrBot 中配置的第一个 Embedding Provider",
+        "_special":"select_embedding_provider",
+        "default":""
+    },
+    "vector_db_type":{
+        "description":"向量数据库类型",
+        "type":"string",
+        "hint":"选择使用的向量数据库类型。Chroma 本地模式无需额外服务，最适合新手上手；Milvus 适合大规模部署，Qdrant 性能优秀，Weaviate 功能全面",
+        "obvious_hint":true,
+        "options":["chroma", "milvus", "qdrant", "weaviate"],
+        "default":"chroma"
+    },
+    "milvus_lite_path":{
+        "description":"milvus数据库的lite模式路径",
+        "type":"string",
+        "hint":"注意！！！只使用milvus_lite_path或者address其中一个即可，milvus_lite_path优先级较高",
+        "obvious_hint":true,
+        "default":"",
+        "minLength":0
+    },
+    "address":{
+        "description":"milvus数据库地址",
+        "type":"string",
+        "hint":"支持支持格式如:http://localhost:19530，https://localhost:19530，localhost:19530",
+        "obvious_hint":true,
+        "default":"",
+        "pattern":"^(https?://)?[a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(\\.[a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*:[0-9]{1,5}$",
+        "minLength":0
+    },
+    "db_name":{
+        "description":"milvus数据库名称",
+        "type":"string",
+        "hint":"Milvus 2.2+ 支持多数据库。默认使用 default，可按需配置为其他数据库名以隔离数据",
+        "obvious_hint":true,
+        "default":"default",
+        "pattern":"^[a-zA-Z][a-zA-Z0-9_\\-]{0,63}$",
+        "minLength":1,
+        "maxLength":64
+    },
+    "authentication":{
+        "description":"milvus数据库的认证信息",
+        "type":"object",
+        "hint":"如果milvus开启了服务器认证，请填写对应的信息",
+        "obvious_hint":true,
+        "items":{
+            "token":{
+                "description":"milvus数据库的认证token",
+                "type":"string",
+                "hint":"token优先于账户密码",
+                "obvious_hint":true,
+                "minLength":0
+            },
+            "user":{
+                "description":"milvus数据库的认证用户名",
+                "type":"string",
+                "minLength":1
+            },
+            "password":{
+                "description":"milvus数据库的认证密码",
+                "type":"string",
+                "minLength":0
+            }
+        }
+    },
+    "chroma_config":{
+        "description":"Chroma 向量数据库配置",
+        "type":"object",
+        "hint":"仅当 vector_db_type 为 chroma 时生效",
+        "obvious_hint":true,
+        "items":{
+            "persist_directory":{
+                "description":"Chroma 数据持久化目录",
+                "type":"string",
+                "hint":"留空则使用插件默认数据目录下的 chroma_data",
+                "default":"",
+                "minLength":0
+            },
+            "host":{
+                "description":"Chroma 服务器地址（客户端模式）",
+                "type":"string",
+                "hint":"使用客户端模式时填写。留空则使用本地持久化模式",
+                "default":"",
+                "minLength":0
+            },
+            "port":{
+                "description":"Chroma 服务器端口",
+                "type":"int",
+                "hint":"默认 8000",
+                "default":8000,
+                "minimum":1,
+                "maximum":65535
+            }
+        }
+    },
+    "qdrant_config":{
+        "description":"Qdrant 向量数据库配置",
+        "type":"object",
+        "hint":"仅当 vector_db_type 为 qdrant 时生效",
+        "obvious_hint":true,
+        "items":{
+            "path":{
+                "description":"Qdrant 数据持久化目录",
+                "type":"string",
+                "hint":"留空则使用插件默认数据目录下的 qdrant_data",
+                "default":"",
+                "minLength":0
+            },
+            "url":{
+                "description":"Qdrant 服务器地址（客户端模式）",
+                "type":"string",
+                "hint":"使用客户端模式时填写，如 http://localhost:6333。留空则使用本地持久化模式",
+                "default":"",
+                "minLength":0
+            },
+            "api_key":{
+                "description":"Qdrant API 密钥",
+                "type":"string",
+                "hint":"客户端模式使用的 API 密钥（可选）",
+                "default":"",
+                "minLength":0
+            },
+            "distance":{
+                "description":"距离度量类型",
+                "type":"string",
+                "hint":"向量距离计算方式：Cosine（余弦相似度）、Euclidean（欧氏距离）、Dot（点积）",
+                "options":["Cosine", "Euclidean", "Dot"],
+                "default":"Cosine"
+            }
+        }
+    },
+    "weaviate_config":{
+        "description":"Weaviate 向量数据库配置",
+        "type":"object",
+        "hint":"仅当 vector_db_type 为 weaviate 时生效",
+        "obvious_hint":true,
+        "items":{
+            "embedded":{
+                "description":"使用嵌入式模式",
+                "type":"bool",
+                "hint":"启用嵌入式模式（本地运行，无需外部服务）",
+                "default":false
+            },
+            "persistence_data_path":{
+                "description":"嵌入式模式数据目录",
+                "type":"string",
+                "hint":"嵌入式模式的持久化路径。留空则使用插件默认数据目录下的 weaviate_data",
+                "default":"",
+                "minLength":0
+            },
+            "url":{
+                "description":"Weaviate 服务器地址",
+                "type":"string",
+                "hint":"客户端模式使用，如 http://localhost:8080",
+                "default":"",
+                "minLength":0
+            },
+            "api_key":{
+                "description":"Weaviate API 密钥",
+                "type":"string",
+                "hint":"客户端模式使用的 API 密钥（可选）",
+                "default":"",
+                "minLength":0
+            }
+        }
+    },
+    "summary_check_task":{
+        "description":"自动总结计时器设置",
+        "type":"object",
+        "hint":"实验性功能，当长时间不和bot说话时，会进行消息总结",
+        "obvious_hint":true,
+        "items":{
+            "SUMMARY_CHECK_INTERVAL_SECONDS":{
+                "description":"计时器间隔时间（秒）",
+                "type":"int",
+                "hint":"默认以每60秒（1分钟）进行检查一次，如果阈值设置为1小时，设置为10分钟应该也没有问题",
+                "obvious_hint":true,
+                "default":60,
+                "minimum":10,
+                "maximum":3600
+            },
+            "SUMMARY_TIME_THRESHOLD_SECONDS":{
+                "description":"计时器总结阈值（秒）",
+                "type":"int",
+                "hint":"默认是3600秒（1小时），设置为-1关闭该功能，每个人与BOT的聊天频率是不同的，按个人需求进行设置",
+                "obvious_hint":true,
+                "default":-1,
+                "minimum":-1
+            }
+        }
+    },
+    "collection_name":{
+        "description":"向量数据库的集合名称",
+        "type":"string",
+        "hint":"长期记忆存储在向量数据库的哪个集合中,请使用英文命名",
+        "obvious_hint":true,
+        "default":"default",
+        "pattern":"^[a-zA-Z][a-zA-Z0-9_]*$",
+        "minLength":1,
+        "maxLength":64
+    },
+    "use_personality_filtering":{
+        "description":"记忆查询时是否使用人格过滤",
+        "type":"bool",
+        "default":true
+    },
+    "use_session_filtering":{
+        "description":"记忆查询时是否使用会话过滤。如果禁用，所有会话将共享记忆",
+        "type":"bool",
+        "default":true
+    },
+    "platform_blacklist":{
+        "description":"平台黑名单（禁用长期记忆）",
+        "type":"list",
+        "hint":"列表中的平台ID将跳过长期记忆查询与写入。可用于按平台差异化开启记忆能力",
+        "default":[],
+        "items":{
+            "type":"string"
+        }
+    },
+    "use_participant_filtering":{
+        "description":"按参与者过滤记忆（群聊防串线）",
+        "type":"bool",
+        "hint":"开启后，优先返回与当前发言用户相关的记忆（基于记录元数据）",
+        "default":false
+    },
+    "personality_fallback":{
+        "description":"对话未配置人格时是否回退到默认人格",
+        "type":"bool",
+        "default":false
+    },
+    "num_pairs":{
+        "description":"记忆总结的对话轮数",
+        "type":"int",
+        "hint":"一问一答算作1轮对话。当对话轮数达到此阈值时会自动进行记忆总结。例如设置为5，表示每5轮对话（5次问答）后进行总结",
+        "obvious_hint":false,
+        "default":5,
+        "minimum":1,
+        "maximum":25
+    },
+    "top_k":{
+        "description":"返回的长期记忆的数量",
+        "type":"int",
+        "default":3,
+        "minimum":1,
+        "maximum":20
+    },
+    "contexts_memory_len": {
+        "description":"历史上下文中保留的长期记忆数量",
+        "type":"int",
+        "hint":"小于0表示完全保留，大于等于0表示保留最新的对应条",
+        "obvious_hint":true,
+        "default":0,
+        "minimum":-1
+    },
+    "memory_injection_method":{
+        "description":"记忆插入方式",
+        "type":"string",
+        "hint":"user_prompt 注入到 LLM 用户提示词，位置由 memory_injection_position 控制；system_prompt 注入到 LLM 系统提示词；insert_system_prompt 会新增一条独立系统消息，可能降低部分模型的提示词缓存命中率",
+        "options": ["user_prompt", "system_prompt", "insert_system_prompt"],
+        "default": "user_prompt"
+    },
+    "memory_injection_position":{
+        "description":"记忆插入位置",
+        "type":"string",
+        "hint":"prepend 表示前置注入，append 表示后置注入",
+        "options":["prepend", "append"],
+        "default":"prepend"
+    },
+    "max_prompt_chars_for_embedding":{
+        "description":"向量化前最大输入字符数",
+        "type":"int",
+        "hint":"当用户输入异常长时，先截断再做Embedding，避免413或上下文超限错误",
+        "default":4000,
+        "minimum":256,
+        "maximum":50000
+    },
+    "enable_explicit_memory_capture":{
+        "description":"启用显式“记住”自动写入",
+        "type":"bool",
+        "hint":"当用户消息以“记住/请记住/remember”开头时，自动写入长期记忆",
+        "default":false
+    },
+    "use_lightweight_memory_graph":{
+        "description":"启用轻量图谱重排",
+        "type":"bool",
+        "hint":"基于实体共现关系做 one-hop 关键词扩展，提升多跳相关记忆召回",
+        "default":true
+    },
+    "use_summary_time_anchor":{
+        "description":"总结时注入绝对时间锚点",
+        "type":"bool",
+        "hint":"减少模型在总结文本中臆造随机年份/日期",
+        "default":true
+    },
+    "summary_speaker_mapping_prompt":{
+        "description":"记忆总结说话人映射提示词",
+        "type":"text",
+        "hint":"用于约束 user/assistant 与第一人称的归属。支持 {persona_id}、{session_id}、{sender_id}、{sender_name} 变量；留空可禁用",
+        "default":"说话人映射：assistant 表示当前会话正在运行的人格角色（persona_id={persona_id}），user 表示当前对话用户（sender_name={sender_name}，sender_id={sender_id}，session_id={session_id}）。总结中的“我/我的”只能指 assistant 对应的人格角色；user 发言中的第一人称应改写为用户昵称、用户或其。除非原始对话或人设明确如此自称，不要把 assistant 称为 AI、助手、bot 或模型。"
+    },
+    "long_memory_prompt":{
+        "description":"对话总结提示词",
+        "type":"string",
+        "default":"请基于以下对话内容生成一段连贯的长期记忆：1. 使用单段自然语言，不加序号或分点；2. 聚焦参与者身份、核心事件、关键时间、特殊需求、争议与解决方案；3. 保留金额、数量、规格等信息；4. 严格遵循说话人映射，不混淆 user 与 assistant 的经历和第一人称；5. 不输出解释或分析过程。",
+        "minLength":10,
+        "maxLength":1000
+    }
+}
