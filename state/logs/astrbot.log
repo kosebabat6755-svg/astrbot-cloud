@@ -1,0 +1,54 @@
+[2026-09-02 10:24:18.681] [astrbot_plugin_mnemosyne] [CRIT] [v4.28.0-beta.1] [astrbot_plugin_mnemosyne.main:506]: ❌ Mnemosyne 插件初始化失败: 'max_context_length'。已初始化的组件: 
+Traceback (most recent call last):
+
+  File "/tmp/astrbot/main.py", line 155, in <module>
+    asyncio.run(main_async(args.webui_dir))
+    │       │   │          │    └ None
+    │       │   │          └ Namespace(webui_dir=None, reset_password=False)
+    │       │   └ <function main_async at 0x7f0dfb1902c0>
+    │       └ <function run at 0x7f0dfe5a34c0>
+    └ <module 'asyncio' from '/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/__init__.py'>
+
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/runners.py", line 196, in run
+    return runner.run(main)
+           │      │   └ <coroutine object main_async at 0x7f0dfb142180>
+           │      └ <function Runner.run at 0x7f0dfe5f6c00>
+           └ <asyncio.runners.Runner object at 0x7f0deafc8050>
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/runners.py", line 119, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<main_async() running at /tmp/astrbot/main.py:127> wait_for=<Future pending cb=[_chain_futur...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x7f0dfe5f47c0>
+           │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x7f0deafc8050>
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/base_events.py", line 713, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x7f0dfe5f4720>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/base_events.py", line 684, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x7f0dfe5f6520>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/base_events.py", line 2061, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x7f0dfe5982c0>
+    └ <Handle <_asyncio.TaskStepMethWrapper object at 0x7f0de1340f70>()>
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <_asyncio.TaskStepMethWrapper object at 0x7f0de1340f70>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <_asyncio.TaskStepMethWrapper object at 0x7f0de1340f70>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <_asyncio.TaskStepMethWrapper object at 0x7f0de1340f70>()>
+
+> File "/home/runner/work/astrbot-cloud/astrbot-cloud/astrbot-data-root/data/plugins/astrbot_plugin_mnemosyne/main.py", line 422, in _initialize_plugin_async
+    initialization.initialize_config_check(self)
+    │              │                       └ <data.plugins.astrbot_plugin_mnemosyne.main.Mnemosyne object at 0x7f0de1382a50>
+    │              └ <function initialize_config_check at 0x7f0de1216200>
+    └ <module 'data.plugins.astrbot_plugin_mnemosyne.core.initialization' from '/home/runner/work/astrbot-cloud/astrbot-cloud/astrb...
+
+  File "/home/runner/work/astrbot-cloud/astrbot-cloud/astrbot-data-root/data/plugins/astrbot_plugin_mnemosyne/core/initialization.py", line 134, in initialize_config_check
+    astrbot_max_context_length = astrbot_config["provider_settings"][
+                                 └ {'config_version': 3, 'platform_settings': {'unique_session': False, 'rate_limit': {'time': 60, 'count': 30, 'strategy': 'sta...
+
+KeyError: 'max_context_length'
