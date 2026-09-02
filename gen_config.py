@@ -122,7 +122,7 @@ config = {
 _dash_pw = os.environ.get("ASTRBOT_DASH_PASSWORD", "")
 config["dashboard"] = {
     "enable": True,
-    "username": os.environ.get("ASTRBOT_DASH_USER", "admin"),
+    "username": os.environ.get("ASTRBOT_DASH_USER", "mamad"),
     "password": hashlib.md5(_dash_pw.encode()).hexdigest() if _dash_pw else "",
     "pbkdf2_password": _pbkdf2_dashboard(_dash_pw) if _dash_pw else "",
     "password_storage_upgraded": bool(_dash_pw),

@@ -7,7 +7,7 @@ set -u
 DATA_DIR="${ASTRBOT_DATA_DIR:-/tmp/astrbot-data}"
 TG_TOKEN="${TG_BOT_TOKEN:-}"
 ADMINS="${ASTRBOT_ADMIN_IDS:-6592796294}"
-DASH_USER="admin"
+DASH_USER="mamad"
 DASH_PASS="${DASH_PASSWORD:-changeme-cloud}"
 DASH_PORT="${DASH_PORT:-6185}"
 
