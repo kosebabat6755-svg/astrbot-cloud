@@ -57,7 +57,9 @@ config = {
             "type": "openai_whisper_api",
             "provider_type": "speech_to_text",
             "enable": True,
-            "api_key": ["$GROQ_API_KEY"],
+            # literal key required: whisper source reads api_key raw. Never
+            # persisted — cmd_config.json is excluded from state sync.
+            "api_key": os.environ.get("GROQ_API_KEY", ""),
             "api_base": "https://api.groq.com/openai/v1",
             "model": "whisper-large-v3-turbo",
             "proxy": "",
@@ -70,23 +72,18 @@ config = {
         "wake_prefix": "",
         "web_search": True,
         "websearch_provider": "tavily",
-        "websearch_tavily_key": ["$TAVILY_API_KEY"],
+        # literal key required: web search tools read this raw (no $env resolution
+        # outside provider manager). Value lives only on the runner — cmd_config.json
+        # is never pushed to the state branch.
+        "websearch_tavily_key": [os.environ.get("TAVILY_API_KEY", "")],
         "web_search_link": True,
         "streaming_response": False,
         "datetime_system_prompt": True,
         "show_tool_use_status": True,
-        "t2i": True,
-        "t2i_word_threshold": 150,
-        # human-like texting: split long replies into multiple messages
-        "segmented_reply": {
-            "enable": True,
-            "only_llm_result": True,
-            "interval_method": "random",
-            "interval": "1.5,3.5",
-            "log_base": 2.6,
-            "words_count_threshold": 150,
-        },
     },
+    # --- t2i: TOP-LEVEL keys in v4.28 (not under provider_settings) ---
+    "t2i": True,
+    "t2i_word_threshold": 150,
     # --- Voice settings: STT only (Groq Whisper in). TTS OFF per Boss. ---
     "provider_stt_settings": {
         "enable": True,
