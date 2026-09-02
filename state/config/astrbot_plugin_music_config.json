@@ -1,0 +1,30 @@
+﻿{
+    "default_player_name": "网易点歌",
+    "nodejs_base_url": "https://163api.qijieya.cn",
+    "song_limit": 5,
+    "select_modes": [
+        "button(按钮模式)",
+        "text(文本模式)",
+        "image(图片模式)"
+    ],
+    "cards_per_row": 3,
+    "send_modes": [
+        "card(卡片模式)",
+        "cz_card(CZ卡片)",
+        "record_local(本地语音)",
+        "record_link(语音链接)",
+        "file_local(本地文件)",
+        "file_link(文件链接)",
+        "text(文本模式)"
+    ],
+    "cz_ckey": "",
+    "record_unsupported": [],
+    "file_unsupported": [],
+    "enable_comments": true,
+    "enable_lyrics": false,
+    "proxy": "",
+    "timeout": 30,
+    "recall_select": true,
+    "enc_sec_key": "45c8bcb07e69c6b545d3045559bd300db897509b8720ee2b45a72bf2d3b216ddc77fb10daec4ca54b466f2da1ffac1e67e245fea9d842589dc402b92b262d3495b12165a721aed880bf09a0a99ff94c959d04e49085dc21c78bbbe8e3331827c0ef0035519e89f097511065643120cbc478f9c0af96400ba4649265781fc9079",
+    "enc_params": "D33zyir4L/58v1qGPcIPjSee79KCzxBIBy507IYDB8EL7jEnp41aDIqpHBhowfQ6iT1Xoka8jD+0p44nRKNKUA0dv+n5RWPOO57dZLVrd+T1J/sNrTdzUhdHhoKRIgegVcXYjYu+CshdtCBe6WEJozBRlaHyLeJtGrABfMOEb4PqgI3h/uELC82S05NtewlbLZ3TOR/TIIhNV6hVTtqHDVHjkekrvEmJzT5pk1UY6r0="
+}
