@@ -1,0 +1,857 @@
+"""
+记忆管理服务 - 提供记忆查询、统计、导出等功能
+"""
+
+import csv
+import io
+import json
+from collections import defaultdict
+from datetime import datetime, timedelta
+from typing import Any
+
+from astrbot.api import logger
+
+from ..models.memory import (
+    MemoryRecord,
+    MemorySearchRequest,
+    MemorySearchResponse,
+    MemoryStatistics,
+)
+
+# 兼容两种加载场景：
+# - 运行时：admin_panel 作为插件子包，`...core` 可达插件根的 core 模块。
+# - 测试时：admin_panel 作为顶层包，`...core` 会超出顶层包，回退到绝对导入
+#   （测试已将插件根加入 sys.path，core 作为顶层包可用）。
+try:
+    from ...core.security_utils import safe_build_milvus_expression
+except ImportError:
+    from core.security_utils import safe_build_milvus_expression
+
+
+class MemoryService:
+    """记忆管理服务"""
+
+    def __init__(self, plugin_instance):
+        """
+        初始化记忆服务
+
+        Args:
+            plugin_instance: Mnemosyne 插件实例
+        """
+        self.plugin = plugin_instance
+        self.logger = logger
+
+    def _get_vector_db(self):
+        return getattr(self.plugin, "vector_db", None)
+
+    def _all_records_expr(self) -> str | None:
+        return None
+
+    def _vector_db_type(self) -> str:
+        return str(getattr(self.plugin, "config", {}).get("vector_db_type", "chroma")).lower()
+
+    @staticmethod
+    def _native_id_expr(memory_id: str) -> str:
+        normalized = str(memory_id).strip().strip('"`')
+        return f'id == "{normalized}"'
+
+    @staticmethod
+    def _record_id(result: dict[str, Any]) -> str:
+        native_id = result.get("id")
+        additional = result.get("_additional")
+        if not native_id and isinstance(additional, dict):
+            native_id = additional.get("id")
+        return str(result.get("memory_id") or native_id or "")
+
+    async def search_memories(
+        self, request: MemorySearchRequest
+    ) -> MemorySearchResponse:
+        """
+        搜索记忆
+
+        Args:
+            request: 搜索请求
+
+        Returns:
+            MemorySearchResponse: 搜索结果
+        """
+        try:
+            vector_db = self._get_vector_db()
+            if not vector_db or not vector_db.is_connected():
+                return MemorySearchResponse(
+                    records=[],
+                    total_count=0,
+                    page=request.offset // request.limit + 1,
+                    page_size=request.limit,
+                    has_more=False,
+                )
+
+            collection_name = self.plugin.collection_name
+            if not vector_db.has_collection(collection_name):
+                return MemorySearchResponse(
+                    records=[],
+                    total_count=0,
+                    page=request.offset // request.limit + 1,
+                    page_size=request.limit,
+                    has_more=False,
+                )
+
+            # 优化：query 方法内部会自动处理集合加载，无需手动加载
+            # 构建查询表达式（仅标量过滤；keyword 需要在内存中匹配）
+            expr_parts = []
+
+            if request.session_id:
+                expr_parts.append(
+                    safe_build_milvus_expression(
+                        "session_id", request.session_id, "=="
+                    )
+                )
+
+            # 注意：persona_id 字段可能不存在，需要先检查
+            if request.persona_id:
+                expr_parts.append(
+                    safe_build_milvus_expression(
+                        "personality_id", request.persona_id, "=="
+                    )
+                )
+
+            if request.start_date:
+                start_timestamp = request.start_date.timestamp()
+                expr_parts.append(f"create_time >= {start_timestamp}")
+
+            if request.end_date:
+                end_timestamp = request.end_date.timestamp()
+                expr_parts.append(f"create_time <= {end_timestamp}")
+
+            expr = " and ".join(expr_parts) if expr_parts else ""
+
+            output_fields = ["memory_id", "session_id", "content", "create_time"]
+            output_fields.append("personality_id")
+
+            try:
+                # Milvus 的 query 不保证按 create_time 排序。
+                # 旧实现是：先分页取一页（默认顺序通常是最旧→最新），再在内存里排序/keyword 过滤。
+                # 这会导致：第一页永远是最旧；keyword 只能搜到“这一页”。
+                # 新实现：
+                # - 无额外过滤（expr 为空且无 keyword）时，用“反向 offset”快速取最新页。
+                # - 其它情况（有 keyword/有筛选）则做受控全量拉取 → 全局过滤/排序 → 再分页。
+
+                query_expr = expr if expr else self._all_records_expr()
+                page = request.offset // request.limit + 1
+
+                def _to_record(result: dict[str, Any]) -> MemoryRecord | None:
+                    try:
+                        create_time = result.get("create_time")
+                        if isinstance(create_time, (int, float)):
+                            create_time_dt = datetime.fromtimestamp(create_time)
+                        elif isinstance(create_time, str):
+                            create_time_dt = datetime.fromisoformat(create_time)
+                        elif isinstance(create_time, datetime):
+                            create_time_dt = create_time
+                        else:
+                            create_time_dt = datetime.now()
+
+                        persona_id_value = result.get("personality_id") or result.get(
+                            "persona_id"
+                        )
+                        memory_type = result.get("memory_type", "long_term")
+
+                        record = MemoryRecord(
+                            memory_id=self._record_id(result),
+                            session_id=result.get("session_id", ""),
+                            content=result.get("content", ""),
+                            create_time=create_time_dt,
+                            persona_id=persona_id_value,
+                        )
+                        record.metadata["memory_type"] = memory_type
+                        return record
+                    except Exception as exc:
+                        self.logger.error(f"转换记忆记录失败: {exc}")
+                        return None
+
+                # 快路径：全量列表（不带任何筛选/keyword）默认展示最新
+                if (
+                    not expr
+                    and not request.keyword
+                    and request.sort_by == "create_time"
+                    and request.sort_order == "desc"
+                ):
+                    all_results = vector_db.query(
+                        collection_name=collection_name,
+                        filters=query_expr,
+                        output_fields=output_fields,
+                        limit=10000,
+                    )
+                    total_count = len(all_results)
+                    if request.offset >= total_count:
+                        return MemorySearchResponse(
+                            records=[],
+                            total_count=total_count,
+                            page=page,
+                            page_size=request.limit,
+                            has_more=False,
+                        )
+
+                    records: list[MemoryRecord] = []
+                    all_results.sort(
+                        key=lambda item: item.get("create_time", 0) or 0,
+                        reverse=True,
+                    )
+                    results = all_results[request.offset : request.offset + request.limit]
+                    for result in results:
+                        record = _to_record(result)
+                        if record is not None:
+                            records.append(record)
+
+                    # 仅对本页做排序（已是最新窗口，排序保证时间倒序展示）
+                    records.sort(key=lambda x: x.create_time, reverse=True)
+                    has_more = request.offset + request.limit < total_count
+
+                    return MemorySearchResponse(
+                        records=records,
+                        total_count=total_count,
+                        page=page,
+                        page_size=request.limit,
+                        has_more=has_more,
+                    )
+
+                # 慢路径：有 keyword 或其它筛选时，为保证“全局搜索/全局排序”，做受控全量拉取
+                max_fetch = 10000
+                batch_size = 1000
+                fetched: list[MemoryRecord] = []
+
+                current_offset = 0
+                while len(fetched) < max_fetch:
+                    batch_limit = min(batch_size, max_fetch - len(fetched))
+                    batch = vector_db.query(
+                        collection_name=collection_name,
+                        filters=query_expr,
+                        output_fields=output_fields,
+                        limit=batch_limit,
+                        offset=current_offset,
+                    )
+                    if not batch:
+                        break
+
+                    for result in batch:
+                        record = _to_record(result)
+                        if record is not None:
+                            fetched.append(record)
+
+                    current_offset += len(batch)
+                    if len(batch) < batch_limit:
+                        break
+
+                # keyword 过滤（全局）
+                filtered = fetched
+                if request.keyword:
+                    keyword_lower = request.keyword.lower()
+                    filtered = [
+                        r
+                        for r in filtered
+                        if keyword_lower in (r.content or "").lower()
+                    ]
+
+                # 排序（全局）
+                if request.sort_by == "create_time":
+                    reverse = request.sort_order == "desc"
+                    filtered.sort(key=lambda x: x.create_time, reverse=reverse)
+
+                total_count = len(filtered)
+                start = min(request.offset, total_count)
+                end = min(request.offset + request.limit, total_count)
+                page_records = filtered[start:end]
+                has_more = end < total_count
+
+                return MemorySearchResponse(
+                    records=page_records,
+                    total_count=total_count,
+                    page=page,
+                    page_size=request.limit,
+                    has_more=has_more,
+                )
+
+            except Exception as e:
+                self.logger.error(f"查询向量数据库失败: {e}", exc_info=True)
+                return MemorySearchResponse(
+                    records=[],
+                    total_count=0,
+                    page=request.offset // request.limit + 1,
+                    page_size=request.limit,
+                    has_more=False,
+                )
+
+        except Exception as e:
+            self.logger.error(f"搜索记忆失败: {e}", exc_info=True)
+            return MemorySearchResponse(
+                records=[],
+                total_count=0,
+                page=request.offset // request.limit + 1,
+                page_size=request.limit,
+                has_more=False,
+            )
+
+    async def get_memory_statistics(self) -> MemoryStatistics:
+        """
+        获取记忆统计信息
+
+        Returns:
+            MemoryStatistics: 统计信息
+        """
+        stats = MemoryStatistics()
+
+        try:
+            vector_db = self._get_vector_db()
+            if not vector_db or not vector_db.is_connected():
+                return stats
+
+            collection_name = self.plugin.collection_name
+            if not vector_db.has_collection(collection_name):
+                return stats
+
+            # 查询所有记忆（限制数量以避免性能问题）
+            max_query = 10000
+            results = vector_db.query(
+                collection_name=collection_name,
+                filters=self._all_records_expr(),
+                output_fields=["session_id", "content", "create_time"],
+                limit=max_query,
+            )
+            stats.total_memories = len(results)
+            if max_query > 0:
+                # 检查查询结果
+                if not results:
+                    self.logger.warning("统计查询返回空结果")
+                    return stats
+
+                # 统计各会话的记忆数
+                session_counts = defaultdict(int)
+                date_counts = defaultdict(int)
+                total_length = 0
+                recent_count = 0
+                now = datetime.now()
+                recent_threshold = now - timedelta(days=7)
+
+                for result in results:
+                    session_id = result.get("session_id", "unknown")
+                    session_counts[session_id] += 1
+
+                    # 内容长度统计
+                    content = result.get("content", "")
+                    total_length += len(content)
+
+                    # 日期统计
+                    create_time = result.get("create_time")
+                    if isinstance(create_time, (int, float)):
+                        create_time = datetime.fromtimestamp(create_time)
+                    elif isinstance(create_time, str):
+                        try:
+                            create_time = datetime.fromisoformat(create_time)
+                        except (ValueError, TypeError):
+                            create_time = None
+
+                    if create_time:
+                        date_key = create_time.strftime("%Y-%m-%d")
+                        date_counts[date_key] += 1
+
+                        # 最近记忆统计
+                        if create_time >= recent_threshold:
+                            recent_count += 1
+
+                stats.total_sessions = len(session_counts)
+                stats.memories_by_session = dict(session_counts)
+                stats.memories_by_date = dict(date_counts)
+
+                # 最活跃的会话（Top 10）
+                stats.most_active_sessions = sorted(
+                    session_counts.items(), key=lambda x: x[1], reverse=True
+                )[:10]
+
+                stats.recent_memories_count = recent_count
+                stats.average_memory_length = (
+                    total_length / len(results) if results else 0.0
+                )
+
+        except Exception as e:
+            self.logger.error(f"获取记忆统计失败: {e}", exc_info=True)
+
+        return stats
+
+    async def delete_memory(self, memory_id: str) -> bool:
+        """
+        删除单条记忆
+
+        Args:
+            memory_id: 记忆ID
+
+        Returns:
+            bool: 是否成功
+        """
+        try:
+            vector_db = self._get_vector_db()
+            if not vector_db or not vector_db.is_connected():
+                return False
+
+            collection_name = self.plugin.collection_name
+            if not vector_db.has_collection(collection_name):
+                return False
+
+            if self._vector_db_type() == "milvus":
+                # Milvus 的 memory_id 是主键字段；非数字时保留字符串兼容旧记录。
+                try:
+                    memory_id_int = int(memory_id)
+                    expr = f"memory_id == {memory_id_int}"
+                except ValueError:
+                    expr = f'memory_id == "{memory_id}"'
+            else:
+                # 非 Milvus 后端管理面板展示的是数据库原生 ID。
+                expr = self._native_id_expr(memory_id)
+
+            mutation_result = vector_db.delete(collection_name, expr)
+            vector_db.flush([collection_name])
+
+            delete_count = getattr(mutation_result, "delete_count", None)
+            self.logger.info(f"已删除记忆: {memory_id}, 删除计数: {delete_count}")
+            return delete_count is None or delete_count > 0
+
+        except Exception as e:
+            self.logger.error(f"删除记忆失败: {e}", exc_info=True)
+            return False
+
+    async def update_memory(self, memory_id: str, content: str) -> dict[str, Any]:
+        """更新记忆内容并重新生成 embedding。"""
+        normalized_content = str(content or "").strip()
+        if not normalized_content:
+            raise ValueError("记忆内容不能为空")
+        if len(normalized_content) > 4096:
+            raise ValueError("记忆内容不能超过 4096 个字符")
+
+        vector_db = self._get_vector_db()
+        if not vector_db or not vector_db.is_connected():
+            raise RuntimeError("向量数据库未连接")
+
+        collection_name = self.plugin.collection_name
+        if not vector_db.has_collection(collection_name):
+            raise RuntimeError("记忆集合不存在")
+
+        provider = getattr(self.plugin, "embedding_provider", None)
+        if not provider:
+            raise RuntimeError("Embedding Provider 未初始化")
+
+        backend = self._vector_db_type()
+        output_fields = ["session_id", "content", "create_time", "personality_id"]
+        if backend == "milvus":
+            output_fields.append("memory_id")
+        try:
+            original = vector_db.get_by_id(
+                collection_name=collection_name,
+                record_id=memory_id,
+                output_fields=output_fields,
+            )
+        except NotImplementedError as e:
+            raise RuntimeError("当前向量数据库不支持按 ID 更新记忆") from e
+
+        if not original:
+            raise ValueError("记忆记录不存在")
+
+        original_content = str(original.get("content", ""))
+        create_time = original.get("create_time")
+        if isinstance(create_time, datetime):
+            create_time = create_time.timestamp()
+        elif isinstance(create_time, str):
+            try:
+                create_time = datetime.fromisoformat(create_time).timestamp()
+            except ValueError:
+                create_time = datetime.now().timestamp()
+        elif not isinstance(create_time, (int, float)):
+            create_time = datetime.now().timestamp()
+
+        new_embedding = await provider.get_embedding(normalized_content)
+        if not new_embedding:
+            raise RuntimeError("无法为更新后的记忆生成 embedding")
+
+        updated_payload = {
+            "content": normalized_content,
+            "embedding": new_embedding,
+            "personality_id": original.get("personality_id", ""),
+            "session_id": original.get("session_id", ""),
+            "create_time": int(create_time),
+        }
+
+        if backend != "milvus":
+            try:
+                result = vector_db.update(collection_name, memory_id, updated_payload)
+            except NotImplementedError as e:
+                raise RuntimeError("当前向量数据库不支持原地更新记忆") from e
+            vector_db.flush([collection_name])
+            if result.insert_count != 1:
+                raise RuntimeError("向量数据库未确认更新操作")
+            updated_id = str(result.primary_keys[0]) if result.primary_keys else memory_id
+            return self._updated_memory_response(
+                memory_id, updated_id, updated_payload
+            )
+
+        # Milvus 集合使用 AutoID，无法原地保留主键。删除前同时生成旧向量，
+        # 这样新记录插入失败时仍可恢复原内容。
+        original_embedding = await provider.get_embedding(original_content)
+        if not original_embedding:
+            raise RuntimeError("无法生成回滚所需的原记忆 embedding")
+
+        try:
+            numeric_id = int(memory_id)
+            filters = f"memory_id == {numeric_id}"
+        except ValueError:
+            filters = f'memory_id == "{memory_id}"'
+
+        delete_result = vector_db.delete(collection_name, filters)
+        vector_db.flush([collection_name])
+        if (
+            delete_result.delete_count is not None
+            and delete_result.delete_count < 1
+        ):
+            raise RuntimeError("原记忆删除失败，更新已取消")
+
+        try:
+            insert_result = vector_db.insert(collection_name, [updated_payload])
+            vector_db.flush([collection_name])
+            if insert_result.insert_count != 1:
+                raise RuntimeError("更新后的记忆插入失败")
+        except Exception as update_error:
+            rollback_payload = {
+                **updated_payload,
+                "content": original_content,
+                "embedding": original_embedding,
+            }
+            try:
+                rollback_result = vector_db.insert(collection_name, [rollback_payload])
+                vector_db.flush([collection_name])
+                if rollback_result.insert_count != 1:
+                    raise RuntimeError("回滚插入未成功")
+            except Exception as rollback_error:
+                raise RuntimeError(
+                    "记忆更新失败且原记录无法恢复，请立即检查向量数据库"
+                ) from rollback_error
+            raise RuntimeError("记忆更新失败，原内容已恢复") from update_error
+
+        updated_id = (
+            str(insert_result.primary_keys[0])
+            if insert_result.primary_keys
+            else memory_id
+        )
+        return self._updated_memory_response(memory_id, updated_id, updated_payload)
+
+    @staticmethod
+    def _updated_memory_response(
+        previous_id: str,
+        updated_id: str,
+        payload: dict[str, Any],
+    ) -> dict[str, Any]:
+        return {
+            "memory_id": updated_id,
+            "previous_memory_id": previous_id,
+            "id_changed": updated_id != previous_id,
+            "content": payload["content"],
+            "session_id": payload.get("session_id", ""),
+            "persona_id": payload.get("personality_id", ""),
+            "create_time": datetime.fromtimestamp(payload["create_time"]).isoformat(),
+            "embedding_regenerated": True,
+        }
+
+    async def delete_session_memories(self, session_id: str) -> int:
+        """
+        删除指定会话的所有记忆
+
+        Args:
+            session_id: 会话ID
+
+        Returns:
+            int: 删除的记忆数量
+        """
+        try:
+            vector_db = self._get_vector_db()
+            if not vector_db or not vector_db.is_connected():
+                return 0
+
+            collection_name = self.plugin.collection_name
+            if not vector_db.has_collection(collection_name):
+                return 0
+
+            # 使用安全的表达式构建方法，避免注入
+            try:
+                expr = safe_build_milvus_expression("session_id", session_id, "==")
+            except ValueError:
+                self.logger.warning(f"删除会话记忆失败：session_id 格式无效: {session_id}")
+                return 0
+
+            # 先查询记忆数量
+            results = vector_db.query(
+                collection_name=collection_name,
+                filters=expr,
+                output_fields=["memory_id"],
+                limit=10000,
+            )
+            count = len(results) if results else 0
+
+            # 删除记忆
+            if count > 0:
+                vector_db.delete(collection_name, expr)
+                vector_db.flush([collection_name])
+
+                self.logger.info(f"已删除会话 {session_id} 的 {count} 条记忆")
+
+            return count
+
+        except Exception as e:
+            self.logger.error(f"删除会话记忆失败: {e}", exc_info=True)
+            return 0
+
+    async def export_memories(
+        self,
+        format: str = "json",
+        session_id: str | None = None,
+        start_date: datetime | None = None,
+        end_date: datetime | None = None,
+    ) -> str | None:
+        """
+        导出记忆
+
+        Args:
+            format: 导出格式 (json/csv)
+            session_id: 会话ID（可选）
+            start_date: 开始日期（可选）
+            end_date: 结束日期（可选）
+
+        Returns:
+            str: 导出的内容
+        """
+        try:
+            # 构建搜索请求
+            request = MemorySearchRequest(
+                session_id=session_id,
+                start_date=start_date,
+                end_date=end_date,
+                limit=10000,  # 最多导出10000条
+                offset=0,
+            )
+
+            # 搜索记忆
+            response = await self.search_memories(request)
+
+            if format == "json":
+                # JSON 格式
+                data = {
+                    "export_time": datetime.now().isoformat(),
+                    "total_count": len(response.records),
+                    "filters": {
+                        "session_id": session_id,
+                        "start_date": start_date.isoformat() if start_date else None,
+                        "end_date": end_date.isoformat() if end_date else None,
+                    },
+                    "memories": [record.to_dict() for record in response.records],
+                }
+                return json.dumps(data, ensure_ascii=False, indent=2)
+
+            elif format == "csv":
+                # CSV 格式
+                output = io.StringIO()
+                writer = csv.writer(output)
+
+                # 写入标题行
+                writer.writerow(["记忆ID", "会话ID", "内容", "创建时间", "人格ID"])
+
+                # 写入数据
+                for record in response.records:
+                    writer.writerow(
+                        [
+                            record.memory_id,
+                            record.session_id,
+                            record.content,
+                            record.create_time.isoformat(),
+                            record.persona_id or "",
+                        ]
+                    )
+
+                return output.getvalue()
+
+            else:
+                self.logger.error(f"不支持的导出格式: {format}")
+                return None
+
+        except Exception as e:
+            self.logger.error(f"导出记忆失败: {e}", exc_info=True)
+            return None
+
+    async def get_session_list(self, limit: int = 100) -> list[dict[str, Any]]:
+        """
+        获取会话列表
+
+        Args:
+            limit: 返回数量限制
+
+        Returns:
+            List[Dict]: 会话列表
+        """
+        try:
+            vector_db = self._get_vector_db()
+            if not vector_db or not vector_db.is_connected():
+                return []
+
+            collection_name = self.plugin.collection_name
+            if not vector_db.has_collection(collection_name):
+                return []
+
+            # 查询所有记忆（无需手动加载，query会自动处理）
+            results = vector_db.query(
+                collection_name=collection_name,
+                filters=self._all_records_expr(),  # 查询所有记录
+                output_fields=["session_id", "create_time"],
+                limit=10000,
+            )
+
+            # 检查查询结果
+            if not results:
+                self.logger.warning("会话列表查询返回空结果")
+                return []
+
+            # 统计每个会话
+            session_data: dict[str, dict[str, Any]] = defaultdict(
+                lambda: {
+                    "session_id": "",
+                    "memory_count": 0,
+                    "last_memory_time": None,
+                    "first_memory_time": None,
+                }
+            )
+
+            for result in results:
+                session_id = result.get("session_id", "unknown")
+                create_time_raw = result.get("create_time")
+
+                create_time: datetime
+                if isinstance(create_time_raw, (int, float)):
+                    create_time = datetime.fromtimestamp(create_time_raw)
+                elif isinstance(create_time_raw, str):
+                    try:
+                        create_time = datetime.fromisoformat(create_time_raw)
+                    except (ValueError, TypeError):
+                        create_time = datetime.now()
+                else:
+                    create_time = datetime.now()
+
+                session_info = session_data[session_id]
+                session_info["session_id"] = session_id
+                session_info["memory_count"] = session_info["memory_count"] + 1
+
+                last_time = session_info["last_memory_time"]
+                if last_time is None or (
+                    isinstance(last_time, datetime) and create_time > last_time
+                ):
+                    session_info["last_memory_time"] = create_time
+
+                first_time = session_info["first_memory_time"]
+                if first_time is None or (
+                    isinstance(first_time, datetime) and create_time < first_time
+                ):
+                    session_info["first_memory_time"] = create_time
+
+            # 转换为列表并排序
+            sessions = list(session_data.values())
+            sessions.sort(
+                key=lambda x: (
+                    x["last_memory_time"] if x["last_memory_time"] else datetime.min
+                ),
+                reverse=True,
+            )
+
+            # 格式化时间
+            for session in sessions[:limit]:
+                last_time = session.get("last_memory_time")
+                if last_time and isinstance(last_time, datetime):
+                    session["last_memory_time"] = last_time.isoformat()
+
+                first_time = session.get("first_memory_time")
+                if first_time and isinstance(first_time, datetime):
+                    session["first_memory_time"] = first_time.isoformat()
+
+            return sessions[:limit]
+
+        except Exception as e:
+            self.logger.error(f"获取会话列表失败: {e}", exc_info=True)
+            return []
+
+    async def vector_search(self, query: str, limit: int = 50) -> list[dict[str, Any]]:
+        """
+        向量检索记忆
+
+        Args:
+            query: 查询文本
+            limit: 返回数量限制
+
+        Returns:
+            List[Dict]: 记忆列表，按相似度排序
+        """
+        try:
+            vector_db = self._get_vector_db()
+            if not vector_db or not vector_db.is_connected():
+                return []
+
+            collection_name = self.plugin.collection_name
+            if not vector_db.has_collection(collection_name):
+                return []
+
+            # 使用embedding模型生成查询向量
+            if not getattr(self.plugin, "embedding_provider", None):
+                self.logger.warning("Embedding Provider 未初始化，无法进行向量检索")
+                return []
+
+            # 生成查询向量
+            query_vector = await self.plugin.embedding_provider.get_embedding(query)
+            if not query_vector:
+                return []
+
+            results = vector_db.search(
+                collection_name=collection_name,
+                query_vector=query_vector,
+                top_k=limit,
+                filters=None,
+            )
+
+            # 转换结果
+            memories = []
+            if results:
+                for entity in results:
+                    try:
+                        # 获取时间
+                        create_time = entity.get("create_time")
+                        if isinstance(create_time, (int, float)):
+                            create_time = datetime.fromtimestamp(create_time)
+                        elif isinstance(create_time, str):
+                            create_time = datetime.fromisoformat(create_time)
+                        else:
+                            create_time = datetime.now()
+
+                        # 获取人格ID
+                        persona_id_value = entity.get("personality_id") or entity.get(
+                            "persona_id"
+                        )
+
+                        memory = {
+                            "memory_id": self._record_id(entity),
+                            "session_id": entity.get("session_id", ""),
+                            "content": entity.get("content", ""),
+                            "create_time": create_time.isoformat(),
+                            "persona_id": persona_id_value,
+                            "similarity_score": entity.get(
+                                "_score", entity.get("score", 0.0)
+                            ),
+                        }
+                        memories.append(memory)
+                    except Exception as e:
+                        self.logger.error(f"转换搜索结果失败: {e}")
+                        continue
+
+            return memories
+
+        except Exception as e:
+            self.logger.error(f"向量检索失败: {e}", exc_info=True)
+            return []
