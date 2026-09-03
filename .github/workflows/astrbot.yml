@@ -129,3 +129,5 @@ jobs:
           name: astrbot-boot-log
           path: astrbot-boot.log
           retention-days: 3
+
+# registration nudge
