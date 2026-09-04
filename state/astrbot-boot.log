@@ -4422,3 +4422,478 @@ DEPRECATION: Unexpected import of 'anyio._core._streams' after pip install start
 [32m[22:40:01.632][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
 [32m[22:40:11.768][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
 [32m[22:40:21.903][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:40:32.042][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:40:42.178][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:40:52.315][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:41:02.449][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:41:12.585][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:41:13.991][0m [Core] [33m[1m[WARN][0m [v4.28.0-beta.1] [telegram.tg_adapter:366]: [33m[1m命令名 'remember' 重复注册，将使用首次注册的定义: '手动记住引用对话及上下文，并链入表达方式和对话示例'[0m
+[32m[22:41:22.724][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:41:32.859][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:41:42.995][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:41:53.131][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:42:03.267][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:42:13.403][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:42:23.539][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:42:33.675][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:42:43.811][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:42:53.946][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:43:04.082][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:43:14.217][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:43:24.354][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:43:34.488][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:43:44.623][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:43:54.759][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:44:04.895][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:44:15.032][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:44:25.167][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:44:35.303][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:44:45.440][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:44:55.576][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:45:05.714][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:45:15.850][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:45:25.985][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:45:36.121][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:45:46.257][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:45:56.392][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:46:06.527][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:46:13.993][0m [Core] [33m[1m[WARN][0m [v4.28.0-beta.1] [telegram.tg_adapter:366]: [33m[1m命令名 'remember' 重复注册，将使用首次注册的定义: '手动记住引用对话及上下文，并链入表达方式和对话示例'[0m
+[32m[22:46:16.664][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:46:26.800][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:46:36.938][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:46:47.074][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:46:57.210][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:47:07.345][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:47:17.482][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:47:27.618][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:47:37.755][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:47:47.891][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:47:58.026][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:48:08.164][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:48:18.301][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:48:28.437][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:48:38.572][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:48:48.707][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:48:58.843][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:49:08.978][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:49:19.116][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:49:29.253][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:49:39.390][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:49:49.525][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:49:59.662][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:50:09.796][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:50:19.933][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:50:30.069][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:50:40.205][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:50:50.340][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:51:00.479][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:51:10.615][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:51:13.992][0m [Core] [33m[1m[WARN][0m [v4.28.0-beta.1] [telegram.tg_adapter:366]: [33m[1m命令名 'remember' 重复注册，将使用首次注册的定义: '手动记住引用对话及上下文，并链入表达方式和对话示例'[0m
+[32m[22:51:20.752][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:51:30.890][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:51:41.026][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:51:51.162][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:52:01.298][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:52:11.434][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:52:21.569][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:52:31.708][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:52:41.843][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:52:51.979][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:53:02.115][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:53:12.250][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:53:15.023][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 409 Conflict"[0m
+[32m[22:53:15.024][0m [Core] [31m[1m[ERRO][0m [v4.28.0-beta.1] [telegram.tg_adapter:293]: [31m[1mTelegram polling request failed: Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "[32m/tmp/astrbot/[0m[32m[1mmain.py[0m", line [33m155[0m, in [35m<module>[0m
+    [1masyncio[0m[35m[1m.[0m[1mrun[0m[1m([0m[1mmain_async[0m[1m([0m[1margs[0m[35m[1m.[0m[1mwebui_dir[0m[1m)[0m[1m)[0m
+    [36m│       │   │          │    └ [0m[36m[1mNone[0m
+    [36m│       │   │          └ [0m[36m[1mNamespace(webui_dir=None, reset_password=False)[0m
+    [36m│       │   └ [0m[36m[1m<function main_async at 0x7f7055726160>[0m
+    [36m│       └ [0m[36m[1m<function run at 0x7f705826aa20>[0m
+    [36m└ [0m[36m[1m<module 'asyncio' from '/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/__init__.py'>[0m
+
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/runners.py", line 196, in run
+    return runner.run(main)
+           │      │   └ <coroutine object main_async at 0x7f704a5b9e00>
+           │      └ <function Runner.run at 0x7f705820c040>
+           └ <asyncio.runners.Runner object at 0x7f7049a0cad0>
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/runners.py", line 119, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<main_async() running at /tmp/astrbot/main.py:127> wait_for=<_GatheringFuture pending cb=[Ta...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x7f7058209b20>
+           │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x7f7049a0cad0>
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/base_events.py", line 713, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x7f7058209a80>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/base_events.py", line 684, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x7f705820b880>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/base_events.py", line 2061, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x7f70583c8e00>
+    └ <Handle Task.task_wakeup()>
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup()>
+> File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages/telegram/ext/_utils/networkloop.py", line 161, in network_retry_loop
+    await do_action()
+          └ <function network_retry_loop.<locals>.do_action at 0x7f702e05bba0>
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages/telegram/ext/_utils/networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    │              └ <method 'result' of '_asyncio.Task' objects>
+    └ <Task finished name='Task-2427' coro=<Updater._start_polling.<locals>.polling_action_cb() done, defined at /opt/hostedtoolcac...
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages/telegram/ext/_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+                    │    └ <member 'bot' of 'Updater' objects>
+                    └ Updater[bot=ExtBot[token=7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE]]
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages/telegram/_bot.py", line 4767, in get_updates
+    await self._post(
+          │    └ <function Bot._post at 0x7f7038328720>
+          └ ExtBot[token=7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE]
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages/telegram/_bot.py", line 712, in _post
+    return await self._do_post(
+                 │    └ <function ExtBot._do_post at 0x7f703822e700>
+                 └ ExtBot[token=7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE]
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages/telegram/_bot.py", line 741, in _do_post
+    result = await request.post(
+                   │       └ <function BaseRequest.post at 0x7f7050c82a20>
+                   └ <telegram.request._httpxrequest.HTTPXRequest object at 0x7f702e6354c0>
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+                   │    └ <function BaseRequest._request_wrapper at 0x7f7050c82b60>
+                   └ <telegram.request._httpxrequest.HTTPXRequest object at 0x7f702e6354c0>
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 375, in _request_wrapper
+    raise exception
+          └ Conflict('Conflict: terminated by other getUpdates request; make sure that only one bot instance is running')
+
+[31m[1mtelegram.error.Conflict[0m:[1m Conflict: terminated by other getUpdates request; make sure that only one bot instance is running[0m
+[32m[22:53:22.692][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 409 Conflict"[0m
+[32m[22:53:22.692][0m [Core] [31m[1m[ERRO][0m [v4.28.0-beta.1] [telegram.tg_adapter:293]: [31m[1mTelegram polling request failed: Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "[32m/tmp/astrbot/[0m[32m[1mmain.py[0m", line [33m155[0m, in [35m<module>[0m
+    [1masyncio[0m[35m[1m.[0m[1mrun[0m[1m([0m[1mmain_async[0m[1m([0m[1margs[0m[35m[1m.[0m[1mwebui_dir[0m[1m)[0m[1m)[0m
+    [36m│       │   │          │    └ [0m[36m[1mNone[0m
+    [36m│       │   │          └ [0m[36m[1mNamespace(webui_dir=None, reset_password=False)[0m
+    [36m│       │   └ [0m[36m[1m<function main_async at 0x7f7055726160>[0m
+    [36m│       └ [0m[36m[1m<function run at 0x7f705826aa20>[0m
+    [36m└ [0m[36m[1m<module 'asyncio' from '/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/__init__.py'>[0m
+
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/runners.py", line 196, in run
+    return runner.run(main)
+           │      │   └ <coroutine object main_async at 0x7f704a5b9e00>
+           │      └ <function Runner.run at 0x7f705820c040>
+           └ <asyncio.runners.Runner object at 0x7f7049a0cad0>
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/runners.py", line 119, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<main_async() running at /tmp/astrbot/main.py:127> wait_for=<_GatheringFuture pending cb=[Ta...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x7f7058209b20>
+           │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x7f7049a0cad0>
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/base_events.py", line 713, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x7f7058209a80>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/base_events.py", line 684, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x7f705820b880>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/base_events.py", line 2061, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x7f70583c8e00>
+    └ <Handle Task.task_wakeup()>
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup()>
+> File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages/telegram/ext/_utils/networkloop.py", line 161, in network_retry_loop
+    await do_action()
+          └ <function network_retry_loop.<locals>.do_action at 0x7f702e05bba0>
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages/telegram/ext/_utils/networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    │              └ <method 'result' of '_asyncio.Task' objects>
+    └ <Task finished name='Task-2429' coro=<Updater._start_polling.<locals>.polling_action_cb() done, defined at /opt/hostedtoolcac...
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages/telegram/ext/_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+                    │    └ <member 'bot' of 'Updater' objects>
+                    └ Updater[bot=ExtBot[token=7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE]]
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages/telegram/_bot.py", line 4767, in get_updates
+    await self._post(
+          │    └ <function Bot._post at 0x7f7038328720>
+          └ ExtBot[token=7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE]
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages/telegram/_bot.py", line 712, in _post
+    return await self._do_post(
+                 │    └ <function ExtBot._do_post at 0x7f703822e700>
+                 └ ExtBot[token=7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE]
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages/telegram/_bot.py", line 741, in _do_post
+    result = await request.post(
+                   │       └ <function BaseRequest.post at 0x7f7050c82a20>
+                   └ <telegram.request._httpxrequest.HTTPXRequest object at 0x7f702e6354c0>
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+                   │    └ <function BaseRequest._request_wrapper at 0x7f7050c82b60>
+                   └ <telegram.request._httpxrequest.HTTPXRequest object at 0x7f702e6354c0>
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 375, in _request_wrapper
+    raise exception
+          └ Conflict('Conflict: terminated by other getUpdates request; make sure that only one bot instance is running')
+
+[31m[1mtelegram.error.Conflict[0m:[1m Conflict: terminated by other getUpdates request; make sure that only one bot instance is running[0m
+[32m[22:53:30.551][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 409 Conflict"[0m
+[32m[22:53:30.552][0m [Core] [31m[1m[ERRO][0m [v4.28.0-beta.1] [telegram.tg_adapter:293]: [31m[1mTelegram polling request failed: Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "[32m/tmp/astrbot/[0m[32m[1mmain.py[0m", line [33m155[0m, in [35m<module>[0m
+    [1masyncio[0m[35m[1m.[0m[1mrun[0m[1m([0m[1mmain_async[0m[1m([0m[1margs[0m[35m[1m.[0m[1mwebui_dir[0m[1m)[0m[1m)[0m
+    [36m│       │   │          │    └ [0m[36m[1mNone[0m
+    [36m│       │   │          └ [0m[36m[1mNamespace(webui_dir=None, reset_password=False)[0m
+    [36m│       │   └ [0m[36m[1m<function main_async at 0x7f7055726160>[0m
+    [36m│       └ [0m[36m[1m<function run at 0x7f705826aa20>[0m
+    [36m└ [0m[36m[1m<module 'asyncio' from '/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/__init__.py'>[0m
+
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/runners.py", line 196, in run
+    return runner.run(main)
+           │      │   └ <coroutine object main_async at 0x7f704a5b9e00>
+           │      └ <function Runner.run at 0x7f705820c040>
+           └ <asyncio.runners.Runner object at 0x7f7049a0cad0>
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/runners.py", line 119, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<main_async() running at /tmp/astrbot/main.py:127> wait_for=<_GatheringFuture pending cb=[Ta...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x7f7058209b20>
+           │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x7f7049a0cad0>
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/base_events.py", line 713, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x7f7058209a80>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/base_events.py", line 684, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x7f705820b880>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/base_events.py", line 2061, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x7f70583c8e00>
+    └ <Handle Task.task_wakeup()>
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup()>
+> File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages/telegram/ext/_utils/networkloop.py", line 161, in network_retry_loop
+    await do_action()
+          └ <function network_retry_loop.<locals>.do_action at 0x7f702e05bba0>
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages/telegram/ext/_utils/networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    │              └ <method 'result' of '_asyncio.Task' objects>
+    └ <Task finished name='Task-2431' coro=<Updater._start_polling.<locals>.polling_action_cb() done, defined at /opt/hostedtoolcac...
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages/telegram/ext/_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+                    │    └ <member 'bot' of 'Updater' objects>
+                    └ Updater[bot=ExtBot[token=7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE]]
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages/telegram/_bot.py", line 4767, in get_updates
+    await self._post(
+          │    └ <function Bot._post at 0x7f7038328720>
+          └ ExtBot[token=7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE]
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages/telegram/_bot.py", line 712, in _post
+    return await self._do_post(
+                 │    └ <function ExtBot._do_post at 0x7f703822e700>
+                 └ ExtBot[token=7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE]
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages/telegram/_bot.py", line 741, in _do_post
+    result = await request.post(
+                   │       └ <function BaseRequest.post at 0x7f7050c82a20>
+                   └ <telegram.request._httpxrequest.HTTPXRequest object at 0x7f702e6354c0>
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+                   │    └ <function BaseRequest._request_wrapper at 0x7f7050c82b60>
+                   └ <telegram.request._httpxrequest.HTTPXRequest object at 0x7f702e6354c0>
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 375, in _request_wrapper
+    raise exception
+          └ Conflict('Conflict: terminated by other getUpdates request; make sure that only one bot instance is running')
+
+[31m[1mtelegram.error.Conflict[0m:[1m Conflict: terminated by other getUpdates request; make sure that only one bot instance is running[0m
+[32m[22:53:39.377][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 409 Conflict"[0m
+[32m[22:53:39.378][0m [Core] [31m[1m[ERRO][0m [v4.28.0-beta.1] [telegram.tg_adapter:293]: [31m[1mTelegram polling request failed: Conflict: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running[0m
+[33m[1mTraceback (most recent call last):[0m
+
+  File "[32m/tmp/astrbot/[0m[32m[1mmain.py[0m", line [33m155[0m, in [35m<module>[0m
+    [1masyncio[0m[35m[1m.[0m[1mrun[0m[1m([0m[1mmain_async[0m[1m([0m[1margs[0m[35m[1m.[0m[1mwebui_dir[0m[1m)[0m[1m)[0m
+    [36m│       │   │          │    └ [0m[36m[1mNone[0m
+    [36m│       │   │          └ [0m[36m[1mNamespace(webui_dir=None, reset_password=False)[0m
+    [36m│       │   └ [0m[36m[1m<function main_async at 0x7f7055726160>[0m
+    [36m│       └ [0m[36m[1m<function run at 0x7f705826aa20>[0m
+    [36m└ [0m[36m[1m<module 'asyncio' from '/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/__init__.py'>[0m
+
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/runners.py", line 196, in run
+    return runner.run(main)
+           │      │   └ <coroutine object main_async at 0x7f704a5b9e00>
+           │      └ <function Runner.run at 0x7f705820c040>
+           └ <asyncio.runners.Runner object at 0x7f7049a0cad0>
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/runners.py", line 119, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<main_async() running at /tmp/astrbot/main.py:127> wait_for=<_GatheringFuture pending cb=[Ta...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x7f7058209b20>
+           │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x7f7049a0cad0>
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/base_events.py", line 713, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x7f7058209a80>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/base_events.py", line 684, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x7f705820b880>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/base_events.py", line 2061, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x7f70583c8e00>
+    └ <Handle Task.task_wakeup()>
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/asyncio/events.py", line 89, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup()>
+> File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages/telegram/ext/_utils/networkloop.py", line 161, in network_retry_loop
+    await do_action()
+          └ <function network_retry_loop.<locals>.do_action at 0x7f702e05bba0>
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages/telegram/ext/_utils/networkloop.py", line 154, in do_action
+    action_cb_task.result()
+    │              └ <method 'result' of '_asyncio.Task' objects>
+    └ <Task finished name='Task-2433' coro=<Updater._start_polling.<locals>.polling_action_cb() done, defined at /opt/hostedtoolcac...
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages/telegram/ext/_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+                    │    └ <member 'bot' of 'Updater' objects>
+                    └ Updater[bot=ExtBot[token=7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE]]
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 680, in get_updates
+    updates = await super().get_updates(
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages/telegram/_bot.py", line 4767, in get_updates
+    await self._post(
+          │    └ <function Bot._post at 0x7f7038328720>
+          └ ExtBot[token=7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE]
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages/telegram/_bot.py", line 712, in _post
+    return await self._do_post(
+                 │    └ <function ExtBot._do_post at 0x7f703822e700>
+                 └ ExtBot[token=7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE]
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages/telegram/ext/_extbot.py", line 378, in _do_post
+    return await super()._do_post(
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages/telegram/_bot.py", line 741, in _do_post
+    result = await request.post(
+                   │       └ <function BaseRequest.post at 0x7f7050c82a20>
+                   └ <telegram.request._httpxrequest.HTTPXRequest object at 0x7f702e6354c0>
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 198, in post
+    result = await self._request_wrapper(
+                   │    └ <function BaseRequest._request_wrapper at 0x7f7050c82b60>
+                   └ <telegram.request._httpxrequest.HTTPXRequest object at 0x7f702e6354c0>
+  File "/opt/hostedtoolcache/Python/3.13.15/x64/lib/python3.13/site-packages/telegram/request/_baserequest.py", line 375, in _request_wrapper
+    raise exception
+          └ Conflict('Conflict: terminated by other getUpdates request; make sure that only one bot instance is running')
+
+[31m[1mtelegram.error.Conflict[0m:[1m Conflict: terminated by other getUpdates request; make sure that only one bot instance is running[0m
+[32m[22:53:52.892][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:54:03.030][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:54:13.165][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:54:23.301][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:54:33.438][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:54:43.574][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:54:53.711][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:55:03.846][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:55:13.982][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:55:24.117][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:55:34.253][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:55:44.390][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:55:54.525][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:56:04.660][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:56:13.991][0m [Core] [33m[1m[WARN][0m [v4.28.0-beta.1] [telegram.tg_adapter:366]: [33m[1m命令名 'remember' 重复注册，将使用首次注册的定义: '手动记住引用对话及上下文，并链入表达方式和对话示例'[0m
+[32m[22:56:14.797][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:56:25.018][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:56:35.287][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:56:45.574][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:56:55.864][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:57:06.279][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:57:16.542][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:57:26.830][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:57:37.096][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:57:47.379][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:57:57.652][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:58:07.915][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:58:18.214][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:58:28.497][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:58:38.738][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:58:49.059][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:58:59.317][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:59:09.455][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:59:19.592][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:59:29.730][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:59:39.868][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[22:59:50.005][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[23:00:00.144][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[23:00:10.283][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[23:00:20.424][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[23:00:30.564][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[23:00:40.704][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[23:00:50.843][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[23:01:00.983][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[23:01:11.121][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[23:01:13.992][0m [Core] [33m[1m[WARN][0m [v4.28.0-beta.1] [telegram.tg_adapter:366]: [33m[1m命令名 'remember' 重复注册，将使用首次注册的定义: '手动记住引用对话及上下文，并链入表达方式和对话示例'[0m
+[32m[23:01:21.261][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[23:01:31.401][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[23:01:41.540][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[23:01:51.682][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[23:02:01.820][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[23:02:11.958][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[23:02:22.097][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[23:02:32.235][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[23:02:42.374][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[23:02:52.512][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[23:03:02.649][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[23:03:12.787][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[23:03:22.925][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[23:03:33.063][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[23:03:43.202][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[23:03:53.339][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[23:04:03.478][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[23:04:13.616][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[23:04:23.754][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[23:04:33.892][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[23:04:44.029][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[23:04:54.168][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[23:05:04.305][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[23:05:14.444][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[23:05:24.582][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[23:05:34.719][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[23:05:44.858][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[23:05:54.996][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[23:06:05.136][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[23:06:13.991][0m [Core] [33m[1m[WARN][0m [v4.28.0-beta.1] [telegram.tg_adapter:366]: [33m[1m命令名 'remember' 重复注册，将使用首次注册的定义: '手动记住引用对话及上下文，并链入表达方式和对话示例'[0m
+[32m[23:06:15.274][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[23:06:25.412][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[23:06:35.551][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
+[32m[23:06:45.690][0m [Core] [1m[INFO][0m [httpx._client:1740]: [1mHTTP Request: POST https://api.telegram.org/bot7625921606:AAGek8syl_uAPsRqwIGn_lItyn0imq0clJE/getUpdates "HTTP/1.1 200 OK"[0m
