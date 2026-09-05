@@ -75,9 +75,9 @@ def snapshot() -> list[tuple[Path, str]]:
         # versions (franken-dist) and 404s the WebUI after login.
         if rel.parts[0] == "dist":
             continue
-        # Skip files > 12MB
-        if path.stat().st_size > 12 * 1024 * 1024:
-            continue
+        # NO SIZE CAP (boss order 2026-09-04, matches hermes pusher v4): push everything.
+        if path.stat().st_size > 90 * 1024 * 1024:
+            print(f"[pusher] BIG-FILE {path.name} ({path.stat().st_size}) — over git blob API limit, push will fail per-file")
         out.append((path, rel.as_posix()))
     return out
 
