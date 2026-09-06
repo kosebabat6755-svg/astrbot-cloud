@@ -115,7 +115,7 @@ jobs:
           # CRITICAL: AstrBot resolves data/ from ASTRBOT_ROOT (cwd fallback).
           # Root = parent of the data dir we generated.
           ASTRBOT_ROOT: ${{ github.workspace }}/astrbot-data-root
-          RUN_MINUTES: "285"
+          RUN_MINUTES: "267"
         run: |
           echo "Running AstrBot @ $ASTRBOT_COMMIT for ${RUN_MINUTES}m"
           # tee to data/ dir so push_state pushes it to Git every minute!
