@@ -2830,3 +2830,13 @@ DEPRECATION: Unexpected import of 'anyio._core._streams' after pip install start
 [32m[15:20:19.657][0m [astrbot_plugin_livingmemory] [1m[INFO][0m [core.plugin_initializer:304]: [1m等待 Provider 就绪（未就绪: Embedding Provider）...（已尝试 35/60 次，下次重试间隔 30.0s）[0m
 [32m[15:22:44.817][0m [Core] [33m[1m[WARN][0m [v4.28.0-beta.1] [telegram.tg_adapter:366]: [33m[1m命令名 'remember' 重复注册，将使用首次注册的定义: '手动记住引用对话及上下文，并链入表达方式和对话示例'[0m
 [32m[15:22:49.661][0m [astrbot_plugin_livingmemory] [1m[INFO][0m [core.plugin_initializer:304]: [1m等待 Provider 就绪（未就绪: Embedding Provider）...（已尝试 40/60 次，下次重试间隔 30.0s）[0m
+[32m[15:25:19.664][0m [astrbot_plugin_livingmemory] [1m[INFO][0m [core.plugin_initializer:304]: [1m等待 Provider 就绪（未就绪: Embedding Provider）...（已尝试 45/60 次，下次重试间隔 30.0s）[0m
+[32m[15:27:44.817][0m [Core] [33m[1m[WARN][0m [v4.28.0-beta.1] [telegram.tg_adapter:366]: [33m[1m命令名 'remember' 重复注册，将使用首次注册的定义: '手动记住引用对话及上下文，并链入表达方式和对话示例'[0m
+[32m[15:27:49.670][0m [astrbot_plugin_livingmemory] [1m[INFO][0m [core.plugin_initializer:304]: [1m等待 Provider 就绪（未就绪: Embedding Provider）...（已尝试 50/60 次，下次重试间隔 30.0s）[0m
+[32m[15:30:19.676][0m [astrbot_plugin_livingmemory] [1m[INFO][0m [core.plugin_initializer:304]: [1m等待 Provider 就绪（未就绪: Embedding Provider）...（已尝试 55/60 次，下次重试间隔 30.0s）[0m
+[32m[15:32:44.817][0m [Core] [33m[1m[WARN][0m [v4.28.0-beta.1] [telegram.tg_adapter:366]: [33m[1m命令名 'remember' 重复注册，将使用首次注册的定义: '手动记住引用对话及上下文，并链入表达方式和对话示例'[0m
+[32m[15:32:49.682][0m [astrbot_plugin_livingmemory] [1m[INFO][0m [core.plugin_initializer:304]: [1m等待 Provider 就绪（未就绪: Embedding Provider）...（已尝试 60/60 次，下次重试间隔 30.0s）[0m
+[32m[15:32:49.682][0m [astrbot_plugin_livingmemory] [31m[1m[ERRO][0m [v4.28.0-beta.1] [core.plugin_initializer:338]: [31m[1m以下 Provider 在 60 次尝试后仍未就绪，初始化失败: Embedding Provider（请配置向量嵌入模型）[0m
+[32m[15:37:44.817][0m [Core] [33m[1m[WARN][0m [v4.28.0-beta.1] [telegram.tg_adapter:366]: [33m[1m命令名 'remember' 重复注册，将使用首次注册的定义: '手动记住引用对话及上下文，并链入表达方式和对话示例'[0m
+[32m[15:42:44.816][0m [Core] [33m[1m[WARN][0m [v4.28.0-beta.1] [telegram.tg_adapter:366]: [33m[1m命令名 'remember' 重复注册，将使用首次注册的定义: '手动记住引用对话及上下文，并链入表达方式和对话示例'[0m
+[32m[15:47:44.816][0m [Core] [33m[1m[WARN][0m [v4.28.0-beta.1] [telegram.tg_adapter:366]: [33m[1m命令名 'remember' 重复注册，将使用首次注册的定义: '手动记住引用对话及上下文，并链入表达方式和对话示例'[0m
